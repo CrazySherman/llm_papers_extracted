@@ -1,0 +1,1154 @@
+{
+  "table_of_contents": [
+    {
+      "title": "MoRA: High-Rank Updating for Parameter-Efficient Fine-Tuning",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          95.162109375,
+          78.85003662109375
+        ],
+        [
+          499.892578125,
+          77.29296875
+        ],
+        [
+          499.892578125,
+          93.19622802734375
+        ],
+        [
+          95.162109375,
+          93.19622802734375
+        ]
+      ]
+    },
+    {
+      "title": "Abstract",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          156.857421875,
+          221.6005859375
+        ],
+        [
+          202.2432861328125,
+          221.6005859375
+        ],
+        [
+          202.2432861328125,
+          233.75543212890625
+        ],
+        [
+          156.857421875,
+          233.75543212890625
+        ]
+      ]
+    },
+    {
+      "title": "1 Introduction",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          70.134765625,
+          566.1298828125
+        ],
+        [
+          153.6796875,
+          566.1298828125
+        ],
+        [
+          153.6796875,
+          578.6133422851562
+        ],
+        [
+          70.134765625,
+          578.6133422851562
+        ]
+      ]
+    },
+    {
+      "title": "2 Related Work",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          305.275390625,
+          331.7841796875
+        ],
+        [
+          396.33249370277076,
+          331.7841796875
+        ],
+        [
+          396.33249370277076,
+          341.89848619768475
+        ],
+        [
+          304.111328125,
+          341.89848619768475
+        ]
+      ]
+    },
+    {
+      "title": "2.1 LoRA",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          304.693359375,
+          353.57421875
+        ],
+        [
+          359.55163727959695,
+          353.57421875
+        ],
+        [
+          359.55163727959695,
+          362.89225289403385
+        ],
+        [
+          304.693359375,
+          362.89225289403385
+        ]
+      ]
+    },
+    {
+      "title": "2.2 Fine-Tuning with LLMs",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          304.7556675062972,
+          651.5565449688335
+        ],
+        [
+          444.3727959697733,
+          651.234375
+        ],
+        [
+          444.3727959697733,
+          662.053428317008
+        ],
+        [
+          304.7556675062972,
+          662.74609375
+        ]
+      ]
+    },
+    {
+      "title": "3 Analysis the Influence of Low-rank\nUpdating",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          70.716796875,
+          610.12109375
+        ],
+        [
+          268.01922607421875,
+          608.4765625
+        ],
+        [
+          268.01922607421875,
+          636.3953552246094
+        ],
+        [
+          70.716796875,
+          636.43359375
+        ]
+      ]
+    },
+    {
+      "title": "4 Method",
+      "heading_level": null,
+      "page_id": 3,
+      "polygon": [
+        [
+          70.716796875,
+          365.8913624220837
+        ],
+        [
+          129.8589420654912,
+          364.6748046875
+        ],
+        [
+          129.8589420654912,
+          376.3882457702582
+        ],
+        [
+          69.552734375,
+          376.3882457702582
+        ]
+      ]
+    },
+    {
+      "title": "5 Experiment",
+      "heading_level": null,
+      "page_id": 4,
+      "polygon": [
+        [
+          304.40234375,
+          349.3962600178094
+        ],
+        [
+          387.3249370277078,
+          349.3962600178094
+        ],
+        [
+          387.3249370277078,
+          360.974609375
+        ],
+        [
+          304.40234375,
+          360.974609375
+        ]
+      ]
+    },
+    {
+      "title": "5.1 Memorizing UUID Pairs",
+      "heading_level": null,
+      "page_id": 4,
+      "polygon": [
+        [
+          305.857421875,
+          529.3428317008014
+        ],
+        [
+          446.624685138539,
+          529.3428317008014
+        ],
+        [
+          446.624685138539,
+          539.0899376669635
+        ],
+        [
+          304.693359375,
+          539.0899376669635
+        ]
+      ]
+    },
+    {
+      "title": "5.2 Fine-tuning Tasks",
+      "heading_level": null,
+      "page_id": 5,
+      "polygon": [
+        [
+          69.552734375,
+          527.5480346679688
+        ],
+        [
+          178.9751739501953,
+          526.25
+        ],
+        [
+          178.9751739501953,
+          538.4571533203125
+        ],
+        [
+          69.552734375,
+          538.4571533203125
+        ]
+      ]
+    },
+    {
+      "title": "5.2.1 Setup",
+      "heading_level": null,
+      "page_id": 5,
+      "polygon": [
+        [
+          69.552734375,
+          545.162109375
+        ],
+        [
+          130.2660369873047,
+          543.517578125
+        ],
+        [
+          130.2660369873047,
+          556.0861511230469
+        ],
+        [
+          69.552734375,
+          556.0861511230469
+        ]
+      ]
+    },
+    {
+      "title": "5.2.2 Baselines and Implements",
+      "heading_level": null,
+      "page_id": 5,
+      "polygon": [
+        [
+          305.275390625,
+          472.802734375
+        ],
+        [
+          460.0912780761719,
+          471.158203125
+        ],
+        [
+          460.0912780761719,
+          483.9931640625
+        ],
+        [
+          305.275390625,
+          483.9931640625
+        ]
+      ]
+    },
+    {
+      "title": "5.2.3 Results and Analysis",
+      "heading_level": null,
+      "page_id": 6,
+      "polygon": [
+        [
+          69.552734375,
+          380.6000671386719
+        ],
+        [
+          199.97518920898438,
+          379.064453125
+        ],
+        [
+          199.97518920898438,
+          391.5091857910156
+        ],
+        [
+          69.552734375,
+          391.5091857910156
+        ]
+      ]
+    },
+    {
+      "title": "5.3 Pretraining",
+      "heading_level": null,
+      "page_id": 6,
+      "polygon": [
+        [
+          305.857421875,
+          472.3916015625
+        ],
+        [
+          384.431640625,
+          470.7470703125
+        ],
+        [
+          384.431640625,
+          483.3471984863281
+        ],
+        [
+          305.857421875,
+          483.3471984863281
+        ]
+      ]
+    },
+    {
+      "title": "6 Analysis",
+      "heading_level": null,
+      "page_id": 7,
+      "polygon": [
+        [
+          69.84375,
+          559.6881713867188
+        ],
+        [
+          131.98098754882812,
+          559.140625
+        ],
+        [
+          131.98098754882812,
+          571.6433715820312
+        ],
+        [
+          69.84375,
+          571.6433715820312
+        ]
+      ]
+    },
+    {
+      "title": "6.1 High-rank Updating",
+      "heading_level": null,
+      "page_id": 7,
+      "polygon": [
+        [
+          69.84375,
+          583.1250610351562
+        ],
+        [
+          190.90625,
+          582.1640625
+        ],
+        [
+          190.90625,
+          594.0341644287109
+        ],
+        [
+          69.84375,
+          594.0341644287109
+        ]
+      ]
+    },
+    {
+      "title": "6.2 Influence of Decompression and\nCompression",
+      "heading_level": null,
+      "page_id": 7,
+      "polygon": [
+        [
+          305.275390625,
+          139.49603271484375
+        ],
+        [
+          479.302734375,
+          138.140625
+        ],
+        [
+          479.2803649902344,
+          163.9541015625
+        ],
+        [
+          304.111328125,
+          163.9541015625
+        ]
+      ]
+    },
+    {
+      "title": "7 Conclusion",
+      "heading_level": null,
+      "page_id": 7,
+      "polygon": [
+        [
+          305.56640625,
+          523.3720703125
+        ],
+        [
+          381.208740234375,
+          523.3720703125
+        ],
+        [
+          381.208740234375,
+          535.9483642578125
+        ],
+        [
+          305.56640625,
+          535.9483642578125
+        ]
+      ]
+    },
+    {
+      "title": "References",
+      "heading_level": null,
+      "page_id": 8,
+      "polygon": [
+        [
+          69.552734375,
+          72.7591552734375
+        ],
+        [
+          126.40985870361328,
+          71.1259765625
+        ],
+        [
+          126.40985870361328,
+          84.71435546875
+        ],
+        [
+          69.552734375,
+          84.71435546875
+        ]
+      ]
+    },
+    {
+      "title": "A Hyperparameters",
+      "heading_level": null,
+      "page_id": 10,
+      "polygon": [
+        [
+          69.26171875,
+          72.72840605520926
+        ],
+        [
+          183.1536523929471,
+          71.1259765625
+        ],
+        [
+          183.1536523929471,
+          83.22528940338378
+        ],
+        [
+          69.26171875,
+          83.4599609375
+        ]
+      ]
+    },
+    {
+      "title": "B Implementation of ReMoRA",
+      "heading_level": null,
+      "page_id": 10,
+      "polygon": [
+        [
+          71.298828125,
+          346.39715048975955
+        ],
+        [
+          237.19899244332493,
+          345.3515625
+        ],
+        [
+          237.19899244332493,
+          357.64381121994654
+        ],
+        [
+          70.134765625,
+          358.5078125
+        ]
+      ]
+    },
+    {
+      "title": "Algorithm 1 Compression",
+      "heading_level": null,
+      "page_id": 10,
+      "polygon": [
+        [
+          68.3073047858942,
+          459.613535173642
+        ],
+        [
+          189.1586901763224,
+          459.613535173642
+        ],
+        [
+          189.1586901763224,
+          470.11041852181654
+        ],
+        [
+          68.3073047858942,
+          471.158203125
+        ]
+      ]
+    },
+    {
+      "title": "Algorithm 2 Decompression",
+      "heading_level": null,
+      "page_id": 10,
+      "polygon": [
+        [
+          68.3073047858942,
+          623.0650044523597
+        ],
+        [
+          198.9168765743073,
+          623.0650044523597
+        ],
+        [
+          198.9168765743073,
+          633.5618878005342
+        ],
+        [
+          68.3073047858942,
+          634.3779296875
+        ]
+      ]
+    },
+    {
+      "title": "C Downstream Tasks of Continual Pretraining",
+      "heading_level": null,
+      "page_id": 11,
+      "polygon": [
+        [
+          69.552734375,
+          71.9482421875
+        ],
+        [
+          316.95184326171875,
+          71.9482421875
+        ],
+        [
+          316.95184326171875,
+          84.71435546875
+        ],
+        [
+          69.552734375,
+          84.71435546875
+        ]
+      ]
+    }
+  ],
+  "page_stats": [
+    {
+      "page_id": 0,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          247
+        ],
+        [
+          "Line",
+          85
+        ],
+        [
+          "Text",
+          6
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ],
+        [
+          "Reference",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 1,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          107
+        ],
+        [
+          "Span",
+          100
+        ],
+        [
+          "Text",
+          6
+        ],
+        [
+          "ListItem",
+          3
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 2,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          350
+        ],
+        [
+          "Line",
+          94
+        ],
+        [
+          "Text",
+          8
+        ],
+        [
+          "Reference",
+          2
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "Equation",
+          1
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 3,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          126
+        ],
+        [
+          "Line",
+          108
+        ],
+        [
+          "Text",
+          11
+        ],
+        [
+          "Equation",
+          6
+        ],
+        [
+          "Reference",
+          4
+        ],
+        [
+          "SectionHeader",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 4,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          98
+        ],
+        [
+          "Line",
+          91
+        ],
+        [
+          "Text",
+          7
+        ],
+        [
+          "Equation",
+          4
+        ],
+        [
+          "Reference",
+          4
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 5,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          285
+        ],
+        [
+          "TableCell",
+          154
+        ],
+        [
+          "Line",
+          77
+        ],
+        [
+          "Text",
+          4
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "Reference",
+          3
+        ],
+        [
+          "Table",
+          2
+        ],
+        [
+          "Caption",
+          2
+        ],
+        [
+          "TableGroup",
+          2
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 6,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          169
+        ],
+        [
+          "Line",
+          67
+        ],
+        [
+          "TableCell",
+          18
+        ],
+        [
+          "Text",
+          8
+        ],
+        [
+          "Reference",
+          3
+        ],
+        [
+          "Figure",
+          2
+        ],
+        [
+          "ListItem",
+          2
+        ],
+        [
+          "Caption",
+          2
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "Table",
+          1
+        ],
+        [
+          "TableGroup",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 7,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          313
+        ],
+        [
+          "Line",
+          86
+        ],
+        [
+          "TableCell",
+          20
+        ],
+        [
+          "Text",
+          6
+        ],
+        [
+          "SectionHeader",
+          4
+        ],
+        [
+          "Caption",
+          2
+        ],
+        [
+          "Reference",
+          2
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Table",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ],
+        [
+          "TableGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 8,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          256
+        ],
+        [
+          "Line",
+          108
+        ],
+        [
+          "ListItem",
+          23
+        ],
+        [
+          "Reference",
+          23
+        ],
+        [
+          "ListGroup",
+          2
+        ],
+        [
+          "SectionHeader",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 9,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          222
+        ],
+        [
+          "Line",
+          94
+        ],
+        [
+          "ListItem",
+          19
+        ],
+        [
+          "Reference",
+          18
+        ],
+        [
+          "ListGroup",
+          2
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 10,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "TableCell",
+          154
+        ],
+        [
+          "Span",
+          94
+        ],
+        [
+          "Line",
+          60
+        ],
+        [
+          "SectionHeader",
+          4
+        ],
+        [
+          "Reference",
+          3
+        ],
+        [
+          "Text",
+          2
+        ],
+        [
+          "Code",
+          2
+        ],
+        [
+          "Table",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "TableGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 11,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "TableCell",
+          90
+        ],
+        [
+          "Span",
+          80
+        ],
+        [
+          "Line",
+          20
+        ],
+        [
+          "Table",
+          2
+        ],
+        [
+          "Caption",
+          2
+        ],
+        [
+          "TableGroup",
+          2
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "Text",
+          1
+        ],
+        [
+          "Reference",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    }
+  ],
+  "debug_data_path": "debug_data/MoRA High-Rank Updating for Parameter-Efficient Fine-Tuning"
+}

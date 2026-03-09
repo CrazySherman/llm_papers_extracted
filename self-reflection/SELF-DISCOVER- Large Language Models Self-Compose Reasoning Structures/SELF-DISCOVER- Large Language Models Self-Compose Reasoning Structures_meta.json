@@ -1,0 +1,1633 @@
+{
+  "table_of_contents": [
+    {
+      "title": "SELF-DISCOVER: Large Language Models Self-Compose Reasoning Structures",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          53.7890625,
+          89.94805908203125
+        ],
+        [
+          541.4285888671875,
+          89.94805908203125
+        ],
+        [
+          541.4285888671875,
+          104.29425048828125
+        ],
+        [
+          53.7890625,
+          104.29425048828125
+        ]
+      ]
+    },
+    {
+      "title": "Abstract",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          149.712890625,
+          188.01226806640625
+        ],
+        [
+          194.68325805664062,
+          186.78515625
+        ],
+        [
+          194.68325805664062,
+          199.96746826171875
+        ],
+        [
+          149.712890625,
+          199.96746826171875
+        ]
+      ]
+    },
+    {
+      "title": "1. Introduction",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          54.685546875,
+          510.08203125
+        ],
+        [
+          132.2760772705078,
+          508.53515625
+        ],
+        [
+          132.2760772705078,
+          522.0723266601562
+        ],
+        [
+          54.685546875,
+          522.0723266601562
+        ]
+      ]
+    },
+    {
+      "title": "2. Self-Discovering Reasoning Structures for\nProblem-Solving",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          305.40234375,
+          418.6471252441406
+        ],
+        [
+          533.4769897460938,
+          417.65625
+        ],
+        [
+          533.4769897460938,
+          444.5503234863281
+        ],
+        [
+          305.40234375,
+          444.5503234863281
+        ]
+      ]
+    },
+    {
+      "title": "2.1. Stage 1: Self-Discover Task-Specific Structures",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          55.44000244140625,
+          376.35150146484375
+        ],
+        [
+          271.95721435546875,
+          375.1171875
+        ],
+        [
+          271.95721435546875,
+          386.3140869140625
+        ],
+        [
+          54.685546875,
+          386.3140869140625
+        ]
+      ]
+    },
+    {
+      "title": "2.2. Stage 2: Tackle Tasks Using Discovered Structures",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          306.0,
+          527.8685302734375
+        ],
+        [
+          539.4789428710938,
+          526.7109375
+        ],
+        [
+          539.4789428710938,
+          537.8311309814453
+        ],
+        [
+          306.0,
+          537.8311309814453
+        ]
+      ]
+    },
+    {
+      "title": "3. Experiment Setup",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          306.896484375,
+          655.9041595458984
+        ],
+        [
+          412.0480041503906,
+          655.875
+        ],
+        [
+          412.0480041503906,
+          667.8593521118164
+        ],
+        [
+          306.896484375,
+          667.8593521118164
+        ]
+      ]
+    },
+    {
+      "title": "3.1. Tasks",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          306.896484375,
+          676.806510925293
+        ],
+        [
+          348.87445068359375,
+          675.59765625
+        ],
+        [
+          348.87445068359375,
+          686.7691116333008
+        ],
+        [
+          306.896484375,
+          686.7691116333008
+        ]
+      ]
+    },
+    {
+      "title": "3.2. Models",
+      "heading_level": null,
+      "page_id": 3,
+      "polygon": [
+        [
+          54.984375,
+          517.04296875
+        ],
+        [
+          103.9921875,
+          517.04296875
+        ],
+        [
+          103.8681869506836,
+          528.1351013183594
+        ],
+        [
+          53.7890625,
+          528.1351013183594
+        ]
+      ]
+    },
+    {
+      "title": "3.3. Baselines",
+      "heading_level": null,
+      "page_id": 3,
+      "polygon": [
+        [
+          54.38671875,
+          609.08203125
+        ],
+        [
+          112.17700958251953,
+          607.53515625
+        ],
+        [
+          112.17700958251953,
+          619.7411193847656
+        ],
+        [
+          54.38671875,
+          619.7411193847656
+        ]
+      ]
+    },
+    {
+      "title": "4. Results",
+      "heading_level": null,
+      "page_id": 4,
+      "polygon": [
+        [
+          54.0,
+          420.75
+        ],
+        [
+          105.75,
+          420.75
+        ],
+        [
+          105.75,
+          430.5
+        ],
+        [
+          54.0,
+          430.5
+        ]
+      ]
+    },
+    {
+      "title": "4.1. Does SELF-DISCOVER Improve LLM Reasoning?",
+      "heading_level": null,
+      "page_id": 4,
+      "polygon": [
+        [
+          54.0,
+          562.5
+        ],
+        [
+          286.5,
+          561.515625
+        ],
+        [
+          286.5,
+          571.5
+        ],
+        [
+          54.0,
+          572.34375
+        ]
+      ]
+    },
+    {
+      "title": "4.2. Which Types of Problems Do SELF-DISCOVER Help the Most?",
+      "heading_level": null,
+      "page_id": 4,
+      "polygon": [
+        [
+          306.0,
+          550.30078125
+        ],
+        [
+          467.25,
+          548.75390625
+        ],
+        [
+          467.25,
+          571.5
+        ],
+        [
+          306.0,
+          572.73046875
+        ]
+      ]
+    },
+    {
+      "title": "4.3. How Efficient is SELF-DISCOVER?",
+      "heading_level": null,
+      "page_id": 5,
+      "polygon": [
+        [
+          54.0,
+          396.0
+        ],
+        [
+          222.0,
+          395.61328125
+        ],
+        [
+          222.0,
+          405.0
+        ],
+        [
+          53.7890625,
+          405.66796875
+        ]
+      ]
+    },
+    {
+      "title": "4.4. Qualitative Examples",
+      "heading_level": null,
+      "page_id": 5,
+      "polygon": [
+        [
+          54.0,
+          656.25
+        ],
+        [
+          165.75,
+          655.1015625
+        ],
+        [
+          165.75,
+          665.25
+        ],
+        [
+          54.0,
+          665.9296875
+        ]
+      ]
+    },
+    {
+      "title": "5. Deep Diving Into Self-Discovered Reasoning Structures",
+      "heading_level": null,
+      "page_id": 5,
+      "polygon": [
+        [
+          305.25,
+          660.0
+        ],
+        [
+          543.0,
+          659.35546875
+        ],
+        [
+          543.0,
+          684.0
+        ],
+        [
+          305.103515625,
+          684.0
+        ]
+      ]
+    },
+    {
+      "title": "5.1. Importance of SELF-DISCOVER Actions",
+      "heading_level": null,
+      "page_id": 6,
+      "polygon": [
+        [
+          54.0,
+          553.78125
+        ],
+        [
+          245.25,
+          552.234375
+        ],
+        [
+          245.25,
+          566.25
+        ],
+        [
+          54.0,
+          566.25
+        ]
+      ]
+    },
+    {
+      "title": "5.2. Towards Universality of Discovered Reasoning Structures",
+      "heading_level": null,
+      "page_id": 6,
+      "polygon": [
+        [
+          306.0,
+          568.5
+        ],
+        [
+          525.0,
+          568.08984375
+        ],
+        [
+          525.0,
+          588.75
+        ],
+        [
+          306.0,
+          588.97265625
+        ]
+      ]
+    },
+    {
+      "title": "Applying PaLM 2-L Discovered Structures to GPT-4",
+      "heading_level": null,
+      "page_id": 6,
+      "polygon": [
+        [
+          304.20703125,
+          599.25
+        ],
+        [
+          543.0,
+          598.640625
+        ],
+        [
+          543.0,
+          608.25
+        ],
+        [
+          304.20703125,
+          609.46875
+        ]
+      ]
+    },
+    {
+      "title": "6. Related Work",
+      "heading_level": null,
+      "page_id": 7,
+      "polygon": [
+        [
+          54.0,
+          495.75
+        ],
+        [
+          138.75,
+          494.2265625
+        ],
+        [
+          138.75,
+          505.5
+        ],
+        [
+          54.0,
+          505.5
+        ]
+      ]
+    },
+    {
+      "title": "6.1. Prompting Methods",
+      "heading_level": null,
+      "page_id": 7,
+      "polygon": [
+        [
+          54.0,
+          516.0
+        ],
+        [
+          159.0,
+          515.109375
+        ],
+        [
+          159.0,
+          525.75
+        ],
+        [
+          54.0,
+          525.9375
+        ]
+      ]
+    },
+    {
+      "title": "6.2. Reasoning and Planning",
+      "heading_level": null,
+      "page_id": 7,
+      "polygon": [
+        [
+          305.25,
+          190.5
+        ],
+        [
+          429.0,
+          189.10546875
+        ],
+        [
+          429.0,
+          199.16015625
+        ],
+        [
+          305.25,
+          200.70703125
+        ]
+      ]
+    },
+    {
+      "title": "7. Conclusion",
+      "heading_level": null,
+      "page_id": 7,
+      "polygon": [
+        [
+          306.0,
+          522.45703125
+        ],
+        [
+          377.25,
+          522.45703125
+        ],
+        [
+          377.25,
+          532.5
+        ],
+        [
+          306.0,
+          532.5
+        ]
+      ]
+    },
+    {
+      "title": "Acknowledgement",
+      "heading_level": null,
+      "page_id": 8,
+      "polygon": [
+        [
+          54.38671875,
+          67.84710693359375
+        ],
+        [
+          149.62306213378906,
+          67.2890625
+        ],
+        [
+          149.62306213378906,
+          79.80230712890625
+        ],
+        [
+          54.38671875,
+          79.80230712890625
+        ]
+      ]
+    },
+    {
+      "title": "References",
+      "heading_level": null,
+      "page_id": 8,
+      "polygon": [
+        [
+          54.38671875,
+          127.740234375
+        ],
+        [
+          110.9838638305664,
+          126.84375
+        ],
+        [
+          110.9838638305664,
+          139.6954345703125
+        ],
+        [
+          54.38671875,
+          139.6954345703125
+        ]
+      ]
+    },
+    {
+      "title": "A. Self-Discover Prompt Details",
+      "heading_level": null,
+      "page_id": 11,
+      "polygon": [
+        [
+          54.0,
+          67.5
+        ],
+        [
+          218.25,
+          67.5
+        ],
+        [
+          218.25,
+          78.890625
+        ],
+        [
+          54.0,
+          78.890625
+        ]
+      ]
+    },
+    {
+      "title": "IMPLEMENT\nSELECT\nADAPT\nOperationalize the reasoning\nSelect several reasoning modules\nRephrase and specify each reasoning\nmodules into a step-by-step\nthat are crucial to utilize in order\nmodule so that it better helps solving\nreasoning plan in ISON format:\nsolve the given task:\nthe task:\nPaired IMPLEMENT Step\nSELECTED module descriptions:\nAll reasoning module descriptions\nDemonstration\nCritical thinking: ...\nCritical thinking: ...\nReasoning description Example\nStep-by-Step: ...\nStep-by-Step: ...\nPropose and verify: ...\nReasoning Plan Example\nTask examples w/o answer:\nADAPTED module description:\nTask examples w/o answer:\nExample 1: ...\nExample 1: ...\nExample 2: ...\nTask examples w/o answer: ...\nExample 2: ...\nImplement a reasoning structure for\nAdapt each reasoning module\nSelect several modules that are\nsolvers to follow step-by-step and\ndescription to better solve the tasks:\ncrucial for solving the tasks above:\narrive at correct answers:",
+      "heading_level": null,
+      "page_id": 11,
+      "polygon": [
+        [
+          55.58203125,
+          192.5859375
+        ],
+        [
+          537.29296875,
+          191.0390625
+        ],
+        [
+          537.29296875,
+          421.5234375
+        ],
+        [
+          55.58203125,
+          423.0703125
+        ]
+      ]
+    },
+    {
+      "title": "B. Evaluation Details",
+      "heading_level": null,
+      "page_id": 11,
+      "polygon": [
+        [
+          54.0,
+          494.25
+        ],
+        [
+          163.5,
+          493.06640625
+        ],
+        [
+          163.5,
+          504.0
+        ],
+        [
+          54.0,
+          504.0
+        ]
+      ]
+    },
+    {
+      "title": "C. BBH Per Task Performance",
+      "heading_level": null,
+      "page_id": 11,
+      "polygon": [
+        [
+          54.0,
+          602.25
+        ],
+        [
+          213.0,
+          601.34765625
+        ],
+        [
+          213.0,
+          611.25
+        ],
+        [
+          54.0,
+          611.40234375
+        ]
+      ]
+    },
+    {
+      "title": "D. Error Analysis",
+      "heading_level": null,
+      "page_id": 11,
+      "polygon": [
+        [
+          54.0,
+          651.0
+        ],
+        [
+          147.0,
+          651.0
+        ],
+        [
+          147.0,
+          661.5
+        ],
+        [
+          54.0,
+          661.5
+        ]
+      ]
+    },
+    {
+      "title": "Reasoning Modules",
+      "heading_level": null,
+      "page_id": 12,
+      "polygon": [
+        [
+          60.064453125,
+          129.69647216796875
+        ],
+        [
+          135.52810668945312,
+          129.1640625
+        ],
+        [
+          135.52810668945312,
+          139.6590576171875
+        ],
+        [
+          60.064453125,
+          139.6590576171875
+        ]
+      ]
+    },
+    {
+      "title": "E. Further Anaysis",
+      "heading_level": null,
+      "page_id": 13,
+      "polygon": [
+        [
+          54.0,
+          443.25
+        ],
+        [
+          153.0,
+          442.40625
+        ],
+        [
+          153.0,
+          453.75
+        ],
+        [
+          54.0,
+          453.75
+        ]
+      ]
+    }
+  ],
+  "page_stats": [
+    {
+      "page_id": 0,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          356
+        ],
+        [
+          "Line",
+          88
+        ],
+        [
+          "Text",
+          7
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "Footnote",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 1,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          331
+        ],
+        [
+          "Line",
+          85
+        ],
+        [
+          "Text",
+          6
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ],
+        [
+          "Reference",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 2,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          429
+        ],
+        [
+          "Line",
+          89
+        ],
+        [
+          "Text",
+          9
+        ],
+        [
+          "SectionHeader",
+          4
+        ],
+        [
+          "Equation",
+          4
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ],
+        [
+          "Reference",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 3,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          301
+        ],
+        [
+          "Line",
+          107
+        ],
+        [
+          "ListItem",
+          6
+        ],
+        [
+          "Text",
+          4
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "Footnote",
+          2
+        ],
+        [
+          "ListGroup",
+          2
+        ],
+        [
+          "Reference",
+          2
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 4,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          108
+        ],
+        [
+          "TableCell",
+          36
+        ],
+        [
+          "Span",
+          33
+        ],
+        [
+          "Text",
+          10
+        ],
+        [
+          "Reference",
+          4
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "Caption",
+          2
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "Table",
+          1
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "TableGroup",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 5,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          120
+        ],
+        [
+          "Span",
+          30
+        ],
+        [
+          "Text",
+          5
+        ],
+        [
+          "Reference",
+          4
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "Figure",
+          2
+        ],
+        [
+          "Caption",
+          2
+        ],
+        [
+          "FigureGroup",
+          2
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 6,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          133
+        ],
+        [
+          "Span",
+          72
+        ],
+        [
+          "Text",
+          5
+        ],
+        [
+          "Reference",
+          4
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "Caption",
+          2
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 7,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          115
+        ],
+        [
+          "Span",
+          46
+        ],
+        [
+          "Text",
+          5
+        ],
+        [
+          "SectionHeader",
+          4
+        ],
+        [
+          "Reference",
+          2
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "Footnote",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 8,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          236
+        ],
+        [
+          "Line",
+          94
+        ],
+        [
+          "ListItem",
+          20
+        ],
+        [
+          "Reference",
+          20
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "ListGroup",
+          2
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "Text",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 9,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          251
+        ],
+        [
+          "Line",
+          97
+        ],
+        [
+          "ListItem",
+          22
+        ],
+        [
+          "Reference",
+          22
+        ],
+        [
+          "ListGroup",
+          2
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 10,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          92
+        ],
+        [
+          "Line",
+          35
+        ],
+        [
+          "ListItem",
+          8
+        ],
+        [
+          "Reference",
+          8
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 11,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          76
+        ],
+        [
+          "Span",
+          52
+        ],
+        [
+          "Text",
+          6
+        ],
+        [
+          "SectionHeader",
+          5
+        ],
+        [
+          "Reference",
+          5
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 12,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          122
+        ],
+        [
+          "Line",
+          57
+        ],
+        [
+          "ListItem",
+          39
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "Text",
+          1
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ],
+        [
+          "Reference",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 13,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "TableCell",
+          222
+        ],
+        [
+          "Line",
+          24
+        ],
+        [
+          "Span",
+          7
+        ],
+        [
+          "Text",
+          3
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "Table",
+          1
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "TableGroup",
+          1
+        ],
+        [
+          "Reference",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 14,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          177
+        ],
+        [
+          "Line",
+          89
+        ],
+        [
+          "TableCell",
+          15
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "Table",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "TableGroup",
+          1
+        ],
+        [
+          "Reference",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 15,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          163
+        ],
+        [
+          "Line",
+          80
+        ],
+        [
+          "TableCell",
+          12
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "Table",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "TableGroup",
+          1
+        ],
+        [
+          "Reference",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 16,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          76
+        ],
+        [
+          "Line",
+          33
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "Text",
+          1
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ],
+        [
+          "Reference",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    }
+  ],
+  "debug_data_path": "debug_data/SELF-DISCOVER- Large Language Models Self-Compose Reasoning Structures"
+}

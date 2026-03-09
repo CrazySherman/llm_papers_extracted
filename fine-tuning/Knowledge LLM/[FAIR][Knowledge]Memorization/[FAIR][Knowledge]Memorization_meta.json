@@ -1,0 +1,887 @@
+{
+  "table_of_contents": [
+    {
+      "title": "Unmasking the Memory Giants: How do LLMs memorize during training?",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          66.75,
+          88.55859375
+        ],
+        [
+          530.25,
+          88.55859375
+        ],
+        [
+          530.25,
+          106.34765625
+        ],
+        [
+          66.75,
+          106.34765625
+        ]
+      ]
+    },
+    {
+      "title": "Anonymous Authors<sup>1</sup>",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          240.85546875,
+          142.3125
+        ],
+        [
+          333.0,
+          142.3125
+        ],
+        [
+          333.0,
+          153.140625
+        ],
+        [
+          240.85546875,
+          153.140625
+        ]
+      ]
+    },
+    {
+      "title": "1. Tracking Verbatim Memorization in LLMs 1.1. Approach",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          54.0,
+          317.8828125
+        ],
+        [
+          289.5,
+          317.8828125
+        ],
+        [
+          289.5,
+          344.25
+        ],
+        [
+          54.0,
+          344.25
+        ]
+      ]
+    },
+    {
+      "title": "1.2. Interpretation for GenAI and Law",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          54.0,
+          531.0
+        ],
+        [
+          219.75,
+          530.96484375
+        ],
+        [
+          219.75,
+          540.0
+        ],
+        [
+          54.0,
+          541.01953125
+        ]
+      ]
+    },
+    {
+      "title": "2. Experiments",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          306.0,
+          522.0
+        ],
+        [
+          385.5,
+          520.91015625
+        ],
+        [
+          385.5,
+          532.5
+        ],
+        [
+          306.0,
+          532.51171875
+        ]
+      ]
+    },
+    {
+      "title": "2.1. LLMs never forget",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          305.25,
+          627.0
+        ],
+        [
+          405.75,
+          626.87109375
+        ],
+        [
+          405.75,
+          636.75
+        ],
+        [
+          305.25,
+          636.92578125
+        ]
+      ]
+    },
+    {
+      "title": "2.2. Can We Mitigate Memorization?",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          54.0,
+          303.75
+        ],
+        [
+          213.0,
+          302.80078125
+        ],
+        [
+          213.0,
+          313.5
+        ],
+        [
+          54.0,
+          314.40234375
+        ]
+      ]
+    },
+    {
+      "title": "2.2.1. NOISY TRAINING",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          54.0,
+          322.13671875
+        ],
+        [
+          157.5,
+          320.58984375
+        ],
+        [
+          157.5,
+          331.5
+        ],
+        [
+          53.7890625,
+          331.5
+        ]
+      ]
+    },
+    {
+      "title": "2.2.2. Lora finetuning & Other Regularizations",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          54.0,
+          502.5
+        ],
+        [
+          289.5,
+          501.57421875
+        ],
+        [
+          289.5,
+          511.5
+        ],
+        [
+          54.0,
+          511.62890625
+        ]
+      ]
+    },
+    {
+      "title": "2.2.3. Unlearning.",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          305.40234375,
+          325.23046875
+        ],
+        [
+          398.25,
+          325.23046875
+        ],
+        [
+          398.25,
+          335.25
+        ],
+        [
+          305.40234375,
+          335.25
+        ]
+      ]
+    },
+    {
+      "title": "3. Preliminary Conclusion & Limits",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          305.103515625,
+          399.75
+        ],
+        [
+          490.5,
+          398.3203125
+        ],
+        [
+          490.5,
+          410.25
+        ],
+        [
+          305.103515625,
+          410.6953125
+        ]
+      ]
+    },
+    {
+      "title": "References",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          51.99609375,
+          67.84710693359375
+        ],
+        [
+          110.9838638305664,
+          67.84710693359375
+        ],
+        [
+          110.9838638305664,
+          79.80230712890625
+        ],
+        [
+          51.99609375,
+          79.80230712890625
+        ]
+      ]
+    },
+    {
+      "title": "A. Probabilistic Model",
+      "heading_level": null,
+      "page_id": 3,
+      "polygon": [
+        [
+          54.0,
+          68.25
+        ],
+        [
+          171.0,
+          67.2890625
+        ],
+        [
+          171.0,
+          77.25
+        ],
+        [
+          52.892578125,
+          78.1171875
+        ]
+      ]
+    },
+    {
+      "title": "B. Experimental details",
+      "heading_level": null,
+      "page_id": 3,
+      "polygon": [
+        [
+          54.0,
+          225.75
+        ],
+        [
+          175.5,
+          224.68359375
+        ],
+        [
+          175.5,
+          236.28515625
+        ],
+        [
+          52.892578125,
+          237.83203125
+        ]
+      ]
+    },
+    {
+      "title": "C. Impact of momentum on memorization",
+      "heading_level": null,
+      "page_id": 3,
+      "polygon": [
+        [
+          54.0,
+          368.54296875
+        ],
+        [
+          270.75,
+          366.99609375
+        ],
+        [
+          270.75,
+          379.5
+        ],
+        [
+          53.490234375,
+          380.14453125
+        ]
+      ]
+    },
+    {
+      "title": "D. Additional Experiments",
+      "heading_level": null,
+      "page_id": 4,
+      "polygon": [
+        [
+          53.490234375,
+          260.6484375
+        ],
+        [
+          192.75,
+          259.1015625
+        ],
+        [
+          192.75,
+          272.25
+        ],
+        [
+          53.490234375,
+          273.0234375
+        ]
+      ]
+    },
+    {
+      "title": "D.1. Why not using DP-SGD directly?",
+      "heading_level": null,
+      "page_id": 4,
+      "polygon": [
+        [
+          54.0,
+          280.5
+        ],
+        [
+          216.75,
+          279.984375
+        ],
+        [
+          216.75,
+          291.0
+        ],
+        [
+          54.0,
+          292.359375
+        ]
+      ]
+    },
+    {
+      "title": "D.2. Unlearning",
+      "heading_level": null,
+      "page_id": 4,
+      "polygon": [
+        [
+          54.0,
+          412.5
+        ],
+        [
+          123.75,
+          412.2421875
+        ],
+        [
+          123.75,
+          421.5234375
+        ],
+        [
+          54.0,
+          423.0703125
+        ]
+      ]
+    },
+    {
+      "title": "D.3. Impact of Learning Rate on Memorization",
+      "heading_level": null,
+      "page_id": 5,
+      "polygon": [
+        [
+          53.490234375,
+          69.22265625
+        ],
+        [
+          255.9771728515625,
+          69.22265625
+        ],
+        [
+          255.9771728515625,
+          79.33905029296875
+        ],
+        [
+          53.490234375,
+          79.33905029296875
+        ]
+      ]
+    },
+    {
+      "title": "330",
+      "heading_level": null,
+      "page_id": 6,
+      "polygon": [
+        [
+          25.998046875,
+          68.8359375
+        ],
+        [
+          44.525390625,
+          67.2890625
+        ],
+        [
+          43.330078125,
+          82.7578125
+        ],
+        [
+          24.802734375,
+          84.3046875
+        ]
+      ]
+    },
+    {
+      "title": "Prompt given to Llama-2-chat:",
+      "heading_level": null,
+      "page_id": 6,
+      "polygon": [
+        [
+          68.73046875,
+          76.18359375
+        ],
+        [
+          189.47714233398438,
+          74.63671875
+        ],
+        [
+          189.47714233398438,
+          85.24456787109375
+        ],
+        [
+          67.53515625,
+          86.23828125
+        ]
+      ]
+    },
+    {
+      "title": "Llama-2 answer:",
+      "heading_level": null,
+      "page_id": 6,
+      "polygon": [
+        [
+          70.822265625,
+          401.80078125
+        ],
+        [
+          136.0284423828125,
+          401.80078125
+        ],
+        [
+          136.0284423828125,
+          412.0185241699219
+        ],
+        [
+          69.626953125,
+          412.0185241699219
+        ]
+      ]
+    }
+  ],
+  "page_stats": [
+    {
+      "page_id": 0,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          177
+        ],
+        [
+          "Span",
+          105
+        ],
+        [
+          "Text",
+          41
+        ],
+        [
+          "SectionHeader",
+          6
+        ],
+        [
+          "Reference",
+          3
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "Footnote",
+          1
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 1,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          177
+        ],
+        [
+          "Span",
+          106
+        ],
+        [
+          "Text",
+          25
+        ],
+        [
+          "TableCell",
+          21
+        ],
+        [
+          "SectionHeader",
+          5
+        ],
+        [
+          "ListItem",
+          3
+        ],
+        [
+          "Reference",
+          3
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "Caption",
+          2
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Table",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ],
+        [
+          "TableGroup",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 2,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          289
+        ],
+        [
+          "Line",
+          118
+        ],
+        [
+          "ListItem",
+          21
+        ],
+        [
+          "Reference",
+          21
+        ],
+        [
+          "Text",
+          8
+        ],
+        [
+          "ListGroup",
+          2
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 3,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          140
+        ],
+        [
+          "Span",
+          123
+        ],
+        [
+          "Text",
+          40
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "Equation",
+          3
+        ],
+        [
+          "Reference",
+          3
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 4,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          139
+        ],
+        [
+          "Span",
+          41
+        ],
+        [
+          "Text",
+          12
+        ],
+        [
+          "Reference",
+          4
+        ],
+        [
+          "Figure",
+          3
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "Caption",
+          2
+        ],
+        [
+          "FigureGroup",
+          2
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 5,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          127
+        ],
+        [
+          "Line",
+          54
+        ],
+        [
+          "Text",
+          12
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "Reference",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 6,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          178
+        ],
+        [
+          "Line",
+          84
+        ],
+        [
+          "Text",
+          31
+        ],
+        [
+          "ListItem",
+          11
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ],
+        [
+          "Reference",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    }
+  ],
+  "debug_data_path": "debug_data/[FAIR][Knowledge]Memorization"
+}

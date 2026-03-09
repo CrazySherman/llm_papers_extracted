@@ -1,0 +1,1201 @@
+{
+  "table_of_contents": [
+    {
+      "title": "CodeUltraFeedback: An LLM-as-a-Judge Dataset\nfor Aligning Large Language Models\nto Coding Preferences",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          63.3515625,
+          53.09869384765625
+        ],
+        [
+          548.2970581054688,
+          53.09869384765625
+        ],
+        [
+          548.2970581054688,
+          132.79998779296875
+        ],
+        [
+          63.3515625,
+          132.79998779296875
+        ]
+      ]
+    },
+    {
+      "title": "I. INTRODUCTION",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          132.978515625,
+          488.42578125
+        ],
+        [
+          213.662109375,
+          486.87890625
+        ],
+        [
+          213.371826171875,
+          498.6763000488281
+        ],
+        [
+          131.783203125,
+          498.6763000488281
+        ]
+      ]
+    },
+    {
+      "title": "II. CODEULTRAFEEDBACK",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          378.9140625,
+          313.20751953125
+        ],
+        [
+          495.6920166015625,
+          311.6953125
+        ],
+        [
+          495.6920166015625,
+          323.1701354980469
+        ],
+        [
+          377.71875,
+          323.1701354980469
+        ]
+      ]
+    },
+    {
+      "title": "A. Coding Preferences and Principles.",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          310.18359375,
+          382.7580261230469
+        ],
+        [
+          470.57269287109375,
+          382.078125
+        ],
+        [
+          470.57269287109375,
+          392.7206115722656
+        ],
+        [
+          310.18359375,
+          392.90625
+        ]
+      ]
+    },
+    {
+      "title": "B. Initial Dataset.",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          310.18359375,
+          599.25
+        ],
+        [
+          387.0,
+          599.25
+        ],
+        [
+          387.0,
+          608.30859375
+        ],
+        [
+          310.18359375,
+          608.30859375
+        ]
+      ]
+    },
+    {
+      "title": "TABLE I: Code readability assessment template.",
+      "heading_level": null,
+      "page_id": 3,
+      "polygon": [
+        [
+          71.71875,
+          47.67755126953125
+        ],
+        [
+          275.85345458984375,
+          47.67755126953125
+        ],
+        [
+          275.85345458984375,
+          57.7310791015625
+        ],
+        [
+          71.71875,
+          57.7310791015625
+        ]
+      ]
+    },
+    {
+      "title": "Evaluation Criteria:",
+      "heading_level": null,
+      "page_id": 3,
+      "polygon": [
+        [
+          50.80078125,
+          95.1328125
+        ],
+        [
+          121.72269439697266,
+          95.1328125
+        ],
+        [
+          121.72269439697266,
+          103.70062255859375
+        ],
+        [
+          49.60546875,
+          103.70062255859375
+        ]
+      ]
+    },
+    {
+      "title": "C. LLMs Selection.",
+      "heading_level": null,
+      "page_id": 3,
+      "polygon": [
+        [
+          48.96400451660156,
+          338.765625
+        ],
+        [
+          128.83416748046875,
+          338.765625
+        ],
+        [
+          128.83416748046875,
+          349.40557861328125
+        ],
+        [
+          48.111328125,
+          349.40557861328125
+        ]
+      ]
+    },
+    {
+      "title": "D. Principle-Driven Code Generation.",
+      "heading_level": null,
+      "page_id": 3,
+      "polygon": [
+        [
+          47.8125,
+          552.4068298339844
+        ],
+        [
+          207.4191436767578,
+          552.4068298339844
+        ],
+        [
+          207.4191436767578,
+          562.3694305419922
+        ],
+        [
+          46.6171875,
+          562.3694305419922
+        ]
+      ]
+    },
+    {
+      "title": "E. LLM-as-a-Judge Annotation.",
+      "heading_level": null,
+      "page_id": 3,
+      "polygon": [
+        [
+          48.96400451660156,
+          669.7288208007812
+        ],
+        [
+          179.2947235107422,
+          668.25
+        ],
+        [
+          179.2947235107422,
+          679.6914215087891
+        ],
+        [
+          47.8125,
+          679.6914215087891
+        ]
+      ]
+    },
+    {
+      "title": "III. EVALUATING LLMS ON CODEULTRAFEEDBACK",
+      "heading_level": null,
+      "page_id": 4,
+      "polygon": [
+        [
+          61.5,
+          174.41015625
+        ],
+        [
+          287.25,
+          174.41015625
+        ],
+        [
+          287.25,
+          184.5
+        ],
+        [
+          61.5,
+          185.25
+        ]
+      ]
+    },
+    {
+      "title": "A. LLMs Scores Exploration",
+      "heading_level": null,
+      "page_id": 4,
+      "polygon": [
+        [
+          47.25,
+          279.75
+        ],
+        [
+          167.25,
+          278.4375
+        ],
+        [
+          167.25,
+          288.75
+        ],
+        [
+          47.25,
+          289.265625
+        ]
+      ]
+    },
+    {
+      "title": "B. LLMs vs GPT-3.5-Turbo",
+      "heading_level": null,
+      "page_id": 4,
+      "polygon": [
+        [
+          48.0,
+          680.625
+        ],
+        [
+          163.5,
+          680.625
+        ],
+        [
+          163.5,
+          690.75
+        ],
+        [
+          48.0,
+          690.75
+        ]
+      ]
+    },
+    {
+      "title": "IV. ALIGNING LLMS TO CODING PREFERENCES",
+      "heading_level": null,
+      "page_id": 5,
+      "polygon": [
+        [
+          70.224609375,
+          321.75
+        ],
+        [
+          278.0826721191406,
+          320.203125
+        ],
+        [
+          278.0826721191406,
+          332.2380676269531
+        ],
+        [
+          69.029296875,
+          332.2380676269531
+        ]
+      ]
+    },
+    {
+      "title": "A. Supervised Fine-Tuning (SFT)",
+      "heading_level": null,
+      "page_id": 5,
+      "polygon": [
+        [
+          47.513671875,
+          445.5
+        ],
+        [
+          185.2722930908203,
+          443.953125
+        ],
+        [
+          185.2722930908203,
+          455.79852294921875
+        ],
+        [
+          47.513671875,
+          455.79852294921875
+        ]
+      ]
+    },
+    {
+      "title": "B. Direct Preference Optimization (DPO)",
+      "heading_level": null,
+      "page_id": 5,
+      "polygon": [
+        [
+          311.37890625,
+          321.75
+        ],
+        [
+          483.50390625,
+          320.203125
+        ],
+        [
+          483.1951599121094,
+          332.06158447265625
+        ],
+        [
+          310.18359375,
+          332.06158447265625
+        ]
+      ]
+    },
+    {
+      "title": "C. Experimental Details",
+      "heading_level": null,
+      "page_id": 5,
+      "polygon": [
+        [
+          311.677734375,
+          608.458984375
+        ],
+        [
+          412.0423583984375,
+          607.53515625
+        ],
+        [
+          412.0423583984375,
+          618.4215850830078
+        ],
+        [
+          311.677734375,
+          618.4215850830078
+        ]
+      ]
+    },
+    {
+      "title": "V. RESULTS",
+      "heading_level": null,
+      "page_id": 6,
+      "polygon": [
+        [
+          146.42578125,
+          645.046875
+        ],
+        [
+          200.72886657714844,
+          643.5
+        ],
+        [
+          200.72886657714844,
+          656.0190124511719
+        ],
+        [
+          146.42578125,
+          656.0190124511719
+        ]
+      ]
+    },
+    {
+      "title": "SFT and DPO Improve Alignment to Coding Preferences.",
+      "heading_level": null,
+      "page_id": 6,
+      "polygon": [
+        [
+          48.963951110839844,
+          659.7421875
+        ],
+        [
+          300.021484375,
+          658.1953125
+        ],
+        [
+          300.021484375,
+          670.9400482177734
+        ],
+        [
+          48.963951110839844,
+          670.9400482177734
+        ]
+      ]
+    },
+    {
+      "title": "DPO Enhances Competitive Edge Against GPT-4-Turbo.\nFig. 4 illustrates the win-tie-lose ratios of the LLMs against\nGPT-4-Turbo for all preferences combined.",
+      "heading_level": null,
+      "page_id": 6,
+      "polygon": [
+        [
+          308.091796875,
+          499.7824401855469
+        ],
+        [
+          563.0354614257812,
+          498.48046875
+        ],
+        [
+          563.0354614257812,
+          533.7459716796875
+        ],
+        [
+          308.091796875,
+          533.7459716796875
+        ]
+      ]
+    },
+    {
+      "title": "Different Judges and References Impact Alignment Scores.\nWe investigate the effect of judges and references on the LLMs\nalignment scores in Table IV.",
+      "heading_level": null,
+      "page_id": 6,
+      "polygon": [
+        [
+          309.287109375,
+          684.10546875
+        ],
+        [
+          563.291015625,
+          682.55859375
+        ],
+        [
+          563.0355224609375,
+          718.8519821166992
+        ],
+        [
+          308.091796875,
+          718.8519821166992
+        ]
+      ]
+    },
+    {
+      "title": "VI. DISCUSSION",
+      "heading_level": null,
+      "page_id": 7,
+      "polygon": [
+        [
+          400.5,
+          667.08984375
+        ],
+        [
+          474.0,
+          667.08984375
+        ],
+        [
+          474.0,
+          676.5
+        ],
+        [
+          400.5,
+          676.5
+        ]
+      ]
+    },
+    {
+      "title": "A. LLM Alignment and LLM-as-a-Judge",
+      "heading_level": null,
+      "page_id": 8,
+      "polygon": [
+        [
+          47.21484375,
+          356.5546875
+        ],
+        [
+          214.77154541015625,
+          355.0078125
+        ],
+        [
+          214.77154541015625,
+          366.9745178222656
+        ],
+        [
+          47.21484375,
+          366.9745178222656
+        ]
+      ]
+    },
+    {
+      "title": "B. Limitations",
+      "heading_level": null,
+      "page_id": 8,
+      "polygon": [
+        [
+          310.18359375,
+          464.44921875
+        ],
+        [
+          370.93670654296875,
+          464.44921875
+        ],
+        [
+          370.93670654296875,
+          476.5704040527344
+        ],
+        [
+          310.18359375,
+          476.5704040527344
+        ]
+      ]
+    },
+    {
+      "title": "VII. RELATED WORK",
+      "heading_level": null,
+      "page_id": 9,
+      "polygon": [
+        [
+          125.806640625,
+          92.0390625
+        ],
+        [
+          221.28919982910156,
+          90.4921875
+        ],
+        [
+          221.28919982910156,
+          102.426025390625
+        ],
+        [
+          125.806640625,
+          102.426025390625
+        ]
+      ]
+    },
+    {
+      "title": "A. Execution-based Benchmarks",
+      "heading_level": null,
+      "page_id": 9,
+      "polygon": [
+        [
+          46.6171875,
+          172.15301513671875
+        ],
+        [
+          181.50643920898438,
+          170.9296875
+        ],
+        [
+          181.50643920898438,
+          182.1156005859375
+        ],
+        [
+          46.6171875,
+          182.1156005859375
+        ]
+      ]
+    },
+    {
+      "title": "B. General Datasets and Closed-Solutions Benchmarks",
+      "heading_level": null,
+      "page_id": 9,
+      "polygon": [
+        [
+          48.41015625,
+          526.7408752441406
+        ],
+        [
+          275.9617919921875,
+          525.55078125
+        ],
+        [
+          275.9617919921875,
+          536.7034759521484
+        ],
+        [
+          47.21484375,
+          536.7034759521484
+        ]
+      ]
+    },
+    {
+      "title": "C. Non-Functional Evaluation of LLM-Generated Code",
+      "heading_level": null,
+      "page_id": 9,
+      "polygon": [
+        [
+          310.482421875,
+          131.61688232421875
+        ],
+        [
+          540.7989501953125,
+          131.61688232421875
+        ],
+        [
+          540.7989501953125,
+          141.5794677734375
+        ],
+        [
+          310.482421875,
+          141.5794677734375
+        ]
+      ]
+    },
+    {
+      "title": "VIII. CONCLUSION AND FUTURE WORK",
+      "heading_level": null,
+      "page_id": 9,
+      "polygon": [
+        [
+          348.732421875,
+          466.76953125
+        ],
+        [
+          524.3201293945312,
+          465.22265625
+        ],
+        [
+          524.3201293945312,
+          477.2078552246094
+        ],
+        [
+          348.732421875,
+          477.2078552246094
+        ]
+      ]
+    },
+    {
+      "title": "REFERENCES",
+      "heading_level": null,
+      "page_id": 9,
+      "polygon": [
+        [
+          407.302734375,
+          682.55859375
+        ],
+        [
+          465.4123840332031,
+          682.55859375
+        ],
+        [
+          465.4123840332031,
+          693.6918411254883
+        ],
+        [
+          407.302734375,
+          693.6918411254883
+        ]
+      ]
+    }
+  ],
+  "page_stats": [
+    {
+      "page_id": 0,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          252
+        ],
+        [
+          "Line",
+          98
+        ],
+        [
+          "Text",
+          8
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "Reference",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 1,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          268
+        ],
+        [
+          "Line",
+          110
+        ],
+        [
+          "Text",
+          11
+        ],
+        [
+          "ListItem",
+          3
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 2,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          80
+        ],
+        [
+          "Span",
+          16
+        ],
+        [
+          "Text",
+          3
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ],
+        [
+          "Reference",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 3,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          308
+        ],
+        [
+          "Line",
+          115
+        ],
+        [
+          "Text",
+          27
+        ],
+        [
+          "SectionHeader",
+          5
+        ],
+        [
+          "ListItem",
+          5
+        ],
+        [
+          "Reference",
+          4
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 4,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          141
+        ],
+        [
+          "Span",
+          52
+        ],
+        [
+          "Text",
+          9
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ],
+        [
+          "Reference",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 5,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          886
+        ],
+        [
+          "Line",
+          174
+        ],
+        [
+          "TableCell",
+          105
+        ],
+        [
+          "Text",
+          7
+        ],
+        [
+          "SectionHeader",
+          4
+        ],
+        [
+          "Equation",
+          2
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "Table",
+          1
+        ],
+        [
+          "TableGroup",
+          1
+        ],
+        [
+          "Reference",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 6,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          269
+        ],
+        [
+          "Line",
+          110
+        ],
+        [
+          "Text",
+          10
+        ],
+        [
+          "SectionHeader",
+          4
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 7,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          101
+        ],
+        [
+          "TableCell",
+          78
+        ],
+        [
+          "Span",
+          27
+        ],
+        [
+          "Text",
+          7
+        ],
+        [
+          "Caption",
+          2
+        ],
+        [
+          "Reference",
+          2
+        ],
+        [
+          "Table",
+          1
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "TableGroup",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 8,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          282
+        ],
+        [
+          "Line",
+          102
+        ],
+        [
+          "TableCell",
+          81
+        ],
+        [
+          "Text",
+          10
+        ],
+        [
+          "Caption",
+          2
+        ],
+        [
+          "Table",
+          2
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "TableGroup",
+          2
+        ],
+        [
+          "Reference",
+          2
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 9,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          282
+        ],
+        [
+          "Line",
+          107
+        ],
+        [
+          "Text",
+          10
+        ],
+        [
+          "SectionHeader",
+          6
+        ],
+        [
+          "Reference",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 10,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          546
+        ],
+        [
+          "Line",
+          145
+        ],
+        [
+          "ListItem",
+          44
+        ],
+        [
+          "Reference",
+          39
+        ],
+        [
+          "ListGroup",
+          2
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 11,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          269
+        ],
+        [
+          "Line",
+          79
+        ],
+        [
+          "ListItem",
+          24
+        ],
+        [
+          "Reference",
+          22
+        ],
+        [
+          "ListGroup",
+          2
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    }
+  ],
+  "debug_data_path": "debug_data/CodeUltraFeedback- An LLM-as-a-Judge Dataset for Aligning Large Language Models to Coding Preferences"
+}

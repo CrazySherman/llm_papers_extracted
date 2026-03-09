@@ -1,0 +1,1325 @@
+{
+  "table_of_contents": [
+    {
+      "title": "Q-Probe: A Lightweight Approach to Reward Maximization for Language Models",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          161.25,
+          89.25
+        ],
+        [
+          435.0,
+          89.25
+        ],
+        [
+          435.0,
+          120.65625
+        ],
+        [
+          161.25,
+          120.65625
+        ]
+      ]
+    },
+    {
+      "title": "Abstract",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          149.115234375,
+          193.5
+        ],
+        [
+          195.75,
+          192.5859375
+        ],
+        [
+          195.75,
+          203.25
+        ],
+        [
+          149.115234375,
+          203.4140625
+        ]
+      ]
+    },
+    {
+      "title": "1. Introduction",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          54.0,
+          512.25
+        ],
+        [
+          132.75,
+          511.62890625
+        ],
+        [
+          132.75,
+          522.0
+        ],
+        [
+          54.0,
+          522.0
+        ]
+      ]
+    },
+    {
+      "title": "2. Related work",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          54.685546875,
+          630.73828125
+        ],
+        [
+          136.00608825683594,
+          630.73828125
+        ],
+        [
+          136.00608825683594,
+          643.079345703125
+        ],
+        [
+          54.685546875,
+          643.079345703125
+        ]
+      ]
+    },
+    {
+      "title": "3. Setting",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          54.38671875,
+          238.11614990234375
+        ],
+        [
+          103.26080322265625,
+          237.4453125
+        ],
+        [
+          103.26080322265625,
+          250.07135009765625
+        ],
+        [
+          54.38671875,
+          250.07135009765625
+        ]
+      ]
+    },
+    {
+      "title": "3.1. Feedback: oracle rewards and preferences",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          54.984375,
+          427.6135559082031
+        ],
+        [
+          253.0780792236328,
+          426.1640625
+        ],
+        [
+          253.0780792236328,
+          437.5761413574219
+        ],
+        [
+          53.7890625,
+          437.5761413574219
+        ]
+      ]
+    },
+    {
+      "title": "3.2. Online vs. offline access to feedback",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          306.298828125,
+          204.0985107421875
+        ],
+        [
+          477.12298583984375,
+          202.640625
+        ],
+        [
+          477.12298583984375,
+          214.06109619140625
+        ],
+        [
+          305.103515625,
+          214.06109619140625
+        ]
+      ]
+    },
+    {
+      "title": "3.3. Access to the LLM",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          305.701171875,
+          611.40234375
+        ],
+        [
+          404.8343811035156,
+          611.40234375
+        ],
+        [
+          404.8343811035156,
+          622.3121185302734
+        ],
+        [
+          305.701171875,
+          622.3121185302734
+        ]
+      ]
+    },
+    {
+      "title": "4. Inference using Q-probes",
+      "heading_level": null,
+      "page_id": 3,
+      "polygon": [
+        [
+          54.0,
+          218.25
+        ],
+        [
+          196.5,
+          216.94921875
+        ],
+        [
+          196.5,
+          228.75
+        ],
+        [
+          54.0,
+          230.09765625
+        ]
+      ]
+    },
+    {
+      "title": "4.1. Defining the Q-probe policy",
+      "heading_level": null,
+      "page_id": 3,
+      "polygon": [
+        [
+          54.0,
+          235.5
+        ],
+        [
+          191.25,
+          235.5
+        ],
+        [
+          191.25,
+          246.0
+        ],
+        [
+          53.490234375,
+          247.11328125
+        ]
+      ]
+    },
+    {
+      "title": "4.2. Theoretical motivation for the Q-probe policy",
+      "heading_level": null,
+      "page_id": 3,
+      "polygon": [
+        [
+          54.0,
+          392.25
+        ],
+        [
+          267.75,
+          390.97265625
+        ],
+        [
+          267.75,
+          401.25
+        ],
+        [
+          54.0,
+          402.57421875
+        ]
+      ]
+    },
+    {
+      "title": "5. Training algorithms for Q-probes",
+      "heading_level": null,
+      "page_id": 3,
+      "polygon": [
+        [
+          306.0,
+          182.14453125
+        ],
+        [
+          490.5,
+          180.59765625
+        ],
+        [
+          490.5,
+          192.19921875
+        ],
+        [
+          304.8046875,
+          193.74609375
+        ]
+      ]
+    },
+    {
+      "title": "5.1. Learning from oracle reward feedback",
+      "heading_level": null,
+      "page_id": 3,
+      "polygon": [
+        [
+          305.25,
+          296.2265625
+        ],
+        [
+          490.5,
+          294.6796875
+        ],
+        [
+          490.5,
+          304.5
+        ],
+        [
+          304.8046875,
+          305.5078125
+        ]
+      ]
+    },
+    {
+      "title": "5.2. Learning from preference feedback",
+      "heading_level": null,
+      "page_id": 4,
+      "polygon": [
+        [
+          54.984375,
+          363.81549072265625
+        ],
+        [
+          223.52896118164062,
+          362.35546875
+        ],
+        [
+          223.52896118164062,
+          373.778076171875
+        ],
+        [
+          54.984375,
+          373.778076171875
+        ]
+      ]
+    },
+    {
+      "title": "6. Oracle reward experiments",
+      "heading_level": null,
+      "page_id": 4,
+      "polygon": [
+        [
+          54.984375,
+          652.63916015625
+        ],
+        [
+          207.28298950195312,
+          652.0078125
+        ],
+        [
+          207.28298950195312,
+          664.594352722168
+        ],
+        [
+          54.984375,
+          664.594352722168
+        ]
+      ]
+    },
+    {
+      "title": "6.1. Setup",
+      "heading_level": null,
+      "page_id": 4,
+      "polygon": [
+        [
+          305.40234375,
+          227.390625
+        ],
+        [
+          349.2331237792969,
+          227.390625
+        ],
+        [
+          349.2331237792969,
+          237.9720458984375
+        ],
+        [
+          305.40234375,
+          237.9720458984375
+        ]
+      ]
+    },
+    {
+      "title": "6.2. Code-LLaMA results",
+      "heading_level": null,
+      "page_id": 5,
+      "polygon": [
+        [
+          55.283203125,
+          399.48046875
+        ],
+        [
+          163.73345947265625,
+          397.93359375
+        ],
+        [
+          163.73345947265625,
+          409.80810546875
+        ],
+        [
+          54.087890625,
+          409.80810546875
+        ]
+      ]
+    },
+    {
+      "title": "6.3. OpenAI API results",
+      "heading_level": null,
+      "page_id": 6,
+      "polygon": [
+        [
+          54.685546875,
+          515.109375
+        ],
+        [
+          157.3773193359375,
+          513.5625
+        ],
+        [
+          157.3773193359375,
+          525.3750915527344
+        ],
+        [
+          54.685546875,
+          525.3750915527344
+        ]
+      ]
+    },
+    {
+      "title": "7. Preference feedback experiments",
+      "heading_level": null,
+      "page_id": 6,
+      "polygon": [
+        [
+          306.298828125,
+          118.3302001953125
+        ],
+        [
+          488.27435302734375,
+          117.17578125
+        ],
+        [
+          488.27435302734375,
+          130.285400390625
+        ],
+        [
+          306.298828125,
+          130.32421875
+        ]
+      ]
+    },
+    {
+      "title": "7.1. Setup",
+      "heading_level": null,
+      "page_id": 6,
+      "polygon": [
+        [
+          305.701171875,
+          446.2734375
+        ],
+        [
+          349.2331237792969,
+          446.2734375
+        ],
+        [
+          349.2331237792969,
+          456.46710205078125
+        ],
+        [
+          305.701171875,
+          456.46710205078125
+        ]
+      ]
+    },
+    {
+      "title": "7.2. Experimental Results",
+      "heading_level": null,
+      "page_id": 7,
+      "polygon": [
+        [
+          53.7890625,
+          607.0685272216797
+        ],
+        [
+          164.47067260742188,
+          606.76171875
+        ],
+        [
+          164.47067260742188,
+          617.0311279296875
+        ],
+        [
+          53.7890625,
+          617.0311279296875
+        ]
+      ]
+    },
+    {
+      "title": "8. Discussion",
+      "heading_level": null,
+      "page_id": 7,
+      "polygon": [
+        [
+          306.0,
+          328.7109375
+        ],
+        [
+          373.20556640625,
+          328.7109375
+        ],
+        [
+          373.20556640625,
+          341.49334716796875
+        ],
+        [
+          306.0,
+          341.49334716796875
+        ]
+      ]
+    },
+    {
+      "title": "Impact Statement",
+      "heading_level": null,
+      "page_id": 8,
+      "polygon": [
+        [
+          54.984375,
+          69.37646484375
+        ],
+        [
+          131.52438354492188,
+          68.0625
+        ],
+        [
+          131.52438354492188,
+          79.33905029296875
+        ],
+        [
+          54.984375,
+          79.33905029296875
+        ]
+      ]
+    },
+    {
+      "title": "Acknowledgments",
+      "heading_level": null,
+      "page_id": 8,
+      "polygon": [
+        [
+          54.685546875,
+          156.99749755859375
+        ],
+        [
+          133.37742614746094,
+          155.84765625
+        ],
+        [
+          133.37742614746094,
+          166.9600830078125
+        ],
+        [
+          54.685546875,
+          167.44921875
+        ]
+      ]
+    },
+    {
+      "title": "References",
+      "heading_level": null,
+      "page_id": 8,
+      "polygon": [
+        [
+          55.283203125,
+          342.1621398925781
+        ],
+        [
+          110.9838638305664,
+          340.69921875
+        ],
+        [
+          110.9838638305664,
+          354.1173400878906
+        ],
+        [
+          54.087890625,
+          354.1173400878906
+        ]
+      ]
+    },
+    {
+      "title": "A. Proofs",
+      "heading_level": null,
+      "page_id": 11,
+      "polygon": [
+        [
+          53.7890625,
+          67.5
+        ],
+        [
+          103.5,
+          66.90234375
+        ],
+        [
+          103.5,
+          77.25
+        ],
+        [
+          53.7890625,
+          77.25
+        ]
+      ]
+    },
+    {
+      "title": "B. Preference learning objectives",
+      "heading_level": null,
+      "page_id": 11,
+      "polygon": [
+        [
+          54.0,
+          530.578125
+        ],
+        [
+          222.75,
+          529.03125
+        ],
+        [
+          222.75,
+          540.75
+        ],
+        [
+          54.0,
+          541.40625
+        ]
+      ]
+    },
+    {
+      "title": "C. Additional OpenAI API Experiments",
+      "heading_level": null,
+      "page_id": 12,
+      "polygon": [
+        [
+          54.0,
+          235.5
+        ],
+        [
+          261.0,
+          233.96484375
+        ],
+        [
+          261.0,
+          246.0
+        ],
+        [
+          54.0,
+          247.11328125
+        ]
+      ]
+    }
+  ],
+  "page_stats": [
+    {
+      "page_id": 0,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          99
+        ],
+        [
+          "Span",
+          43
+        ],
+        [
+          "Text",
+          10
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "Footnote",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 1,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          249
+        ],
+        [
+          "Line",
+          68
+        ],
+        [
+          "Text",
+          9
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 2,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          480
+        ],
+        [
+          "Line",
+          107
+        ],
+        [
+          "Text",
+          13
+        ],
+        [
+          "SectionHeader",
+          4
+        ],
+        [
+          "ListItem",
+          4
+        ],
+        [
+          "ListGroup",
+          2
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "Equation",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 3,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          113
+        ],
+        [
+          "Span",
+          100
+        ],
+        [
+          "Text",
+          18
+        ],
+        [
+          "Equation",
+          6
+        ],
+        [
+          "SectionHeader",
+          5
+        ],
+        [
+          "ListItem",
+          2
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ],
+        [
+          "Reference",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 4,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          480
+        ],
+        [
+          "Line",
+          121
+        ],
+        [
+          "Text",
+          16
+        ],
+        [
+          "Equation",
+          3
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "Footnote",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "Reference",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 5,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          344
+        ],
+        [
+          "Line",
+          71
+        ],
+        [
+          "TableCell",
+          33
+        ],
+        [
+          "Text",
+          7
+        ],
+        [
+          "Caption",
+          3
+        ],
+        [
+          "Reference",
+          3
+        ],
+        [
+          "Figure",
+          2
+        ],
+        [
+          "FigureGroup",
+          2
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "Table",
+          1
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "TableGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 6,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          339
+        ],
+        [
+          "Line",
+          82
+        ],
+        [
+          "TableCell",
+          34
+        ],
+        [
+          "Text",
+          8
+        ],
+        [
+          "Caption",
+          3
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "Reference",
+          3
+        ],
+        [
+          "Table",
+          2
+        ],
+        [
+          "TableGroup",
+          2
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 7,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          233
+        ],
+        [
+          "Line",
+          71
+        ],
+        [
+          "Text",
+          8
+        ],
+        [
+          "Figure",
+          2
+        ],
+        [
+          "Caption",
+          2
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "FigureGroup",
+          2
+        ],
+        [
+          "Reference",
+          2
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 8,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          224
+        ],
+        [
+          "Line",
+          96
+        ],
+        [
+          "ListItem",
+          17
+        ],
+        [
+          "Reference",
+          17
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "Text",
+          2
+        ],
+        [
+          "ListGroup",
+          2
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 9,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          248
+        ],
+        [
+          "Line",
+          97
+        ],
+        [
+          "ListItem",
+          22
+        ],
+        [
+          "Reference",
+          21
+        ],
+        [
+          "ListGroup",
+          2
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 10,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          173
+        ],
+        [
+          "Line",
+          67
+        ],
+        [
+          "ListItem",
+          15
+        ],
+        [
+          "Reference",
+          15
+        ],
+        [
+          "ListGroup",
+          2
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 11,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          49
+        ],
+        [
+          "Span",
+          32
+        ],
+        [
+          "Equation",
+          12
+        ],
+        [
+          "Text",
+          9
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "Reference",
+          2
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 12,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "TableCell",
+          33
+        ],
+        [
+          "Line",
+          27
+        ],
+        [
+          "Span",
+          25
+        ],
+        [
+          "Text",
+          5
+        ],
+        [
+          "Equation",
+          2
+        ],
+        [
+          "Reference",
+          2
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "Table",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "TableGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    }
+  ],
+  "debug_data_path": "debug_data/[Harvard]Q-Probe- A Lightweight Approach to Reward Maximization for Language Models"
+}

@@ -1,0 +1,1280 @@
+{
+  "table_of_contents": [
+    {
+      "title": "Overconfidence in LLM-as-a-Judge: Diagnosis and Confidence-Driven Solution",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          62.25,
+          97.06640625
+        ],
+        [
+          549.0,
+          97.06640625
+        ],
+        [
+          549.0,
+          110.21484375
+        ],
+        [
+          62.25,
+          110.21484375
+        ]
+      ]
+    },
+    {
+      "title": "Abstract",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          153.75,
+          239.765625
+        ],
+        [
+          192.0,
+          239.765625
+        ],
+        [
+          192.0,
+          249.0
+        ],
+        [
+          153.75,
+          249.0
+        ]
+      ]
+    },
+    {
+      "title": "1 Introduction",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          131.185546875,
+          486.4921875
+        ],
+        [
+          215.25,
+          486.4921875
+        ],
+        [
+          215.25,
+          496.5
+        ],
+        [
+          131.185546875,
+          496.5
+        ]
+      ]
+    },
+    {
+      "title": "2 Related Work",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          127.001953125,
+          610.1685943603516
+        ],
+        [
+          217.795166015625,
+          610.1685943603516
+        ],
+        [
+          217.795166015625,
+          622.1237945556641
+        ],
+        [
+          127.001953125,
+          622.1237945556641
+        ]
+      ]
+    },
+    {
+      "title": "LLM-as-a-Judge",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          53.19140625,
+          624.9375
+        ],
+        [
+          132.62188720703125,
+          624.9375
+        ],
+        [
+          132.62188720703125,
+          636.3085784912109
+        ],
+        [
+          51.99609375,
+          636.3085784912109
+        ]
+      ]
+    },
+    {
+      "title": "Calibration in LLMs",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          319.447265625,
+          317.23516845703125
+        ],
+        [
+          417.0928039550781,
+          316.3359375
+        ],
+        [
+          417.0928039550781,
+          328.144287109375
+        ],
+        [
+          318.251953125,
+          328.144287109375
+        ]
+      ]
+    },
+    {
+      "title": "Uncertainty Quantification and Reward Modeling",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          318.251953125,
+          537.5390625
+        ],
+        [
+          552.2347412109375,
+          535.9921875
+        ],
+        [
+          552.2347412109375,
+          548.5330657958984
+        ],
+        [
+          318.251953125,
+          548.5330657958984
+        ]
+      ]
+    },
+    {
+      "title": "3 Overconfidence in LLM-as-a-Judge",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          72.615234375,
+          54.0
+        ],
+        [
+          273.75,
+          54.0
+        ],
+        [
+          273.75,
+          65.25
+        ],
+        [
+          72.615234375,
+          65.25
+        ]
+      ]
+    },
+    {
+      "title": "How to measure confidence in LLMs?",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          52.5,
+          275.25
+        ],
+        [
+          231.0,
+          274.95703125
+        ],
+        [
+          231.0,
+          285.0
+        ],
+        [
+          52.5,
+          285.01171875
+        ]
+      ]
+    },
+    {
+      "title": "Existing Calibration Evaluation Metrics",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          52.5,
+          547.5
+        ],
+        [
+          242.25,
+          546.43359375
+        ],
+        [
+          242.25,
+          556.5
+        ],
+        [
+          52.5,
+          556.5
+        ]
+      ]
+    },
+    {
+      "title": "Initial Results",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          52.5,
+          657.80859375
+        ],
+        [
+          120.0,
+          656.26171875
+        ],
+        [
+          120.0,
+          666.0
+        ],
+        [
+          52.5,
+          666.31640625
+        ]
+      ]
+    },
+    {
+      "title": "Empirical Observations of Overconfidence",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          317.953125,
+          230.25
+        ],
+        [
+          518.25,
+          229.32421875
+        ],
+        [
+          518.25,
+          240.75
+        ],
+        [
+          316.7578125,
+          240.92578125
+        ]
+      ]
+    },
+    {
+      "title": "4 TH-Score: A New Metric for LLM-as-a-Judge Calibration Evaluation",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          342.0,
+          443.56640625
+        ],
+        [
+          553.5,
+          442.01953125
+        ],
+        [
+          553.5,
+          469.08984375
+        ],
+        [
+          342.0,
+          470.63671875
+        ]
+      ]
+    },
+    {
+      "title": "Definition",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          317.25,
+          570.41015625
+        ],
+        [
+          366.75,
+          570.41015625
+        ],
+        [
+          366.75,
+          579.75
+        ],
+        [
+          317.25,
+          579.75
+        ]
+      ]
+    },
+    {
+      "title": "Impact of \u03f5 on TH-Score Performance",
+      "heading_level": null,
+      "page_id": 4,
+      "polygon": [
+        [
+          54.0,
+          319.6501770019531
+        ],
+        [
+          231.3368377685547,
+          318.26953125
+        ],
+        [
+          231.3368377685547,
+          330.712158203125
+        ],
+        [
+          52.892578125,
+          330.712158203125
+        ]
+      ]
+    },
+    {
+      "title": "5 LLM-as-a-Fuser",
+      "heading_level": null,
+      "page_id": 4,
+      "polygon": [
+        [
+          120.427734375,
+          643.88671875
+        ],
+        [
+          224.7183074951172,
+          643.88671875
+        ],
+        [
+          224.7183074951172,
+          656.43115234375
+        ],
+        [
+          120.427734375,
+          656.43115234375
+        ]
+      ]
+    },
+    {
+      "title": "Methodology",
+      "heading_level": null,
+      "page_id": 4,
+      "polygon": [
+        [
+          319.1484375,
+          421.1507873535156
+        ],
+        [
+          380.7110290527344,
+          419.9765625
+        ],
+        [
+          380.7110290527344,
+          432.0599060058594
+        ],
+        [
+          317.953125,
+          432.0599060058594
+        ]
+      ]
+    },
+    {
+      "title": "Baseline Methods",
+      "heading_level": null,
+      "page_id": 4,
+      "polygon": [
+        [
+          319.1484375,
+          495.7734375
+        ],
+        [
+          401.623779296875,
+          495.7734375
+        ],
+        [
+          401.623779296875,
+          506.95086669921875
+        ],
+        [
+          319.1484375,
+          506.95086669921875
+        ]
+      ]
+    },
+    {
+      "title": "Experimental Results",
+      "heading_level": null,
+      "page_id": 5,
+      "polygon": [
+        [
+          52.5,
+          624.0
+        ],
+        [
+          156.0,
+          623.77734375
+        ],
+        [
+          156.0,
+          633.0
+        ],
+        [
+          52.5,
+          633.83203125
+        ]
+      ]
+    },
+    {
+      "title": "Disagreement with Majority Voting",
+      "heading_level": null,
+      "page_id": 6,
+      "polygon": [
+        [
+          53.490234375,
+          609.2860565185547
+        ],
+        [
+          219.04376220703125,
+          608.6953125
+        ],
+        [
+          219.04376220703125,
+          620.1951446533203
+        ],
+        [
+          53.490234375,
+          620.1951446533203
+        ]
+      ]
+    },
+    {
+      "title": "6 Conclusion",
+      "heading_level": null,
+      "page_id": 6,
+      "polygon": [
+        [
+          400.130859375,
+          621.45703125
+        ],
+        [
+          476.2837219238281,
+          621.45703125
+        ],
+        [
+          476.2837219238281,
+          633.7863616943359
+        ],
+        [
+          400.130859375,
+          633.7863616943359
+        ]
+      ]
+    },
+    {
+      "title": "References",
+      "heading_level": null,
+      "page_id": 7,
+      "polygon": [
+        [
+          144.6328125,
+          147.2659912109375
+        ],
+        [
+          201.0218505859375,
+          146.1796875
+        ],
+        [
+          201.0218505859375,
+          159.22119140625
+        ],
+        [
+          143.4375,
+          159.22119140625
+        ]
+      ]
+    },
+    {
+      "title": "A Appendices",
+      "heading_level": null,
+      "page_id": 9,
+      "polygon": [
+        [
+          131.783203125,
+          54.0
+        ],
+        [
+          214.5,
+          53.3671875
+        ],
+        [
+          214.5,
+          65.25
+        ],
+        [
+          131.783203125,
+          65.7421875
+        ]
+      ]
+    },
+    {
+      "title": "Self-Confidence (SC) Setting Prompt",
+      "heading_level": null,
+      "page_id": 9,
+      "polygon": [
+        [
+          52.5,
+          72.0
+        ],
+        [
+          225.75,
+          71.15625
+        ],
+        [
+          225.75,
+          82.5
+        ],
+        [
+          51.3984375,
+          83.53125
+        ]
+      ]
+    },
+    {
+      "title": "Multiple-Prompting (MP) Setting Prompt",
+      "heading_level": null,
+      "page_id": 9,
+      "polygon": [
+        [
+          52.5,
+          483.75
+        ],
+        [
+          249.75,
+          482.625
+        ],
+        [
+          249.75,
+          494.25
+        ],
+        [
+          52.5,
+          494.25
+        ]
+      ]
+    },
+    {
+      "title": "LLM-as-a-Fuser Prompt",
+      "heading_level": null,
+      "page_id": 9,
+      "polygon": [
+        [
+          317.25,
+          186.75
+        ],
+        [
+          436.5,
+          185.625
+        ],
+        [
+          436.5,
+          196.453125
+        ],
+        [
+          317.25,
+          198.0
+        ]
+      ]
+    },
+    {
+      "title": "Supplementary Figures and Tables",
+      "heading_level": null,
+      "page_id": 10,
+      "polygon": [
+        [
+          52.294921875,
+          494.25
+        ],
+        [
+          216.75,
+          493.453125
+        ],
+        [
+          216.75,
+          504.75
+        ],
+        [
+          52.294921875,
+          504.75
+        ]
+      ]
+    }
+  ],
+  "page_stats": [
+    {
+      "page_id": 0,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          101
+        ],
+        [
+          "Span",
+          49
+        ],
+        [
+          "Text",
+          7
+        ],
+        [
+          "Footnote",
+          4
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 1,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          189
+        ],
+        [
+          "Line",
+          114
+        ],
+        [
+          "Text",
+          9
+        ],
+        [
+          "SectionHeader",
+          4
+        ],
+        [
+          "ListItem",
+          3
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 2,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          131
+        ],
+        [
+          "Span",
+          59
+        ],
+        [
+          "Text",
+          14
+        ],
+        [
+          "SectionHeader",
+          7
+        ],
+        [
+          "Equation",
+          2
+        ],
+        [
+          "ListItem",
+          2
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 3,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          74
+        ],
+        [
+          "Line",
+          24
+        ],
+        [
+          "Text",
+          3
+        ],
+        [
+          "Figure",
+          2
+        ],
+        [
+          "Caption",
+          2
+        ],
+        [
+          "ListItem",
+          2
+        ],
+        [
+          "FigureGroup",
+          2
+        ],
+        [
+          "Equation",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 4,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          247
+        ],
+        [
+          "TableCell",
+          123
+        ],
+        [
+          "Line",
+          82
+        ],
+        [
+          "Text",
+          6
+        ],
+        [
+          "SectionHeader",
+          4
+        ],
+        [
+          "ListItem",
+          3
+        ],
+        [
+          "Table",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "TableGroup",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 5,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "TableCell",
+          135
+        ],
+        [
+          "Line",
+          44
+        ],
+        [
+          "Span",
+          35
+        ],
+        [
+          "Text",
+          4
+        ],
+        [
+          "Table",
+          2
+        ],
+        [
+          "Caption",
+          2
+        ],
+        [
+          "TableGroup",
+          2
+        ],
+        [
+          "SectionHeader",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 6,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          142
+        ],
+        [
+          "TableCell",
+          126
+        ],
+        [
+          "Line",
+          47
+        ],
+        [
+          "Caption",
+          3
+        ],
+        [
+          "Text",
+          3
+        ],
+        [
+          "Figure",
+          2
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "FigureGroup",
+          2
+        ],
+        [
+          "Table",
+          1
+        ],
+        [
+          "TableGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 7,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          245
+        ],
+        [
+          "Line",
+          110
+        ],
+        [
+          "ListItem",
+          18
+        ],
+        [
+          "Text",
+          9
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 8,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          69
+        ],
+        [
+          "Line",
+          31
+        ],
+        [
+          "ListItem",
+          8
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 9,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          140
+        ],
+        [
+          "Line",
+          136
+        ],
+        [
+          "Text",
+          6
+        ],
+        [
+          "SectionHeader",
+          4
+        ],
+        [
+          "Code",
+          4
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 10,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          131
+        ],
+        [
+          "Span",
+          70
+        ],
+        [
+          "Figure",
+          5
+        ],
+        [
+          "Caption",
+          5
+        ],
+        [
+          "FigureGroup",
+          5
+        ],
+        [
+          "Code",
+          1
+        ],
+        [
+          "SectionHeader",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 11,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "TableCell",
+          192
+        ],
+        [
+          "Span",
+          111
+        ],
+        [
+          "Line",
+          26
+        ],
+        [
+          "Table",
+          2
+        ],
+        [
+          "Caption",
+          2
+        ],
+        [
+          "TableGroup",
+          2
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 12,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          15
+        ],
+        [
+          "Figure",
+          8
+        ],
+        [
+          "Caption",
+          8
+        ],
+        [
+          "Line",
+          8
+        ],
+        [
+          "FigureGroup",
+          8
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 13,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          15
+        ],
+        [
+          "Figure",
+          8
+        ],
+        [
+          "Caption",
+          8
+        ],
+        [
+          "Line",
+          8
+        ],
+        [
+          "FigureGroup",
+          8
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 14,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          15
+        ],
+        [
+          "Figure",
+          8
+        ],
+        [
+          "Caption",
+          8
+        ],
+        [
+          "Line",
+          8
+        ],
+        [
+          "FigureGroup",
+          8
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 15,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          5
+        ],
+        [
+          "Figure",
+          3
+        ],
+        [
+          "Caption",
+          3
+        ],
+        [
+          "Line",
+          3
+        ],
+        [
+          "FigureGroup",
+          3
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    }
+  ],
+  "debug_data_path": "debug_data/Overconfidence in LLM-as-a-Judge"
+}

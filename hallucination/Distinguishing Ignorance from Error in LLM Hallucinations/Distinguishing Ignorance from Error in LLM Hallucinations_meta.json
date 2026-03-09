@@ -1,0 +1,1593 @@
+{
+  "table_of_contents": [
+    {
+      "title": "Distinguishing Ignorance from Error in LLM\nHallucinations",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          152.4921875,
+          124.984375
+        ],
+        [
+          464.0746765136719,
+          123.33984375
+        ],
+        [
+          464.0746765136719,
+          164.3934326171875
+        ],
+        [
+          151.328125,
+          164.3934326171875
+        ]
+      ]
+    },
+    {
+      "title": "Abstract",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          291.306640625,
+          255.3134765625
+        ],
+        [
+          325.646484375,
+          255.3134765625
+        ],
+        [
+          325.1199645996094,
+          265.33251953125
+        ],
+        [
+          290.142578125,
+          265.33251953125
+        ]
+      ]
+    },
+    {
+      "title": "1 Introduction",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          107.99998474121094,
+          477.6419982910156
+        ],
+        [
+          207.37611389160156,
+          476.091796875
+        ],
+        [
+          207.37611389160156,
+          491.9881896972656
+        ],
+        [
+          107.99998474121094,
+          491.9881896972656
+        ]
+      ]
+    },
+    {
+      "title": "2 Model-specific dataset Construction",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          107.67578125,
+          85.515625
+        ],
+        [
+          349.7934508816121,
+          85.515625
+        ],
+        [
+          349.7934508816121,
+          98.671875
+        ],
+        [
+          107.67578125,
+          98.671875
+        ]
+      ]
+    },
+    {
+      "title": "2.1 Categorization of Knowledge",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          106.58942065491183,
+          209.93766696349064
+        ],
+        [
+          284.4886649874055,
+          208.85546875
+        ],
+        [
+          284.4886649874055,
+          220.43455031166516
+        ],
+        [
+          106.58942065491183,
+          222.01171875
+        ]
+      ]
+    },
+    {
+      "title": "2.2 Hallucination Despite knowledge",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          107.384765625,
+          460.3633125556545
+        ],
+        [
+          304.0050377833753,
+          459.646484375
+        ],
+        [
+          304.0050377833753,
+          470.11041852181654
+        ],
+        [
+          106.220703125,
+          471.158203125
+        ]
+      ]
+    },
+    {
+      "title": "2.3 Dataset Construction",
+      "heading_level": null,
+      "page_id": 4,
+      "polygon": [
+        [
+          107.384765625,
+          334.2509765625
+        ],
+        [
+          243.476318359375,
+          332.6064453125
+        ],
+        [
+          243.476318359375,
+          346.32342529296875
+        ],
+        [
+          106.220703125,
+          346.32342529296875
+        ]
+      ]
+    },
+    {
+      "title": "3 Implementation details",
+      "heading_level": null,
+      "page_id": 4,
+      "polygon": [
+        [
+          107.966796875,
+          515.1494140625
+        ],
+        [
+          270.9871826171875,
+          513.5048828125
+        ],
+        [
+          270.9871826171875,
+          530.3661804199219
+        ],
+        [
+          106.802734375,
+          530.7724609375
+        ]
+      ]
+    },
+    {
+      "title": "4 Detecting Different Types of Hallucinations",
+      "heading_level": null,
+      "page_id": 5,
+      "polygon": [
+        [
+          107.09375,
+          85.46197509765625
+        ],
+        [
+          394.37884521484375,
+          85.46197509765625
+        ],
+        [
+          394.37884521484375,
+          99.80816650390625
+        ],
+        [
+          107.09375,
+          99.80816650390625
+        ]
+      ]
+    },
+    {
+      "title": "4.1 Models can Distinguish Hallucinations despite knowledge from hallucina-\ntions caused by not knowing from factually correct",
+      "heading_level": null,
+      "page_id": 5,
+      "polygon": [
+        [
+          107.966796875,
+          149.99945068359375
+        ],
+        [
+          511.314453125,
+          148.4189453125
+        ],
+        [
+          510.85772705078125,
+          175.93939208984375
+        ],
+        [
+          106.802734375,
+          175.93939208984375
+        ]
+      ]
+    },
+    {
+      "title": "4.2 Generalization of WACK hallucinations across hallucination settings",
+      "heading_level": null,
+      "page_id": 5,
+      "polygon": [
+        [
+          108.0,
+          402.4651794433594
+        ],
+        [
+          484.25,
+          401.265625
+        ],
+        [
+          483.9671325683594,
+          414.4203796386719
+        ],
+        [
+          107.09375,
+          414.421875
+        ]
+      ]
+    },
+    {
+      "title": "5 Comparing Model-specific and Generic datasets",
+      "heading_level": null,
+      "page_id": 5,
+      "polygon": [
+        [
+          108.0,
+          607.654296875
+        ],
+        [
+          423.71875,
+          606.009765625
+        ],
+        [
+          423.60205078125,
+          622.6971740722656
+        ],
+        [
+          107.09375,
+          622.6971740722656
+        ]
+      ]
+    },
+    {
+      "title": "5.1 Different models have different knowledge and different hallucinations",
+      "heading_level": null,
+      "page_id": 5,
+      "polygon": [
+        [
+          107.966796875,
+          672.9251708984375
+        ],
+        [
+          496.181640625,
+          672.9251708984375
+        ],
+        [
+          495.3484802246094,
+          684.88037109375
+        ],
+        [
+          106.802734375,
+          684.88037109375
+        ]
+      ]
+    },
+    {
+      "title": "Detecting a model's hallucinations works better with a model-specific\ndataset",
+      "heading_level": null,
+      "page_id": 7,
+      "polygon": [
+        [
+          107.09375,
+          614.0676758682101
+        ],
+        [
+          510.42821158690174,
+          612.9990234375
+        ],
+        [
+          510.42821158690174,
+          638.0605520926091
+        ],
+        [
+          105.9296875,
+          638.4892578125
+        ]
+      ]
+    },
+    {
+      "title": "5.3 Preemptive Hallucination Detection Using Model-Specific Datasets",
+      "heading_level": null,
+      "page_id": 8,
+      "polygon": [
+        [
+          107.67578125,
+          611.8183437221727
+        ],
+        [
+          475.1486146095718,
+          610.943359375
+        ],
+        [
+          475.1486146095718,
+          622.3152270703473
+        ],
+        [
+          107.67578125,
+          622.455078125
+        ]
+      ]
+    },
+    {
+      "title": "6 Related Work",
+      "heading_level": null,
+      "page_id": 9,
+      "polygon": [
+        [
+          107.384765625,
+          214.611328125
+        ],
+        [
+          214.9078826904297,
+          214.611328125
+        ],
+        [
+          214.9078826904297,
+          229.0732421875
+        ],
+        [
+          107.384765625,
+          229.0732421875
+        ]
+      ]
+    },
+    {
+      "title": "7 Discussion and conclusion",
+      "heading_level": null,
+      "page_id": 9,
+      "polygon": [
+        [
+          107.67578125,
+          574.7270202636719
+        ],
+        [
+          288.9629821777344,
+          573.5302734375
+        ],
+        [
+          288.9629821777344,
+          589.0732116699219
+        ],
+        [
+          106.51171875,
+          589.0732116699219
+        ]
+      ]
+    },
+    {
+      "title": "8 Limitations",
+      "heading_level": null,
+      "page_id": 10,
+      "polygon": [
+        [
+          106.802734375,
+          85.46197509765625
+        ],
+        [
+          200.4612579345703,
+          84.693359375
+        ],
+        [
+          200.4612579345703,
+          99.80816650390625
+        ],
+        [
+          106.802734375,
+          99.80816650390625
+        ]
+      ]
+    },
+    {
+      "title": "9 Acknowledgement",
+      "heading_level": null,
+      "page_id": 10,
+      "polygon": [
+        [
+          107.67578125,
+          177.21697998046875
+        ],
+        [
+          242.70703125,
+          175.96484375
+        ],
+        [
+          242.53866577148438,
+          191.56317138671875
+        ],
+        [
+          106.51171875,
+          191.56317138671875
+        ]
+      ]
+    },
+    {
+      "title": "References",
+      "heading_level": null,
+      "page_id": 10,
+      "polygon": [
+        [
+          108.0,
+          268.4697265625
+        ],
+        [
+          174.65245056152344,
+          266.8251953125
+        ],
+        [
+          174.65245056152344,
+          283.31927490234375
+        ],
+        [
+          107.09375,
+          283.31927490234375
+        ]
+      ]
+    },
+    {
+      "title": "A Hyper parameters search for Knowledge Categorization",
+      "heading_level": null,
+      "page_id": 13,
+      "polygon": [
+        [
+          107.67578125,
+          85.46197509765625
+        ],
+        [
+          476.68359375,
+          85.46197509765625
+        ],
+        [
+          476.5826110839844,
+          99.80816650390625
+        ],
+        [
+          106.51171875,
+          99.80816650390625
+        ]
+      ]
+    },
+    {
+      "title": "B Dataset construction specifics",
+      "heading_level": null,
+      "page_id": 13,
+      "polygon": [
+        [
+          108.0,
+          586.6865234375
+        ],
+        [
+          312.0173034667969,
+          585.0419921875
+        ],
+        [
+          312.0173034667969,
+          602.0242004394531
+        ],
+        [
+          107.09375,
+          602.3095703125
+        ]
+      ]
+    },
+    {
+      "title": "B.1 Generic dataset construction",
+      "heading_level": null,
+      "page_id": 13,
+      "polygon": [
+        [
+          108.0,
+          712.0291442871094
+        ],
+        [
+          283.740234375,
+          710.8486328125
+        ],
+        [
+          283.6577453613281,
+          723.9843444824219
+        ],
+        [
+          107.384765625,
+          723.9843444824219
+        ]
+      ]
+    },
+    {
+      "title": "B.2 Specific dataset construction",
+      "heading_level": null,
+      "page_id": 14,
+      "polygon": [
+        [
+          107.384765625,
+          367.5091552734375
+        ],
+        [
+          282.3426818847656,
+          365.908203125
+        ],
+        [
+          282.3426818847656,
+          379.46435546875
+        ],
+        [
+          107.384765625,
+          379.46435546875
+        ]
+      ]
+    },
+    {
+      "title": "Good shots:",
+      "heading_level": null,
+      "page_id": 14,
+      "polygon": [
+        [
+          122.2265625,
+          529.9501953125
+        ],
+        [
+          173.59385681152344,
+          529.9501953125
+        ],
+        [
+          173.59385681152344,
+          541.1421203613281
+        ],
+        [
+          121.0625,
+          541.1421203613281
+        ]
+      ]
+    },
+    {
+      "title": "Bad shots:",
+      "heading_level": null,
+      "page_id": 15,
+      "polygon": [
+        [
+          121.935546875,
+          363.44140625
+        ],
+        [
+          167.5067138671875,
+          361.796875
+        ],
+        [
+          167.5067138671875,
+          373.75830078125
+        ],
+        [
+          120.771484375,
+          373.75830078125
+        ]
+      ]
+    },
+    {
+      "title": "C Alice-Bob-setting dataset statistics",
+      "heading_level": null,
+      "page_id": 16,
+      "polygon": [
+        [
+          107.09375,
+          363.0302734375
+        ],
+        [
+          342.28778076171875,
+          361.3857421875
+        ],
+        [
+          342.28778076171875,
+          377.6553039550781
+        ],
+        [
+          107.09375,
+          377.6553039550781
+        ]
+      ]
+    },
+    {
+      "title": "D Detection results on the MLP and Attention components",
+      "heading_level": null,
+      "page_id": 16,
+      "polygon": [
+        [
+          108.0,
+          442.7900390625
+        ],
+        [
+          477.84765625,
+          441.1455078125
+        ],
+        [
+          477.12774658203125,
+          457.4552001953125
+        ],
+        [
+          107.67578125,
+          458.4130859375
+        ]
+      ]
+    }
+  ],
+  "page_stats": [
+    {
+      "page_id": 0,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          161
+        ],
+        [
+          "Line",
+          48
+        ],
+        [
+          "Text",
+          4
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "Footnote",
+          2
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "Reference",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 1,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          240
+        ],
+        [
+          "Line",
+          71
+        ],
+        [
+          "Text",
+          4
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ],
+        [
+          "Reference",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 2,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          63
+        ],
+        [
+          "Span",
+          61
+        ],
+        [
+          "Text",
+          6
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "Reference",
+          3
+        ],
+        [
+          "ListItem",
+          2
+        ],
+        [
+          "Footnote",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 3,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          148
+        ],
+        [
+          "Line",
+          50
+        ],
+        [
+          "TableCell",
+          19
+        ],
+        [
+          "Text",
+          14
+        ],
+        [
+          "Caption",
+          2
+        ],
+        [
+          "Reference",
+          2
+        ],
+        [
+          "Table",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "TableGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 4,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          142
+        ],
+        [
+          "Line",
+          50
+        ],
+        [
+          "TableCell",
+          28
+        ],
+        [
+          "Text",
+          5
+        ],
+        [
+          "Reference",
+          3
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "Footnote",
+          2
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "Table",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "TableGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 5,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          118
+        ],
+        [
+          "Line",
+          46
+        ],
+        [
+          "Text",
+          7
+        ],
+        [
+          "SectionHeader",
+          5
+        ],
+        [
+          "Reference",
+          3
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 6,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          43
+        ],
+        [
+          "Span",
+          9
+        ],
+        [
+          "Figure",
+          2
+        ],
+        [
+          "Caption",
+          2
+        ],
+        [
+          "FigureGroup",
+          2
+        ],
+        [
+          "Reference",
+          2
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 7,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          58
+        ],
+        [
+          "Span",
+          45
+        ],
+        [
+          "Text",
+          6
+        ],
+        [
+          "Figure",
+          5
+        ],
+        [
+          "ListItem",
+          3
+        ],
+        [
+          "Reference",
+          3
+        ],
+        [
+          "Caption",
+          2
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 8,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          62
+        ],
+        [
+          "Span",
+          40
+        ],
+        [
+          "Text",
+          6
+        ],
+        [
+          "Figure",
+          2
+        ],
+        [
+          "Reference",
+          2
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 9,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          177
+        ],
+        [
+          "Line",
+          45
+        ],
+        [
+          "Text",
+          5
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 10,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          116
+        ],
+        [
+          "Line",
+          43
+        ],
+        [
+          "ListItem",
+          10
+        ],
+        [
+          "Reference",
+          10
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "Text",
+          2
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 11,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          143
+        ],
+        [
+          "Line",
+          45
+        ],
+        [
+          "ListItem",
+          17
+        ],
+        [
+          "Reference",
+          17
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 12,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          109
+        ],
+        [
+          "Line",
+          38
+        ],
+        [
+          "ListItem",
+          13
+        ],
+        [
+          "Reference",
+          13
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 13,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          164
+        ],
+        [
+          "Line",
+          48
+        ],
+        [
+          "Text",
+          16
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "Reference",
+          2
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 14,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          106
+        ],
+        [
+          "Line",
+          52
+        ],
+        [
+          "Text",
+          26
+        ],
+        [
+          "TableCell",
+          15
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "Table",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "TableGroup",
+          1
+        ],
+        [
+          "Reference",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 15,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          111
+        ],
+        [
+          "Line",
+          56
+        ],
+        [
+          "Text",
+          52
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 16,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          103
+        ],
+        [
+          "Line",
+          38
+        ],
+        [
+          "TableCell",
+          28
+        ],
+        [
+          "Text",
+          14
+        ],
+        [
+          "Reference",
+          3
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "Table",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "TableGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 17,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          24
+        ],
+        [
+          "Span",
+          6
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ],
+        [
+          "Reference",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 18,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          41
+        ],
+        [
+          "Span",
+          7
+        ],
+        [
+          "Figure",
+          2
+        ],
+        [
+          "Caption",
+          2
+        ],
+        [
+          "FigureGroup",
+          2
+        ],
+        [
+          "Reference",
+          2
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 19,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          54
+        ],
+        [
+          "Span",
+          4
+        ],
+        [
+          "Figure",
+          3
+        ],
+        [
+          "Caption",
+          3
+        ],
+        [
+          "FigureGroup",
+          3
+        ],
+        [
+          "Reference",
+          3
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 20,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          36
+        ],
+        [
+          "Span",
+          4
+        ],
+        [
+          "Figure",
+          2
+        ],
+        [
+          "Caption",
+          2
+        ],
+        [
+          "FigureGroup",
+          2
+        ],
+        [
+          "Reference",
+          2
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    }
+  ],
+  "debug_data_path": "debug_data/Distinguishing Ignorance from Error in LLM Hallucinations"
+}

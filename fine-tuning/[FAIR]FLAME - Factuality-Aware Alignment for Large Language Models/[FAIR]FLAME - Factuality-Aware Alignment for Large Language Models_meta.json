@@ -1,0 +1,1631 @@
+{
+  "table_of_contents": [
+    {
+      "title": "FLAME : Factuality-Aware Alignment for Large Language Models",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          90.796875,
+          80.58203125
+        ],
+        [
+          504.3326110839844,
+          78.9375
+        ],
+        [
+          504.3326110839844,
+          97.5902099609375
+        ],
+        [
+          90.796875,
+          97.5902099609375
+        ]
+      ]
+    },
+    {
+      "title": "Sheng-Chieh Lin1\u2217\n, Luyu Gao2\n, Barlas Oguz3\n,\nWenhan Xiong3\n, Jimmy Lin1\n, Wen-tau Yih3\n, and Xilun Chen3\u2020",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          139.396484375,
+          115.1171875
+        ],
+        [
+          462.3109130859375,
+          113.47265625
+        ],
+        [
+          462.3109130859375,
+          143.15252685546875
+        ],
+        [
+          138.232421875,
+          143.15252685546875
+        ]
+      ]
+    },
+    {
+      "title": "Abstract",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          156.857421875,
+          212.966796875
+        ],
+        [
+          202.24331665039062,
+          212.966796875
+        ],
+        [
+          202.24331665039062,
+          226.44744873046875
+        ],
+        [
+          156.857421875,
+          226.44744873046875
+        ]
+      ]
+    },
+    {
+      "title": "1 Introduction",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          70.134765625,
+          603.54296875
+        ],
+        [
+          153.67967224121094,
+          603.54296875
+        ],
+        [
+          153.67967224121094,
+          616.40234375
+        ],
+        [
+          70.134765625,
+          616.40234375
+        ]
+      ]
+    },
+    {
+      "title": "2 Related Work",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          304.40234375,
+          205.033203125
+        ],
+        [
+          395.232177734375,
+          203.5107421875
+        ],
+        [
+          395.232177734375,
+          216.9884033203125
+        ],
+        [
+          304.40234375,
+          216.9884033203125
+        ]
+      ]
+    },
+    {
+      "title": "3 A Pilot Study on Factual Alignment",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          69.552734375,
+          231.4677734375
+        ],
+        [
+          270.82867431640625,
+          231.4677734375
+        ],
+        [
+          270.82867431640625,
+          244.57537841796875
+        ],
+        [
+          69.552734375,
+          244.57537841796875
+        ]
+      ]
+    },
+    {
+      "title": "3.1 Alignment for Biography Generation",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          69.552734375,
+          453.890625
+        ],
+        [
+          268.00433349609375,
+          452.24609375
+        ],
+        [
+          268.00433349609375,
+          464.8041687011719
+        ],
+        [
+          69.552734375,
+          464.8041687011719
+        ]
+      ]
+    },
+    {
+      "title": "3.2 Strategies for Factual Alignment",
+      "heading_level": null,
+      "page_id": 3,
+      "polygon": [
+        [
+          70.716796875,
+          292.3154296875
+        ],
+        [
+          247.70780856423173,
+          290.6708984375
+        ],
+        [
+          247.70780856423173,
+          302.16028495102404
+        ],
+        [
+          69.552734375,
+          303.0048828125
+        ]
+      ]
+    },
+    {
+      "title": "4 Factuality-Aware Alignment",
+      "heading_level": null,
+      "page_id": 3,
+      "polygon": [
+        [
+          70.134765625,
+          469.3606411398041
+        ],
+        [
+          234.19647355163727,
+          467.869140625
+        ],
+        [
+          234.19647355163727,
+          480.6073018699911
+        ],
+        [
+          70.134765625,
+          480.6073018699911
+        ]
+      ]
+    },
+    {
+      "title": "4.1 Baseline Alignment",
+      "heading_level": null,
+      "page_id": 3,
+      "polygon": [
+        [
+          304.693359375,
+          326.90293855743545
+        ],
+        [
+          423.3551637279597,
+          326.0283203125
+        ],
+        [
+          423.3551637279597,
+          337.39982190560994
+        ],
+        [
+          303.529296875,
+          338.3623046875
+        ]
+      ]
+    },
+    {
+      "title": "4.2 Our Approach",
+      "heading_level": null,
+      "page_id": 3,
+      "polygon": [
+        [
+          304.7556675062972,
+          640.3098842386464
+        ],
+        [
+          400.08564231738035,
+          639.3115234375
+        ],
+        [
+          400.08564231738035,
+          649.307212822796
+        ],
+        [
+          304.7556675062972,
+          650.0009765625
+        ]
+      ]
+    },
+    {
+      "title": "4.2.1 Factuality-Aware SFT (SFT)",
+      "heading_level": null,
+      "page_id": 3,
+      "polygon": [
+        [
+          304.7556675062972,
+          656.8049866429208
+        ],
+        [
+          479.65239294710324,
+          656.16796875
+        ],
+        [
+          479.65239294710324,
+          668.0516473731077
+        ],
+        [
+          304.7556675062972,
+          668.0516473731077
+        ]
+      ]
+    },
+    {
+      "title": "4.2.2 Factuality-Aware DPO (DPO)",
+      "heading_level": null,
+      "page_id": 4,
+      "polygon": [
+        [
+          69.05793450881612,
+          636.5609973285841
+        ],
+        [
+          250.71032745591938,
+          636.0224609375
+        ],
+        [
+          250.71032745591938,
+          646.3081032947462
+        ],
+        [
+          69.05793450881612,
+          646.7119140625
+        ]
+      ]
+    },
+    {
+      "title": "5 Experiments",
+      "heading_level": null,
+      "page_id": 4,
+      "polygon": [
+        [
+          305.275390625,
+          639.560106856634
+        ],
+        [
+          390.32745591939545,
+          638.900390625
+        ],
+        [
+          390.32745591939545,
+          649.307212822796
+        ],
+        [
+          305.275390625,
+          650.412109375
+        ]
+      ]
+    },
+    {
+      "title": "5.1 Evaluation Datasets and Metrics",
+      "heading_level": null,
+      "page_id": 4,
+      "polygon": [
+        [
+          304.984375,
+          662.3349609375
+        ],
+        [
+          483.4055415617128,
+          660.6904296875
+        ],
+        [
+          483.4055415617128,
+          671.80053428317
+        ],
+        [
+          304.984375,
+          671.80053428317
+        ]
+      ]
+    },
+    {
+      "title": "5.2 Comparisons of SFT",
+      "heading_level": null,
+      "page_id": 5,
+      "polygon": [
+        [
+          69.05793450881612,
+          673.300089047195
+        ],
+        [
+          192.911838790932,
+          672.2021484375
+        ],
+        [
+          192.911838790932,
+          683.047195013357
+        ],
+        [
+          69.05793450881612,
+          683.047195013357
+        ]
+      ]
+    },
+    {
+      "title": "5.3 Comparisons of DPO",
+      "heading_level": null,
+      "page_id": 5,
+      "polygon": [
+        [
+          304.693359375,
+          539.8397150489759
+        ],
+        [
+          430.8614609571788,
+          539.8173828125
+        ],
+        [
+          430.8614609571788,
+          550.3365983971505
+        ],
+        [
+          304.693359375,
+          550.5068359375
+        ]
+      ]
+    },
+    {
+      "title": "5.4 Results on TruthfulQA",
+      "heading_level": null,
+      "page_id": 6,
+      "polygon": [
+        [
+          69.05793450881612,
+          728.033837934105
+        ],
+        [
+          203.42065491183877,
+          726.8828125
+        ],
+        [
+          203.42065491183877,
+          738.5307212822796
+        ],
+        [
+          69.05793450881612,
+          738.5307212822796
+        ]
+      ]
+    },
+    {
+      "title": "5.5 Discussions",
+      "heading_level": null,
+      "page_id": 6,
+      "polygon": [
+        [
+          304.7556675062972,
+          405.7880859375
+        ],
+        [
+          385.823677581864,
+          404.1435546875
+        ],
+        [
+          385.823677581864,
+          415.3766696349065
+        ],
+        [
+          304.7556675062972,
+          415.3766696349065
+        ]
+      ]
+    },
+    {
+      "title": "Effects of Fact-Based Instruction Classification.",
+      "heading_level": null,
+      "page_id": 6,
+      "polygon": [
+        [
+          304.693359375,
+          600.5716829919858
+        ],
+        [
+          528.4433249370277,
+          599.0205078125
+        ],
+        [
+          528.4433249370277,
+          610.3187889581478
+        ],
+        [
+          304.693359375,
+          610.3187889581478
+        ]
+      ]
+    },
+    {
+      "title": "Effects of Fact-Based Sentence Classification.",
+      "heading_level": null,
+      "page_id": 7,
+      "polygon": [
+        [
+          69.05793450881612,
+          346.39715048975955
+        ],
+        [
+          291.9949622166247,
+          345.3515625
+        ],
+        [
+          291.9949622166247,
+          356.1442564559216
+        ],
+        [
+          69.05793450881612,
+          356.1442564559216
+        ]
+      ]
+    },
+    {
+      "title": "6 Conclusion",
+      "heading_level": null,
+      "page_id": 8,
+      "polygon": [
+        [
+          69.84375,
+          260.18707275390625
+        ],
+        [
+          145.93270874023438,
+          258.6025390625
+        ],
+        [
+          145.93270874023438,
+          272.14227294921875
+        ],
+        [
+          69.84375,
+          272.14227294921875
+        ]
+      ]
+    },
+    {
+      "title": "7 Limitations",
+      "heading_level": null,
+      "page_id": 8,
+      "polygon": [
+        [
+          69.552734375,
+          563.6630859375
+        ],
+        [
+          147.91726684570312,
+          563.6630859375
+        ],
+        [
+          147.91726684570312,
+          576.0943908691406
+        ],
+        [
+          69.552734375,
+          576.0943908691406
+        ]
+      ]
+    },
+    {
+      "title": "Acknowledgements",
+      "heading_level": null,
+      "page_id": 8,
+      "polygon": [
+        [
+          305.275390625,
+          219.2431640625
+        ],
+        [
+          404.97564697265625,
+          217.900390625
+        ],
+        [
+          404.97564697265625,
+          231.1983642578125
+        ],
+        [
+          305.275390625,
+          231.1983642578125
+        ]
+      ]
+    },
+    {
+      "title": "References",
+      "heading_level": null,
+      "page_id": 8,
+      "polygon": [
+        [
+          304.984375,
+          317.8056640625
+        ],
+        [
+          361.6858825683594,
+          317.8056640625
+        ],
+        [
+          361.6858825683594,
+          330.5023193359375
+        ],
+        [
+          304.984375,
+          330.5023193359375
+        ]
+      ]
+    },
+    {
+      "title": "A Appendix",
+      "heading_level": null,
+      "page_id": 12,
+      "polygon": [
+        [
+          69.26171875,
+          72.7591552734375
+        ],
+        [
+          140.98324584960938,
+          71.9482421875
+        ],
+        [
+          140.98324584960938,
+          84.71435546875
+        ],
+        [
+          69.26171875,
+          84.71435546875
+        ]
+      ]
+    },
+    {
+      "title": "A.1 Biography Data Generation",
+      "heading_level": null,
+      "page_id": 12,
+      "polygon": [
+        [
+          70.42578125,
+          94.841064453125
+        ],
+        [
+          227.57421875,
+          93.3271484375
+        ],
+        [
+          227.36795043945312,
+          105.7501220703125
+        ],
+        [
+          69.26171875,
+          105.7501220703125
+        ]
+      ]
+    },
+    {
+      "title": "Creating Factuality Preference Pairs for DPO.",
+      "heading_level": null,
+      "page_id": 12,
+      "polygon": [
+        [
+          69.84375,
+          494.0235900878906
+        ],
+        [
+          291.04156494140625,
+          492.9482421875
+        ],
+        [
+          291.04156494140625,
+          505.15087890625
+        ],
+        [
+          69.84375,
+          505.15087890625
+        ]
+      ]
+    },
+    {
+      "title": "A.2 Retrieval Models",
+      "heading_level": null,
+      "page_id": 12,
+      "polygon": [
+        [
+          70.42578125,
+          623.6884765625
+        ],
+        [
+          177.51953125,
+          623.6884765625
+        ],
+        [
+          177.24061584472656,
+          636.3911590576172
+        ],
+        [
+          69.26171875,
+          636.3911590576172
+        ]
+      ]
+    },
+    {
+      "title": "A.3 Alignment with Self Rewarding",
+      "heading_level": null,
+      "page_id": 12,
+      "polygon": [
+        [
+          304.984375,
+          71.9482421875
+        ],
+        [
+          480.0766906738281,
+          71.9482421875
+        ],
+        [
+          480.0766906738281,
+          84.47113037109375
+        ],
+        [
+          304.984375,
+          84.47113037109375
+        ]
+      ]
+    },
+    {
+      "title": "A.4 Factuality Reward Modeling",
+      "heading_level": null,
+      "page_id": 13,
+      "polygon": [
+        [
+          69.552734375,
+          217.43544078361532
+        ],
+        [
+          232.69521410579344,
+          217.43544078361532
+        ],
+        [
+          232.69521410579344,
+          227.93232413178984
+        ],
+        [
+          69.552734375,
+          227.93232413178984
+        ]
+      ]
+    },
+    {
+      "title": "A.5 Training Details",
+      "heading_level": null,
+      "page_id": 13,
+      "polygon": [
+        [
+          304.7556675062972,
+          411.62778272484417
+        ],
+        [
+          409.84382871536525,
+          411.1328125
+        ],
+        [
+          409.84382871536525,
+          422.12466607301866
+        ],
+        [
+          304.7556675062972,
+          422.64453125
+        ]
+      ]
+    },
+    {
+      "title": "",
+      "heading_level": null,
+      "page_id": 16,
+      "polygon": [
+        [
+          135.61328125,
+          109.361328125
+        ],
+        [
+          162.38671875,
+          107.716796875
+        ],
+        [
+          161.22265625,
+          119.228515625
+        ],
+        [
+          134.44921875,
+          120.873046875
+        ]
+      ]
+    },
+    {
+      "title": "",
+      "heading_level": null,
+      "page_id": 16,
+      "polygon": [
+        [
+          259.876953125,
+          107.716796875
+        ],
+        [
+          341.943359375,
+          106.072265625
+        ],
+        [
+          340.779296875,
+          119.228515625
+        ],
+        [
+          258.712890625,
+          120.873046875
+        ]
+      ]
+    },
+    {
+      "title": "SFT SFT + DPO SFT + DPO",
+      "heading_level": null,
+      "page_id": 16,
+      "polygon": [
+        [
+          135.23805236816406,
+          103.60546875
+        ],
+        [
+          497.345703125,
+          101.9609375
+        ],
+        [
+          496.181640625,
+          126.1385498046875
+        ],
+        [
+          135.23805236816406,
+          126.1385498046875
+        ]
+      ]
+    },
+    {
+      "title": "What are the names of some famous actors that started their careers on Broadway?",
+      "heading_level": null,
+      "page_id": 16,
+      "polygon": [
+        [
+          162.38671875,
+          131.1513671875
+        ],
+        [
+          432.44921875,
+          129.5068359375
+        ],
+        [
+          431.6261901855469,
+          139.59466552734375
+        ],
+        [
+          161.22265625,
+          139.59466552734375
+        ]
+      ]
+    },
+    {
+      "title": "Tell me the bio of Marianne McAndrew (very rare entity)",
+      "heading_level": null,
+      "page_id": 16,
+      "polygon": [
+        [
+          204.29296875,
+          362.2080078125
+        ],
+        [
+          389.7669372558594,
+          360.5634765625
+        ],
+        [
+          389.7669372558594,
+          371.19927978515625
+        ],
+        [
+          204.29296875,
+          371.19927978515625
+        ]
+      ]
+    },
+    {
+      "title": "Tell me the bio of Ji Sung (very frequent entity)",
+      "heading_level": null,
+      "page_id": 16,
+      "polygon": [
+        [
+          221.60791015625,
+          511.8603515625
+        ],
+        [
+          373.74114990234375,
+          511.8603515625
+        ],
+        [
+          373.74114990234375,
+          522.038818359375
+        ],
+        [
+          221.60791015625,
+          522.038818359375
+        ]
+      ]
+    }
+  ],
+  "page_stats": [
+    {
+      "page_id": 0,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          331
+        ],
+        [
+          "Line",
+          108
+        ],
+        [
+          "Text",
+          6
+        ],
+        [
+          "SectionHeader",
+          4
+        ],
+        [
+          "Figure",
+          2
+        ],
+        [
+          "FigureGroup",
+          2
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "Footnote",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "Reference",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 1,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          314
+        ],
+        [
+          "Line",
+          101
+        ],
+        [
+          "Text",
+          8
+        ],
+        [
+          "SectionHeader",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 2,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          375
+        ],
+        [
+          "Line",
+          99
+        ],
+        [
+          "TableCell",
+          39
+        ],
+        [
+          "Text",
+          8
+        ],
+        [
+          "Reference",
+          4
+        ],
+        [
+          "Footnote",
+          3
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "Table",
+          1
+        ],
+        [
+          "TableGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 3,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          97
+        ],
+        [
+          "Span",
+          65
+        ],
+        [
+          "TableCell",
+          23
+        ],
+        [
+          "Text",
+          6
+        ],
+        [
+          "SectionHeader",
+          5
+        ],
+        [
+          "Reference",
+          5
+        ],
+        [
+          "Table",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "Footnote",
+          1
+        ],
+        [
+          "TableGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 4,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          133
+        ],
+        [
+          "Span",
+          76
+        ],
+        [
+          "Text",
+          7
+        ],
+        [
+          "Reference",
+          5
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "Figure",
+          2
+        ],
+        [
+          "Caption",
+          2
+        ],
+        [
+          "Footnote",
+          2
+        ],
+        [
+          "FigureGroup",
+          2
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 5,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          92
+        ],
+        [
+          "Span",
+          69
+        ],
+        [
+          "TableCell",
+          56
+        ],
+        [
+          "Text",
+          6
+        ],
+        [
+          "Footnote",
+          2
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "Reference",
+          2
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "Table",
+          1
+        ],
+        [
+          "TableGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 6,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "TableCell",
+          185
+        ],
+        [
+          "Line",
+          68
+        ],
+        [
+          "Span",
+          39
+        ],
+        [
+          "Text",
+          4
+        ],
+        [
+          "Reference",
+          4
+        ],
+        [
+          "Caption",
+          3
+        ],
+        [
+          "Table",
+          3
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "Footnote",
+          2
+        ],
+        [
+          "TableGroup",
+          2
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 7,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          95
+        ],
+        [
+          "Span",
+          60
+        ],
+        [
+          "TableCell",
+          47
+        ],
+        [
+          "Text",
+          6
+        ],
+        [
+          "Caption",
+          2
+        ],
+        [
+          "Table",
+          2
+        ],
+        [
+          "TableGroup",
+          2
+        ],
+        [
+          "Reference",
+          2
+        ],
+        [
+          "Footnote",
+          1
+        ],
+        [
+          "SectionHeader",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 8,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          234
+        ],
+        [
+          "Line",
+          103
+        ],
+        [
+          "Text",
+          8
+        ],
+        [
+          "SectionHeader",
+          4
+        ],
+        [
+          "Reference",
+          3
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 9,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          252
+        ],
+        [
+          "Line",
+          106
+        ],
+        [
+          "ListItem",
+          23
+        ],
+        [
+          "Reference",
+          22
+        ],
+        [
+          "ListGroup",
+          2
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 10,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          246
+        ],
+        [
+          "Line",
+          115
+        ],
+        [
+          "ListItem",
+          16
+        ],
+        [
+          "Reference",
+          16
+        ],
+        [
+          "ListGroup",
+          2
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 11,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          48
+        ],
+        [
+          "Line",
+          23
+        ],
+        [
+          "ListItem",
+          4
+        ],
+        [
+          "Reference",
+          4
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 12,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          366
+        ],
+        [
+          "Line",
+          99
+        ],
+        [
+          "Reference",
+          9
+        ],
+        [
+          "Text",
+          6
+        ],
+        [
+          "Footnote",
+          6
+        ],
+        [
+          "SectionHeader",
+          5
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 13,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          85
+        ],
+        [
+          "TableCell",
+          67
+        ],
+        [
+          "Span",
+          54
+        ],
+        [
+          "Reference",
+          7
+        ],
+        [
+          "Text",
+          4
+        ],
+        [
+          "Footnote",
+          3
+        ],
+        [
+          "Caption",
+          2
+        ],
+        [
+          "Table",
+          2
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "TableGroup",
+          2
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 14,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "TableCell",
+          81
+        ],
+        [
+          "Line",
+          39
+        ],
+        [
+          "Span",
+          28
+        ],
+        [
+          "Caption",
+          5
+        ],
+        [
+          "Reference",
+          5
+        ],
+        [
+          "Text",
+          3
+        ],
+        [
+          "Table",
+          1
+        ],
+        [
+          "Code",
+          1
+        ],
+        [
+          "TableGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 15,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          91
+        ],
+        [
+          "Line",
+          39
+        ],
+        [
+          "Text",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "Reference",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 16,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          531
+        ],
+        [
+          "Line",
+          205
+        ],
+        [
+          "Text",
+          10
+        ],
+        [
+          "SectionHeader",
+          6
+        ],
+        [
+          "Reference",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    }
+  ],
+  "debug_data_path": "debug_data/[FAIR]FLAME - Factuality-Aware Alignment for Large Language Models"
+}

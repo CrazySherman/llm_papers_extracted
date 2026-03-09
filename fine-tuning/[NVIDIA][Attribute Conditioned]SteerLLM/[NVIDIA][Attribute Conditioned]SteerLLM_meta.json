@@ -1,0 +1,1398 @@
+{
+  "table_of_contents": [
+    {
+      "title": "SteerLM: Attribute Conditioned SFT as an (User-Steerable)\nAlternative to RLHF",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          113.49609375,
+          78.85003662109375
+        ],
+        [
+          482.19622802734375,
+          77.29296875
+        ],
+        [
+          482.19622802734375,
+          109.13623046875
+        ],
+        [
+          113.49609375,
+          109.13623046875
+        ]
+      ]
+    },
+    {
+      "title": "Yi Dong, Zhilin Wang, Makesh Narsimhan Sreedhar, Xianchao Wu, Oleksii Kuchaiev\nNVIDIA",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          80.611328125,
+          132.7958984375
+        ],
+        [
+          516.8692016601562,
+          131.1513671875
+        ],
+        [
+          516.8692016601562,
+          159.01251220703125
+        ],
+        [
+          79.447265625,
+          159.01251220703125
+        ]
+      ]
+    },
+    {
+      "title": "Abstract",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          156.56640625,
+          213.3779296875
+        ],
+        [
+          202.2432861328125,
+          213.3779296875
+        ],
+        [
+          202.2432861328125,
+          226.4473876953125
+        ],
+        [
+          156.56640625,
+          226.4473876953125
+        ]
+      ]
+    },
+    {
+      "title": "1 Introduction",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          70.716796875,
+          605.5986328125
+        ],
+        [
+          153.67967224121094,
+          605.5986328125
+        ],
+        [
+          153.67967224121094,
+          617.6293640136719
+        ],
+        [
+          70.716796875,
+          617.6293640136719
+        ]
+      ]
+    },
+    {
+      "title": "2 Related Work",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          70.134765625,
+          684.947265625
+        ],
+        [
+          159.95614624023438,
+          684.947265625
+        ],
+        [
+          159.95614624023438,
+          697.8213653564453
+        ],
+        [
+          70.134765625,
+          697.8213653564453
+        ]
+      ]
+    },
+    {
+      "title": "3 SteerLM",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          70.86599731445312,
+          510.2158203125
+        ],
+        [
+          134.740234375,
+          510.2158203125
+        ],
+        [
+          134.61111450195312,
+          522.8463439941406
+        ],
+        [
+          70.134765625,
+          522.8463439941406
+        ]
+      ]
+    },
+    {
+      "title": "3.1 Step 1. Attribute Prediction Model",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          70.42578125,
+          636.7400665283203
+        ],
+        [
+          257.1497802734375,
+          635.611328125
+        ],
+        [
+          257.1497802734375,
+          647.6491546630859
+        ],
+        [
+          70.42578125,
+          647.6491546630859
+        ]
+      ]
+    },
+    {
+      "title": "3.2 Step 2. Annotating Datasets using\nAttribute Prediction Model",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          305.275390625,
+          275.8701171875
+        ],
+        [
+          488.615234375,
+          274.2255859375
+        ],
+        [
+          488.0185546875,
+          301.0010986328125
+        ],
+        [
+          304.111328125,
+          301.0010986328125
+        ]
+      ]
+    },
+    {
+      "title": "3.3 Step 3. Attribute Conditioned SFT",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          304.984375,
+          677.5380706787109
+        ],
+        [
+          492.04400634765625,
+          675.90234375
+        ],
+        [
+          492.04400634765625,
+          688.4471588134766
+        ],
+        [
+          304.984375,
+          688.4471588134766
+        ]
+      ]
+    },
+    {
+      "title": "3.4 Step 4. Bootstrapping with High Quality Samples",
+      "heading_level": null,
+      "page_id": 3,
+      "polygon": [
+        [
+          68.3073047858942,
+          575.0792520035619
+        ],
+        [
+          285.23929471032744,
+          573.5302734375
+        ],
+        [
+          285.23929471032744,
+          598.3223508459483
+        ],
+        [
+          68.3073047858942,
+          599.0205078125
+        ]
+      ]
+    },
+    {
+      "title": "4 Experiments",
+      "heading_level": null,
+      "page_id": 4,
+      "polygon": [
+        [
+          68.970703125,
+          145.45681211041853
+        ],
+        [
+          155.38035264483625,
+          145.541015625
+        ],
+        [
+          155.38035264483625,
+          158.20302760463045
+        ],
+        [
+          68.970703125,
+          158.697265625
+        ]
+      ]
+    },
+    {
+      "title": "Training Datasets\n4.1",
+      "heading_level": null,
+      "page_id": 4,
+      "polygon": [
+        [
+          69.05793450881612,
+          217.43544078361532
+        ],
+        [
+          178.6498740554156,
+          216.6669921875
+        ],
+        [
+          178.6498740554156,
+          227.93232413178984
+        ],
+        [
+          69.05793450881612,
+          229.0009765625
+        ]
+      ]
+    },
+    {
+      "title": "4.2 Base Models for STEERLM",
+      "heading_level": null,
+      "page_id": 4,
+      "polygon": [
+        [
+          305.5062972292191,
+          72.359375
+        ],
+        [
+          460.88664987405537,
+          72.359375
+        ],
+        [
+          460.88664987405537,
+          82.47551202137133
+        ],
+        [
+          305.5062972292191,
+          82.47551202137133
+        ]
+      ]
+    },
+    {
+      "title": "4.3 Training details",
+      "heading_level": null,
+      "page_id": 4,
+      "polygon": [
+        [
+          304.40234375,
+          330.9619140625
+        ],
+        [
+          405.34005037783373,
+          330.9619140625
+        ],
+        [
+          405.34005037783373,
+          342.64826357969724
+        ],
+        [
+          304.40234375,
+          342.64826357969724
+        ]
+      ]
+    },
+    {
+      "title": "4.4 Evaluation",
+      "heading_level": null,
+      "page_id": 4,
+      "polygon": [
+        [
+          304.7556675062972,
+          606.4208984375
+        ],
+        [
+          382.0705289672544,
+          606.4208984375
+        ],
+        [
+          382.0705289672544,
+          617.06678539626
+        ],
+        [
+          304.7556675062972,
+          617.06678539626
+        ]
+      ]
+    },
+    {
+      "title": "4.5 Results",
+      "heading_level": null,
+      "page_id": 6,
+      "polygon": [
+        [
+          68.6796875,
+          258.19140625
+        ],
+        [
+          130.6095717884131,
+          256.546875
+        ],
+        [
+          130.6095717884131,
+          267.6705253784506
+        ],
+        [
+          68.6796875,
+          267.6705253784506
+        ]
+      ]
+    },
+    {
+      "title": "5 Ablation Study",
+      "heading_level": null,
+      "page_id": 6,
+      "polygon": [
+        [
+          304.7556675062972,
+          713.7265625
+        ],
+        [
+          402.3375314861461,
+          712.08203125
+        ],
+        [
+          402.3375314861461,
+          724.2849510240427
+        ],
+        [
+          304.7556675062972,
+          724.2849510240427
+        ]
+      ]
+    },
+    {
+      "title": "6 Steerability demonstration",
+      "heading_level": null,
+      "page_id": 7,
+      "polygon": [
+        [
+          304.111328125,
+          202.43989314336596
+        ],
+        [
+          462.3879093198992,
+          201.455078125
+        ],
+        [
+          462.3879093198992,
+          212.966796875
+        ],
+        [
+          302.947265625,
+          214.611328125
+        ]
+      ]
+    },
+    {
+      "title": "6.1 Toxicity",
+      "heading_level": null,
+      "page_id": 7,
+      "polygon": [
+        [
+          304.111328125,
+          289.0263671875
+        ],
+        [
+          369.30982367758185,
+          289.0263671875
+        ],
+        [
+          369.30982367758185,
+          299.9109528049866
+        ],
+        [
+          304.111328125,
+          299.9109528049866
+        ]
+      ]
+    },
+    {
+      "title": "6.2 Humor",
+      "heading_level": null,
+      "page_id": 7,
+      "polygon": [
+        [
+          304.7556675062972,
+          671.3798828125
+        ],
+        [
+          365.55667506297226,
+          671.3798828125
+        ],
+        [
+          365.55667506297226,
+          680.7978628673196
+        ],
+        [
+          304.7556675062972,
+          680.7978628673196
+        ]
+      ]
+    },
+    {
+      "title": "7 Conclusion",
+      "heading_level": null,
+      "page_id": 8,
+      "polygon": [
+        [
+          69.84375,
+          396.2041320800781
+        ],
+        [
+          145.93270874023438,
+          395.509765625
+        ],
+        [
+          145.93270874023438,
+          408.1593322753906
+        ],
+        [
+          69.84375,
+          408.1593322753906
+        ]
+      ]
+    },
+    {
+      "title": "Limitations",
+      "heading_level": null,
+      "page_id": 8,
+      "polygon": [
+        [
+          69.552734375,
+          658.2236328125
+        ],
+        [
+          129.98446655273438,
+          658.2236328125
+        ],
+        [
+          129.98446655273438,
+          671.0933532714844
+        ],
+        [
+          69.552734375,
+          671.0933532714844
+        ]
+      ]
+    },
+    {
+      "title": "Ethics Statement",
+      "heading_level": null,
+      "page_id": 8,
+      "polygon": [
+        [
+          305.857421875,
+          164.80816650390625
+        ],
+        [
+          392.8052673339844,
+          163.2197265625
+        ],
+        [
+          392.8052673339844,
+          176.76336669921875
+        ],
+        [
+          305.857421875,
+          176.76336669921875
+        ]
+      ]
+    },
+    {
+      "title": "Acknowledgments",
+      "heading_level": null,
+      "page_id": 8,
+      "polygon": [
+        [
+          305.275390625,
+          372.8974609375
+        ],
+        [
+          399.66754150390625,
+          372.8974609375
+        ],
+        [
+          399.66754150390625,
+          384.9523620605469
+        ],
+        [
+          305.275390625,
+          384.9523620605469
+        ]
+      ]
+    },
+    {
+      "title": "References",
+      "heading_level": null,
+      "page_id": 8,
+      "polygon": [
+        [
+          306.14202880859375,
+          524.60546875
+        ],
+        [
+          361.6858825683594,
+          524.60546875
+        ],
+        [
+          361.6858825683594,
+          538.0603637695312
+        ],
+        [
+          306.14202880859375,
+          538.0603637695312
+        ]
+      ]
+    },
+    {
+      "title": "A Appendix",
+      "heading_level": null,
+      "page_id": 11,
+      "polygon": [
+        [
+          69.26171875,
+          144.71875
+        ],
+        [
+          140.98324584960938,
+          143.07421875
+        ],
+        [
+          140.98324584960938,
+          156.84033203125
+        ],
+        [
+          69.26171875,
+          156.84033203125
+        ]
+      ]
+    },
+    {
+      "title": "A.1 Attribute Prediction Model prompt\ntemplates",
+      "heading_level": null,
+      "page_id": 11,
+      "polygon": [
+        [
+          70.42578125,
+          168.564453125
+        ],
+        [
+          262.49609375,
+          166.919921875
+        ],
+        [
+          262.3534240722656,
+          193.47113037109375
+        ],
+        [
+          69.26171875,
+          193.47113037109375
+        ]
+      ]
+    },
+    {
+      "title": "A.2 Attribute Conditioned SFT prompt\ntemplates",
+      "heading_level": null,
+      "page_id": 11,
+      "polygon": [
+        [
+          68.970703125,
+          484.7255859375
+        ],
+        [
+          261.97161865234375,
+          483.0810546875
+        ],
+        [
+          261.97161865234375,
+          509.5821838378906
+        ],
+        [
+          68.970703125,
+          509.5821838378906
+        ]
+      ]
+    },
+    {
+      "title": "A.3 Further Data Collection",
+      "heading_level": null,
+      "page_id": 11,
+      "polygon": [
+        [
+          305.857421875,
+          299.7711181640625
+        ],
+        [
+          445.2112121582031,
+          298.482421875
+        ],
+        [
+          445.2112121582031,
+          310.68017578125
+        ],
+        [
+          304.693359375,
+          310.68017578125
+        ]
+      ]
+    },
+    {
+      "title": "A.4 Effect of model size on performance",
+      "heading_level": null,
+      "page_id": 11,
+      "polygon": [
+        [
+          304.40234375,
+          636.43359375
+        ],
+        [
+          500.3676452636719,
+          634.7890625
+        ],
+        [
+          500.3676452636719,
+          647.4271392822266
+        ],
+        [
+          304.40234375,
+          647.4271392822266
+        ]
+      ]
+    },
+    {
+      "title": "A.5 Human Annotation UI",
+      "heading_level": null,
+      "page_id": 12,
+      "polygon": [
+        [
+          70.42578125,
+          426.3447265625
+        ],
+        [
+          203.30247497558594,
+          426.3447265625
+        ],
+        [
+          203.30247497558594,
+          438.10516357421875
+        ],
+        [
+          69.26171875,
+          438.10516357421875
+        ]
+      ]
+    },
+    {
+      "title": "A.6 Example of Generations by SteerLM 43B\nand ChatGPT 3.5",
+      "heading_level": null,
+      "page_id": 12,
+      "polygon": [
+        [
+          70.134765625,
+          444.0234375
+        ],
+        [
+          289.1802673339844,
+          444.0234375
+        ],
+        [
+          289.1802673339844,
+          469.9191589355469
+        ],
+        [
+          68.970703125,
+          469.9191589355469
+        ]
+      ]
+    },
+    {
+      "title": "A.7 Response lengths of various models",
+      "heading_level": null,
+      "page_id": 13,
+      "polygon": [
+        [
+          306.439453125,
+          72.72840605520926
+        ],
+        [
+          499.16876574307304,
+          72.72840605520926
+        ],
+        [
+          499.16876574307304,
+          83.4599609375
+        ],
+        [
+          305.275390625,
+          83.4599609375
+        ]
+      ]
+    }
+  ],
+  "page_stats": [
+    {
+      "page_id": 0,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          234
+        ],
+        [
+          "Line",
+          77
+        ],
+        [
+          "Text",
+          5
+        ],
+        [
+          "SectionHeader",
+          4
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 1,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          350
+        ],
+        [
+          "Line",
+          99
+        ],
+        [
+          "Text",
+          8
+        ],
+        [
+          "ListItem",
+          3
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 2,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          333
+        ],
+        [
+          "Line",
+          104
+        ],
+        [
+          "Text",
+          9
+        ],
+        [
+          "Reference",
+          5
+        ],
+        [
+          "SectionHeader",
+          4
+        ],
+        [
+          "Equation",
+          2
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 3,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          105
+        ],
+        [
+          "Span",
+          51
+        ],
+        [
+          "Text",
+          8
+        ],
+        [
+          "Equation",
+          3
+        ],
+        [
+          "Reference",
+          3
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 4,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          101
+        ],
+        [
+          "Line",
+          98
+        ],
+        [
+          "Text",
+          10
+        ],
+        [
+          "SectionHeader",
+          5
+        ],
+        [
+          "Equation",
+          1
+        ],
+        [
+          "Footnote",
+          1
+        ],
+        [
+          "Reference",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 5,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          92
+        ],
+        [
+          "Span",
+          90
+        ],
+        [
+          "TableCell",
+          36
+        ],
+        [
+          "Text",
+          4
+        ],
+        [
+          "Reference",
+          2
+        ],
+        [
+          "Footnote",
+          1
+        ],
+        [
+          "Table",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "TableGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 6,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "TableCell",
+          96
+        ],
+        [
+          "Line",
+          87
+        ],
+        [
+          "Span",
+          35
+        ],
+        [
+          "Text",
+          6
+        ],
+        [
+          "Reference",
+          3
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "Table",
+          2
+        ],
+        [
+          "Caption",
+          2
+        ],
+        [
+          "TableGroup",
+          2
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 7,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          109
+        ],
+        [
+          "Span",
+          28
+        ],
+        [
+          "TableCell",
+          18
+        ],
+        [
+          "Text",
+          11
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "Reference",
+          2
+        ],
+        [
+          "Table",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "Footnote",
+          1
+        ],
+        [
+          "TableGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 8,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          258
+        ],
+        [
+          "Line",
+          99
+        ],
+        [
+          "Text",
+          11
+        ],
+        [
+          "SectionHeader",
+          5
+        ],
+        [
+          "Reference",
+          2
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 9,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          247
+        ],
+        [
+          "Line",
+          112
+        ],
+        [
+          "ListItem",
+          19
+        ],
+        [
+          "Reference",
+          18
+        ],
+        [
+          "ListGroup",
+          2
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 10,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          251
+        ],
+        [
+          "Line",
+          114
+        ],
+        [
+          "ListItem",
+          18
+        ],
+        [
+          "Reference",
+          18
+        ],
+        [
+          "ListGroup",
+          2
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 11,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          188
+        ],
+        [
+          "Line",
+          86
+        ],
+        [
+          "Text",
+          5
+        ],
+        [
+          "SectionHeader",
+          5
+        ],
+        [
+          "Reference",
+          5
+        ],
+        [
+          "Code",
+          2
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 12,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          106
+        ],
+        [
+          "Line",
+          46
+        ],
+        [
+          "ListItem",
+          9
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "Text",
+          2
+        ],
+        [
+          "ListGroup",
+          2
+        ],
+        [
+          "Reference",
+          2
+        ],
+        [
+          "Picture",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "PictureGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 13,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          55
+        ],
+        [
+          "TableCell",
+          27
+        ],
+        [
+          "Span",
+          17
+        ],
+        [
+          "ListItem",
+          9
+        ],
+        [
+          "Text",
+          2
+        ],
+        [
+          "ListGroup",
+          2
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "Table",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "TableGroup",
+          1
+        ],
+        [
+          "Reference",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    }
+  ],
+  "debug_data_path": "debug_data/[NVIDIA][Attribute Conditioned]SteerLLM"
+}

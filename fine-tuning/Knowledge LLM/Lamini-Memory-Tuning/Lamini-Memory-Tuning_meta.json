@@ -1,0 +1,1497 @@
+{
+  "table_of_contents": [
+    {
+      "title": "Banishing LLM Hallucinations Requires Rethinking\nGeneralization",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          111.0,
+          98.25
+        ],
+        [
+          500.25,
+          98.25
+        ],
+        [
+          500.25,
+          132.2578125
+        ],
+        [
+          111.0,
+          132.2578125
+        ]
+      ]
+    },
+    {
+      "title": "<sup>1</sup>Lamini",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          283.88671875,
+          219.0
+        ],
+        [
+          327.75,
+          219.0
+        ],
+        [
+          327.75,
+          229.5
+        ],
+        [
+          283.88671875,
+          229.5
+        ]
+      ]
+    },
+    {
+      "title": "Abstract",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          282.69140625,
+          277.27734375
+        ],
+        [
+          329.25,
+          277.27734375
+        ],
+        [
+          329.25,
+          285.78515625
+        ],
+        [
+          282.69140625,
+          285.78515625
+        ]
+      ]
+    },
+    {
+      "title": "1 Introduction",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          107.25,
+          492.29296875
+        ],
+        [
+          192.0,
+          492.29296875
+        ],
+        [
+          192.0,
+          501.75
+        ],
+        [
+          107.25,
+          501.75
+        ]
+      ]
+    },
+    {
+      "title": "1.1 Our Contributions",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          108.0,
+          120.65625
+        ],
+        [
+          210.375,
+          119.109375
+        ],
+        [
+          210.20632934570312,
+          130.80108642578125
+        ],
+        [
+          107.578125,
+          130.80108642578125
+        ]
+      ]
+    },
+    {
+      "title": "Lamini Memory Tuning",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          106.98046875,
+          549.3214874267578
+        ],
+        [
+          210.5948486328125,
+          549.3214874267578
+        ],
+        [
+          210.5948486328125,
+          559.2840881347656
+        ],
+        [
+          106.98046875,
+          559.2840881347656
+        ]
+      ]
+    },
+    {
+      "title": "Lamini-1",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          107.279296875,
+          659.35546875
+        ],
+        [
+          147.3024444580078,
+          657.80859375
+        ],
+        [
+          147.3024444580078,
+          669.5151138305664
+        ],
+        [
+          107.279296875,
+          669.5151138305664
+        ]
+      ]
+    },
+    {
+      "title": "2 Randomization Tests",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          106.98046875,
+          134.96484375
+        ],
+        [
+          232.76446533203125,
+          134.96484375
+        ],
+        [
+          232.76446533203125,
+          147.01239013671875
+        ],
+        [
+          106.98046875,
+          147.01239013671875
+        ]
+      ]
+    },
+    {
+      "title": "3 Regularization Tests",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          107.578125,
+          630.2931518554688
+        ],
+        [
+          230.0984649658203,
+          630.2931518554688
+        ],
+        [
+          230.0984649658203,
+          642.2483520507812
+        ],
+        [
+          107.578125,
+          642.2483520507812
+        ]
+      ]
+    },
+    {
+      "title": "4 Information Retrieval",
+      "heading_level": null,
+      "page_id": 3,
+      "polygon": [
+        [
+          106.98046875,
+          597.3781585693359
+        ],
+        [
+          237.89324951171875,
+          596.70703125
+        ],
+        [
+          237.89324951171875,
+          609.3333587646484
+        ],
+        [
+          106.98046875,
+          609.3333587646484
+        ]
+      ]
+    },
+    {
+      "title": "4.1 Missing information",
+      "heading_level": null,
+      "page_id": 3,
+      "polygon": [
+        [
+          106.3828125,
+          658.96875
+        ],
+        [
+          216.7915802001953,
+          657.421875
+        ],
+        [
+          216.7915802001953,
+          669.1611251831055
+        ],
+        [
+          106.3828125,
+          669.1611251831055
+        ]
+      ]
+    },
+    {
+      "title": "4.2 Conflicting Information",
+      "heading_level": null,
+      "page_id": 4,
+      "polygon": [
+        [
+          107.876953125,
+          144.36553955078125
+        ],
+        [
+          231.7354736328125,
+          143.0859375
+        ],
+        [
+          231.7354736328125,
+          154.328125
+        ],
+        [
+          106.681640625,
+          154.328125
+        ]
+      ]
+    },
+    {
+      "title": "4.3 Sampling Noise",
+      "heading_level": null,
+      "page_id": 4,
+      "polygon": [
+        [
+          106.681640625,
+          224.26251220703125
+        ],
+        [
+          196.5675048828125,
+          222.75
+        ],
+        [
+          196.5675048828125,
+          234.22509765625
+        ],
+        [
+          106.681640625,
+          234.22509765625
+        ]
+      ]
+    },
+    {
+      "title": "4.4 Attention Glitches",
+      "heading_level": null,
+      "page_id": 4,
+      "polygon": [
+        [
+          106.98046875,
+          358.48828125
+        ],
+        [
+          208.17393493652344,
+          356.94140625
+        ],
+        [
+          208.17393493652344,
+          368.6680908203125
+        ],
+        [
+          106.98046875,
+          368.6680908203125
+        ]
+      ]
+    },
+    {
+      "title": "5 Lamini Memory Tuning",
+      "heading_level": null,
+      "page_id": 4,
+      "polygon": [
+        [
+          107.876953125,
+          522.8521728515625
+        ],
+        [
+          249.04745483398438,
+          521.68359375
+        ],
+        [
+          249.04745483398438,
+          534.807373046875
+        ],
+        [
+          107.876953125,
+          534.807373046875
+        ]
+      ]
+    },
+    {
+      "title": "6 Computational Requirements of Clearing the Mind",
+      "heading_level": null,
+      "page_id": 6,
+      "polygon": [
+        [
+          107.279296875,
+          274.5703125
+        ],
+        [
+          387.727783203125,
+          274.5703125
+        ],
+        [
+          387.727783203125,
+          287.2743835449219
+        ],
+        [
+          107.279296875,
+          287.2743835449219
+        ]
+      ]
+    },
+    {
+      "title": "7 Lamini-1",
+      "heading_level": null,
+      "page_id": 6,
+      "polygon": [
+        [
+          107.279296875,
+          399.48046875
+        ],
+        [
+          173.0960693359375,
+          399.48046875
+        ],
+        [
+          173.0960693359375,
+          411.44537353515625
+        ],
+        [
+          107.279296875,
+          411.44537353515625
+        ]
+      ]
+    },
+    {
+      "title": "7.1 Systems Optimizations for Banishing Hallucinations",
+      "heading_level": null,
+      "page_id": 6,
+      "polygon": [
+        [
+          107.279296875,
+          553.9825286865234
+        ],
+        [
+          352.1434020996094,
+          553.39453125
+        ],
+        [
+          352.1434020996094,
+          563.9451293945312
+        ],
+        [
+          106.083984375,
+          563.9451293945312
+        ]
+      ]
+    },
+    {
+      "title": "8 Insights",
+      "heading_level": null,
+      "page_id": 7,
+      "polygon": [
+        [
+          106.98046875,
+          411.629150390625
+        ],
+        [
+          166.4609375,
+          411.46875
+        ],
+        [
+          166.4609375,
+          423.5843505859375
+        ],
+        [
+          106.98046875,
+          423.5843505859375
+        ]
+      ]
+    },
+    {
+      "title": "Insight: LLMs can easily memorize random labels without generalization error.",
+      "heading_level": null,
+      "page_id": 7,
+      "polygon": [
+        [
+          106.681640625,
+          437.697509765625
+        ],
+        [
+          446.6785888671875,
+          436.21875
+        ],
+        [
+          446.6785888671875,
+          447.66009521484375
+        ],
+        [
+          106.681640625,
+          447.66009521484375
+        ]
+      ]
+    },
+    {
+      "title": "Insight: Generalization error does not discriminate between models that hallucinate and those\nthat don't.",
+      "heading_level": null,
+      "page_id": 7,
+      "polygon": [
+        [
+          107.279296875,
+          518.1865234375
+        ],
+        [
+          504.0426940917969,
+          516.65625
+        ],
+        [
+          504.0426940917969,
+          539.0581207275391
+        ],
+        [
+          106.083984375,
+          539.0581207275391
+        ]
+      ]
+    },
+    {
+      "title": "Insight: Training long enough to remove hallucinations is much more computationally\nintensive than the optimal recipe implied by scaling laws for generalization.",
+      "heading_level": null,
+      "page_id": 7,
+      "polygon": [
+        [
+          107.578125,
+          636.5390625
+        ],
+        [
+          473.7370300292969,
+          636.5390625
+        ],
+        [
+          473.7370300292969,
+          657.7541046142578
+        ],
+        [
+          106.3828125,
+          657.7541046142578
+        ]
+      ]
+    },
+    {
+      "title": "9 Fallacies",
+      "heading_level": null,
+      "page_id": 8,
+      "polygon": [
+        [
+          106.98046875,
+          72.787109375
+        ],
+        [
+          170.1311798095703,
+          71.54296875
+        ],
+        [
+          170.1311798095703,
+          84.7423095703125
+        ],
+        [
+          106.98046875,
+          84.7423095703125
+        ]
+      ]
+    },
+    {
+      "title": "Fallacy: Standard methods for constructing train/test sets are appropriate for testing for\nhallucinations.",
+      "heading_level": null,
+      "page_id": 8,
+      "polygon": [
+        [
+          106.98046875,
+          138.16754150390625
+        ],
+        [
+          483.2812805175781,
+          136.8984375
+        ],
+        [
+          483.2812805175781,
+          159.04010009765625
+        ],
+        [
+          106.98046875,
+          159.04010009765625
+        ]
+      ]
+    },
+    {
+      "title": "Fallacy: Finetuned LLMs still hallucinate and cannot get every digit right exactly.",
+      "heading_level": null,
+      "page_id": 8,
+      "polygon": [
+        [
+          108.0,
+          285.4825439453125
+        ],
+        [
+          454.9873046875,
+          284.625
+        ],
+        [
+          454.9873046875,
+          295.44512939453125
+        ],
+        [
+          106.98046875,
+          295.453125
+        ]
+      ]
+    },
+    {
+      "title": "Fallacy: LLMs do not have enough capacity to store many facts exactly.",
+      "heading_level": null,
+      "page_id": 8,
+      "polygon": [
+        [
+          108.0,
+          366.99609375
+        ],
+        [
+          411.51055908203125,
+          365.44921875
+        ],
+        [
+          411.51055908203125,
+          377.3061218261719
+        ],
+        [
+          106.98046875,
+          377.3061218261719
+        ]
+      ]
+    },
+    {
+      "title": "10 Related Work",
+      "heading_level": null,
+      "page_id": 8,
+      "polygon": [
+        [
+          108.0,
+          472.95703125
+        ],
+        [
+          203.0677490234375,
+          472.95703125
+        ],
+        [
+          203.0677490234375,
+          485.3823547363281
+        ],
+        [
+          107.578125,
+          485.3823547363281
+        ]
+      ]
+    },
+    {
+      "title": "Scaling Laws and Generalization",
+      "heading_level": null,
+      "page_id": 8,
+      "polygon": [
+        [
+          107.876953125,
+          500.02734375
+        ],
+        [
+          248.326171875,
+          500.02734375
+        ],
+        [
+          248.3231964111328,
+          510.0470886230469
+        ],
+        [
+          106.681640625,
+          510.0470886230469
+        ]
+      ]
+    },
+    {
+      "title": "LLM Hallucinations",
+      "heading_level": null,
+      "page_id": 8,
+      "polygon": [
+        [
+          107.876953125,
+          624.55078125
+        ],
+        [
+          195.19268798828125,
+          624.55078125
+        ],
+        [
+          195.19268798828125,
+          635.5441131591797
+        ],
+        [
+          107.876953125,
+          635.5441131591797
+        ]
+      ]
+    },
+    {
+      "title": "Rethinking Generalization",
+      "heading_level": null,
+      "page_id": 9,
+      "polygon": [
+        [
+          107.279296875,
+          74.25
+        ],
+        [
+          221.19505310058594,
+          72.703125
+        ],
+        [
+          221.19505310058594,
+          84.279052734375
+        ],
+        [
+          107.279296875,
+          84.279052734375
+        ]
+      ]
+    },
+    {
+      "title": "Information Retrieval Methods",
+      "heading_level": null,
+      "page_id": 9,
+      "polygon": [
+        [
+          107.578125,
+          174.9945068359375
+        ],
+        [
+          240.87118530273438,
+          174.0234375
+        ],
+        [
+          240.87118530273438,
+          184.95709228515625
+        ],
+        [
+          106.3828125,
+          184.95709228515625
+        ]
+      ]
+    },
+    {
+      "title": "High Performance Training Systems",
+      "heading_level": null,
+      "page_id": 9,
+      "polygon": [
+        [
+          107.876953125,
+          286.171875
+        ],
+        [
+          262.6095886230469,
+          284.625
+        ],
+        [
+          262.6095886230469,
+          296.5440673828125
+        ],
+        [
+          106.681640625,
+          296.5440673828125
+        ]
+      ]
+    },
+    {
+      "title": "11 Conclusion",
+      "heading_level": null,
+      "page_id": 9,
+      "polygon": [
+        [
+          108.0,
+          432.3515625
+        ],
+        [
+          189.158203125,
+          432.3515625
+        ],
+        [
+          189.0443115234375,
+          445.2573547363281
+        ],
+        [
+          107.279296875,
+          445.2573547363281
+        ]
+      ]
+    },
+    {
+      "title": "References",
+      "heading_level": null,
+      "page_id": 9,
+      "polygon": [
+        [
+          107.876953125,
+          617.58984375
+        ],
+        [
+          163.54385375976562,
+          617.58984375
+        ],
+        [
+          163.54385375976562,
+          629.6153411865234
+        ],
+        [
+          106.681640625,
+          629.6153411865234
+        ]
+      ]
+    },
+    {
+      "title": "A Experiment Appendix",
+      "heading_level": null,
+      "page_id": 12,
+      "polygon": [
+        [
+          107.279296875,
+          600.6521606445312
+        ],
+        [
+          241.53961181640625,
+          600.6521606445312
+        ],
+        [
+          241.53961181640625,
+          612.6073608398438
+        ],
+        [
+          107.279296875,
+          612.6073608398438
+        ]
+      ]
+    },
+    {
+      "title": "Dataset",
+      "heading_level": null,
+      "page_id": 12,
+      "polygon": [
+        [
+          108.00001525878906,
+          641.56640625
+        ],
+        [
+          138.05859375,
+          640.01953125
+        ],
+        [
+          137.8778533935547,
+          651.7620697021484
+        ],
+        [
+          106.98046875,
+          651.7620697021484
+        ]
+      ]
+    },
+    {
+      "title": "Model architecture",
+      "heading_level": null,
+      "page_id": 12,
+      "polygon": [
+        [
+          107.578125,
+          711.94921875
+        ],
+        [
+          184.078125,
+          710.40234375
+        ],
+        [
+          183.5264892578125,
+          722.4070739746094
+        ],
+        [
+          106.3828125,
+          722.4070739746094
+        ]
+      ]
+    },
+    {
+      "title": "B Entropy Discussion",
+      "heading_level": null,
+      "page_id": 13,
+      "polygon": [
+        [
+          107.876953125,
+          206.89453125
+        ],
+        [
+          227.02598571777344,
+          206.89453125
+        ],
+        [
+          227.02598571777344,
+          219.88531494140625
+        ],
+        [
+          107.876953125,
+          219.88531494140625
+        ]
+      ]
+    }
+  ],
+  "page_stats": [
+    {
+      "page_id": 0,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          51
+        ],
+        [
+          "Span",
+          11
+        ],
+        [
+          "Text",
+          5
+        ],
+        [
+          "SectionHeader",
+          4
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 1,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          172
+        ],
+        [
+          "Line",
+          48
+        ],
+        [
+          "Text",
+          10
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "ListItem",
+          3
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 2,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          75
+        ],
+        [
+          "Line",
+          24
+        ],
+        [
+          "Text",
+          4
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ],
+        [
+          "Reference",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 3,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          193
+        ],
+        [
+          "Line",
+          99
+        ],
+        [
+          "TableCell",
+          28
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "Text",
+          2
+        ],
+        [
+          "Table",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "TableGroup",
+          1
+        ],
+        [
+          "Reference",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 4,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          124
+        ],
+        [
+          "Line",
+          49
+        ],
+        [
+          "Text",
+          8
+        ],
+        [
+          "SectionHeader",
+          4
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 5,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          15
+        ],
+        [
+          "Line",
+          8
+        ],
+        [
+          "Figure",
+          2
+        ],
+        [
+          "Caption",
+          2
+        ],
+        [
+          "FigureGroup",
+          2
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "Reference",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 6,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          94
+        ],
+        [
+          "Line",
+          32
+        ],
+        [
+          "Text",
+          6
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "ListItem",
+          3
+        ],
+        [
+          "Reference",
+          2
+        ],
+        [
+          "Picture",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "Footnote",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "PictureGroup",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 7,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          71
+        ],
+        [
+          "Line",
+          30
+        ],
+        [
+          "Text",
+          6
+        ],
+        [
+          "SectionHeader",
+          4
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ],
+        [
+          "Reference",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 8,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          165
+        ],
+        [
+          "Line",
+          45
+        ],
+        [
+          "SectionHeader",
+          7
+        ],
+        [
+          "Text",
+          6
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 9,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          174
+        ],
+        [
+          "Line",
+          48
+        ],
+        [
+          "Text",
+          7
+        ],
+        [
+          "SectionHeader",
+          5
+        ],
+        [
+          "Reference",
+          3
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 10,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          151
+        ],
+        [
+          "Line",
+          49
+        ],
+        [
+          "ListItem",
+          17
+        ],
+        [
+          "Reference",
+          17
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 11,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          148
+        ],
+        [
+          "Line",
+          48
+        ],
+        [
+          "ListItem",
+          18
+        ],
+        [
+          "Reference",
+          18
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 12,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          139
+        ],
+        [
+          "Line",
+          44
+        ],
+        [
+          "ListItem",
+          18
+        ],
+        [
+          "Reference",
+          16
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "ListGroup",
+          2
+        ],
+        [
+          "Text",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 13,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          51
+        ],
+        [
+          "Line",
+          18
+        ],
+        [
+          "ListItem",
+          6
+        ],
+        [
+          "Text",
+          2
+        ],
+        [
+          "Reference",
+          2
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    }
+  ],
+  "debug_data_path": "debug_data/Lamini-Memory-Tuning"
+}

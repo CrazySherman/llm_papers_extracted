@@ -1,0 +1,1877 @@
+{
+  "table_of_contents": [
+    {
+      "title": "SFT Memorizes, RL Generalizes:\nA Comparative Study of Foundation Model Post-training",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          123.1171875,
+          89.9119873046875
+        ],
+        [
+          473.34375,
+          89.9119873046875
+        ],
+        [
+          473.34375,
+          122.191162109375
+        ],
+        [
+          123.1171875,
+          122.191162109375
+        ]
+      ]
+    },
+    {
+      "title": "Abstract",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          148.517578125,
+          205.34765625
+        ],
+        [
+          194.68325805664062,
+          205.34765625
+        ],
+        [
+          194.68325805664062,
+          218.07342529296875
+        ],
+        [
+          148.517578125,
+          218.07342529296875
+        ]
+      ]
+    },
+    {
+      "title": "1. Introduction",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          54.685546875,
+          592.6080322265625
+        ],
+        [
+          132.2760467529297,
+          592.06640625
+        ],
+        [
+          132.2760467529297,
+          604.563232421875
+        ],
+        [
+          54.685546875,
+          604.563232421875
+        ]
+      ]
+    },
+    {
+      "title": "2. Related Works",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          54.984375,
+          543.0499114990234
+        ],
+        [
+          143.20306396484375,
+          541.79296875
+        ],
+        [
+          143.20306396484375,
+          555.0051116943359
+        ],
+        [
+          54.984375,
+          555.0051116943359
+        ]
+      ]
+    },
+    {
+      "title": "3. Preliminaries",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          54.0,
+          420.75
+        ],
+        [
+          136.5,
+          419.203125
+        ],
+        [
+          136.5,
+          431.25
+        ],
+        [
+          54.0,
+          431.25
+        ]
+      ]
+    },
+    {
+      "title": "Adapting RL terminology to LLM/VLM with a verifier. We adopt a multi-turn RL setting for foundation model training (Zhai et al., 2024a). Let \\mathcal{V} represent the discrete and finite vocabulary (token) space. The input and output text spaces are denoted by \\mathcal{V}^m and \\mathcal{V}^n respectively, where m and n are the maximum token length of the input sequence v^{\\text{in}} and output sequence v^{\\text{out}}. For models requiring visual inputs (VLM), we define \\mathcal{O} as the space of all RGB images. The state space, denoted by \\mathcal{S}, is defined as \\mathcal{S} := \\mathcal{V}^m \\times \\mathcal{O} for VLM, and \\mathcal{S} := \\mathcal{V}^m for LLM. The action space \\mathcal{A} is defined as \\mathcal{A} := \\mathcal{V}^n. We use VER: \\mathcal{V}^n \\to \\mathbb{R} \\times \\mathcal{V}^k to",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          54.0,
+          576.0
+        ],
+        [
+          289.5,
+          576.0
+        ],
+        [
+          289.5,
+          703.5
+        ],
+        [
+          53.7890625,
+          703.5
+        ]
+      ]
+    },
+    {
+      "title": "4. Evaluation Tasks",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          305.40234375,
+          290.25
+        ],
+        [
+          408.0,
+          288.87890625
+        ],
+        [
+          408.0,
+          300.0
+        ],
+        [
+          305.40234375,
+          300.0
+        ]
+      ]
+    },
+    {
+      "title": "4.1. The General Points Environment",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          304.8046875,
+          414.5625
+        ],
+        [
+          466.5,
+          413.015625
+        ],
+        [
+          466.5,
+          423.0
+        ],
+        [
+          304.8046875,
+          423.84375
+        ]
+      ]
+    },
+    {
+      "title": "4.2. The V-IRL Environment",
+      "heading_level": null,
+      "page_id": 3,
+      "polygon": [
+        [
+          54.0,
+          552.234375
+        ],
+        [
+          180.0,
+          552.234375
+        ],
+        [
+          180.0,
+          562.5
+        ],
+        [
+          53.7890625,
+          562.5
+        ]
+      ]
+    },
+    {
+      "title": "5. Results",
+      "heading_level": null,
+      "page_id": 4,
+      "polygon": [
+        [
+          54.38671875,
+          507.375
+        ],
+        [
+          104.58781433105469,
+          507.375
+        ],
+        [
+          104.58781433105469,
+          519.3923645019531
+        ],
+        [
+          54.38671875,
+          519.3923645019531
+        ]
+      ]
+    },
+    {
+      "title": "5.1. Generalization across Rules",
+      "heading_level": null,
+      "page_id": 4,
+      "polygon": [
+        [
+          306.0,
+          458.26171875
+        ],
+        [
+          443.130615234375,
+          458.26171875
+        ],
+        [
+          443.130615234375,
+          469.2890930175781
+        ],
+        [
+          306.0,
+          469.2890930175781
+        ]
+      ]
+    },
+    {
+      "title": "5.2. Generalization in Visual Out-of-Distribution Tasks",
+      "heading_level": null,
+      "page_id": 5,
+      "polygon": [
+        [
+          54.0,
+          659.35546875
+        ],
+        [
+          289.5,
+          659.35546875
+        ],
+        [
+          289.5,
+          669.0
+        ],
+        [
+          54.0,
+          669.0
+        ]
+      ]
+    },
+    {
+      "title": "5.3. RL Improves Visual Capabilities",
+      "heading_level": null,
+      "page_id": 6,
+      "polygon": [
+        [
+          54.685546875,
+          624.1640625
+        ],
+        [
+          211.8927001953125,
+          622.6171875
+        ],
+        [
+          211.8927001953125,
+          634.1289978027344
+        ],
+        [
+          54.685546875,
+          634.1289978027344
+        ]
+      ]
+    },
+    {
+      "title": "5.4. The Role of SFT for RL Training",
+      "heading_level": null,
+      "page_id": 7,
+      "polygon": [
+        [
+          53.7890625,
+          68.8359375
+        ],
+        [
+          214.5,
+          68.8359375
+        ],
+        [
+          214.5,
+          78.1171875
+        ],
+        [
+          53.7890625,
+          78.1171875
+        ]
+      ]
+    },
+    {
+      "title": "5.5. Role of Verification Iterations",
+      "heading_level": null,
+      "page_id": 7,
+      "polygon": [
+        [
+          54.0,
+          536.765625
+        ],
+        [
+          200.25,
+          536.765625
+        ],
+        [
+          200.25,
+          547.5
+        ],
+        [
+          54.0,
+          547.5
+        ]
+      ]
+    },
+    {
+      "title": "6. Conclusion, Discussion and Limitations",
+      "heading_level": null,
+      "page_id": 7,
+      "polygon": [
+        [
+          306.0,
+          286.171875
+        ],
+        [
+          522.75,
+          284.625
+        ],
+        [
+          522.75,
+          297.0
+        ],
+        [
+          306.0,
+          297.0
+        ]
+      ]
+    },
+    {
+      "title": "7. Acknowledgements",
+      "heading_level": null,
+      "page_id": 8,
+      "polygon": [
+        [
+          55.283203125,
+          144.233154296875
+        ],
+        [
+          166.2288360595703,
+          143.859375
+        ],
+        [
+          166.2288360595703,
+          156.1883544921875
+        ],
+        [
+          54.087890625,
+          156.234375
+        ]
+      ]
+    },
+    {
+      "title": "References",
+      "heading_level": null,
+      "page_id": 8,
+      "polygon": [
+        [
+          55.283203125,
+          275.85723876953125
+        ],
+        [
+          110.9838638305664,
+          274.5703125
+        ],
+        [
+          110.9838638305664,
+          287.81243896484375
+        ],
+        [
+          54.087890625,
+          287.81243896484375
+        ]
+      ]
+    },
+    {
+      "title": "A. Details on the General Points Environment",
+      "heading_level": null,
+      "page_id": 12,
+      "polygon": [
+        [
+          54.0,
+          67.5
+        ],
+        [
+          289.5,
+          66.12890625
+        ],
+        [
+          289.5,
+          77.25
+        ],
+        [
+          53.7890625,
+          77.73046875
+        ]
+      ]
+    },
+    {
+      "title": "A.1. Data",
+      "heading_level": null,
+      "page_id": 12,
+      "polygon": [
+        [
+          53.7890625,
+          173.25
+        ],
+        [
+          96.0,
+          172.4765625
+        ],
+        [
+          96.0,
+          181.5
+        ],
+        [
+          53.7890625,
+          181.7578125
+        ]
+      ]
+    },
+    {
+      "title": "A.2. Detailed Examples on the Transition Dynamics",
+      "heading_level": null,
+      "page_id": 12,
+      "polygon": [
+        [
+          54.0,
+          263.25
+        ],
+        [
+          275.25,
+          263.35546875
+        ],
+        [
+          275.25,
+          274.5
+        ],
+        [
+          53.19140625,
+          274.95703125
+        ]
+      ]
+    },
+    {
+      "title": "A.3. Additional Eetails on the Environmental Design",
+      "heading_level": null,
+      "page_id": 12,
+      "polygon": [
+        [
+          54.0,
+          367.5
+        ],
+        [
+          279.0,
+          366.609375
+        ],
+        [
+          279.0,
+          377.25
+        ],
+        [
+          53.19140625,
+          377.4375
+        ]
+      ]
+    },
+    {
+      "title": "B. Details on the V-IRL Environment",
+      "heading_level": null,
+      "page_id": 12,
+      "polygon": [
+        [
+          305.40234375,
+          399.0
+        ],
+        [
+          498.0,
+          397.93359375
+        ],
+        [
+          498.0,
+          407.25
+        ],
+        [
+          305.40234375,
+          407.98828125
+        ]
+      ]
+    },
+    {
+      "title": "B.1. Data",
+      "heading_level": null,
+      "page_id": 12,
+      "polygon": [
+        [
+          306.0,
+          539.25
+        ],
+        [
+          348.0,
+          539.25
+        ],
+        [
+          348.0,
+          548.75390625
+        ],
+        [
+          306.0,
+          548.75390625
+        ]
+      ]
+    },
+    {
+      "title": "B.2. Detailed Examples on the Transition Dynamics",
+      "heading_level": null,
+      "page_id": 13,
+      "polygon": [
+        [
+          54.984375,
+          434.5865478515625
+        ],
+        [
+          273.8898010253906,
+          433.125
+        ],
+        [
+          273.8898010253906,
+          444.54913330078125
+        ],
+        [
+          53.7890625,
+          444.54913330078125
+        ]
+      ]
+    },
+    {
+      "title": "B.3. Additional Details on the Environmental Design",
+      "heading_level": null,
+      "page_id": 13,
+      "polygon": [
+        [
+          55.43992614746094,
+          501.9609375
+        ],
+        [
+          277.9346618652344,
+          500.4140625
+        ],
+        [
+          277.9346618652344,
+          512.2451171875
+        ],
+        [
+          54.38671875,
+          512.2451171875
+        ]
+      ]
+    },
+    {
+      "title": "System Prompt (v\nin\n0 )\n[Task Description]\nYou are an expert in navigation. You will receive a sequence of instructions to\nfollow while observing your surrounding street views. You are also provided with\nyour observation and action history in text. your goal is to take the action based on\nthe current observation and instruction.\n[Instruction]\n1. First, turn left to face east.\n2. Move forward until you reach the next intersection where Hotel 32One is on\nyour right behind.\n3. Turn right to face north.\n4. Move forward until you reach the next intersection where Dragon Gate Chinatown SF is on your right front.\n5. Turn left to face east.\n6. Move forward until the destination Caf\u00e9 de la Presse is on your right.\n[Current observation]\nYou observe a 2x2 grid of street view images with the following headings:\n[front, right\nback, left]\nYou need to identify if any of the landmarks in the instruction are visible in the street view grid.\n[Action space]\n- \"forward()\": indicates moving forward for 1 step;\n- \"turn_direction(x)\": indicates turn direction to the target heading, where x\u2208['north', 'northeast', 'east', 'southeast',\n'south', 'southwest', 'west', 'northwest'];\n- \"stop()\": indicates the navigation is finished;\n[Observations and actions sequence]\nO_1: No landmarks nearby;\nA_1: turn_direction(east)\nO_2: No landmarks nearby;\nA_2: forward()\nO_3: No landmarks nearby;\nA_3: forward()\nO_4: You observe an image of 4 views; You observe an intersection\nA_4:\n[Output]\nYour response should be a valid json file in the following format:\n{\n\"current observation\": latest observation from the street view grid,\n\"current instruction\": analyze the full instruction and identify the sentence to be executed,\n\"action\": the action to be taken chosen from the action space,\n}\nAppending model and verifier outputs to obtain v\nin\nt\nv\nin\nt = [v\nout\n0 , v\nver\n0 , v\nout\n1 , v\nver\n1 , . . . , v\nout\nt\u22121, v\nver\nt\u22121] \u25b7 v\nin\nt = concat \nv\nin\n0 , [v\nout\nk , v\nver\nk ]\nt\u22121\nk=0\nModel output (v\nout\n)\n\"current observation\": \"Hotel 32One is on my right behind; I observe an intersection\",\n\"current instruction\": \"Turn right to face north.\",\n\"action\": \"turn_direction(north)\",\nVerifier Output (v\nver\nt\n)\nCorrect solution. \u25b7 Move to the next scene upon correct action",
+      "heading_level": null,
+      "page_id": 15,
+      "polygon": [
+        [
+          77.09765625,
+          92.42578125
+        ],
+        [
+          520.55859375,
+          90.87890625
+        ],
+        [
+          520.55859375,
+          653.16796875
+        ],
+        [
+          77.09765625,
+          654.71484375
+        ]
+      ]
+    },
+    {
+      "title": "C. Experimental Setup",
+      "heading_level": null,
+      "page_id": 17,
+      "polygon": [
+        [
+          54.0,
+          68.0625
+        ],
+        [
+          172.5,
+          66.515625
+        ],
+        [
+          172.5,
+          78.0
+        ],
+        [
+          53.490234375,
+          78.890625
+        ]
+      ]
+    },
+    {
+      "title": "C.1. Data",
+      "heading_level": null,
+      "page_id": 17,
+      "polygon": [
+        [
+          54.0,
+          173.25
+        ],
+        [
+          96.0,
+          172.4765625
+        ],
+        [
+          96.0,
+          181.5
+        ],
+        [
+          54.0,
+          181.7578125
+        ]
+      ]
+    },
+    {
+      "title": "C.2. Training Pipeline",
+      "heading_level": null,
+      "page_id": 17,
+      "polygon": [
+        [
+          54.0,
+          676.5
+        ],
+        [
+          149.25,
+          676.5
+        ],
+        [
+          149.25,
+          686.0390625
+        ],
+        [
+          54.0,
+          686.0390625
+        ]
+      ]
+    },
+    {
+      "title": "C.3. Evaluation Metric",
+      "heading_level": null,
+      "page_id": 17,
+      "polygon": [
+        [
+          306.0,
+          153.0
+        ],
+        [
+          405.75,
+          152.3671875
+        ],
+        [
+          405.75,
+          162.0
+        ],
+        [
+          306.0,
+          162.0
+        ]
+      ]
+    },
+    {
+      "title": "D. Additional Experimental Results",
+      "heading_level": null,
+      "page_id": 18,
+      "polygon": [
+        [
+          54.0,
+          309.75
+        ],
+        [
+          238.5,
+          308.6015625
+        ],
+        [
+          238.5,
+          319.5
+        ],
+        [
+          54.0,
+          320.9765625
+        ]
+      ]
+    },
+    {
+      "title": "D.1. Ablation Studies on GP-VL",
+      "heading_level": null,
+      "page_id": 18,
+      "polygon": [
+        [
+          53.7890625,
+          367.5
+        ],
+        [
+          191.25,
+          366.609375
+        ],
+        [
+          191.25,
+          375.75
+        ],
+        [
+          53.7890625,
+          375.890625
+        ]
+      ]
+    },
+    {
+      "title": "D.2. More results on V-IRL-VL",
+      "heading_level": null,
+      "page_id": 18,
+      "polygon": [
+        [
+          54.0,
+          651.234375
+        ],
+        [
+          192.0,
+          651.234375
+        ],
+        [
+          192.0,
+          660.75
+        ],
+        [
+          54.0,
+          660.75
+        ]
+      ]
+    },
+    {
+      "title": "D.3. Failure Cases",
+      "heading_level": null,
+      "page_id": 18,
+      "polygon": [
+        [
+          305.25,
+          516.26953125
+        ],
+        [
+          385.5,
+          516.26953125
+        ],
+        [
+          385.5,
+          525.75
+        ],
+        [
+          305.25,
+          525.75
+        ]
+      ]
+    },
+    {
+      "title": "System Prompt (v\nin\n0 )\n[Task Description]\nYou are an expert in navigation. You will receive a sequence of instructions to fol-\nlow while observing your surrounding street views. You are also provided with\nyour observation and action history in text. Your goal is to first analyze the instruc-\ntion and identify the next sentence to be executed. Then, you need to provide the\naction to be taken based on the current observation and instruction.\n[Instruction]\n1. First, turn right to face northwest.\n2. Move forward until you reach next intersection where Korean War Memorial is\non your left.\n3. Turn left to face southwest.\n4. Move forward until you reach next intersection where Korean War Memorial is on your left behind.\n5. Turn right to face north.\n6. Move forward until you reach next intersection.\n7. Turn left to face east.\n8. Move forward until you reach next intersection.\n9. Turn left to face north.\n10. Move forward until you reach next intersection.\n11. Turn right to face east.\n12. Move forward until you reach next intersection.\n13. Turn left to face northeast.\n14. Move forward until you reach next intersection where 9/11 Memorial & Museum is on your left.\n15. Turn right to face northwest.\n16. Move forward until you reach destination where The destination 9/11 Memorial & Museum is on your right\nfront.\n[Action space]\n\"forward()\": indicates moving forward one step\n\"turn_direction(x)\": indicates adjust the ego agent direction towards x direction. x could be any following ['left',\n'right', 'slightly left', 'slightly right']\n\"stop()\": indicates the navigation is finished.\n[Observations and actions sequence]\nO_1: You observe an image of 4 views;\nA_1:\n[Output]\n{\n\"current observation\": latest observation from the streetview grid,\n\"current instruction\": analyze the full instruction and identify the sentence to be executed,\n\"action\": the action to be taken chosen from the action space,\n}\nAppending model and verifier outputs to obtain v\nin\nt\nv\nin\nt = [v\nout\n0 , v\nver\n0 , v\nout\n1 , v\nver\n1 , . . . , v\nout\nt\u22121, v\nver\nt\u22121] \u25b7 v\nin\nt = concat \nv\nin\n0 , [v\nout\nk , v\nver\nk ]\nt\u22121\nk=0\nFailed model output (v\nout\n)\n\"current observation\": \"No landmarks nearby\",\n\"current instruction\": \"Turn right to face northwest.\",\n\"action\": \"turn_direction(northwest)\",\nVerifier Output (v\nver\nt\n)\nIncorrect action. \u25b7 Fail this sample.",
+      "heading_level": null,
+      "page_id": 20,
+      "polygon": [
+        [
+          75.603515625,
+          104.04296875
+        ],
+        [
+          520.857421875,
+          104.04296875
+        ],
+        [
+          520.857421875,
+          650.84765625
+        ],
+        [
+          75.603515625,
+          652.39453125
+        ]
+      ]
+    }
+  ],
+  "page_stats": [
+    {
+      "page_id": 0,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          305
+        ],
+        [
+          "Line",
+          87
+        ],
+        [
+          "Text",
+          7
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "Footnote",
+          2
+        ],
+        [
+          "Reference",
+          2
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 1,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          416
+        ],
+        [
+          "Line",
+          99
+        ],
+        [
+          "Text",
+          5
+        ],
+        [
+          "Reference",
+          2
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 2,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          122
+        ],
+        [
+          "Line",
+          115
+        ],
+        [
+          "Text",
+          9
+        ],
+        [
+          "SectionHeader",
+          4
+        ],
+        [
+          "Reference",
+          3
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 3,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          91
+        ],
+        [
+          "Span",
+          41
+        ],
+        [
+          "Text",
+          7
+        ],
+        [
+          "Reference",
+          6
+        ],
+        [
+          "Caption",
+          2
+        ],
+        [
+          "Footnote",
+          2
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 4,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          282
+        ],
+        [
+          "Line",
+          70
+        ],
+        [
+          "Text",
+          5
+        ],
+        [
+          "Reference",
+          4
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "Picture",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 5,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          128
+        ],
+        [
+          "Span",
+          34
+        ],
+        [
+          "Text",
+          4
+        ],
+        [
+          "Reference",
+          4
+        ],
+        [
+          "Figure",
+          2
+        ],
+        [
+          "Caption",
+          2
+        ],
+        [
+          "FigureGroup",
+          2
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 6,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          360
+        ],
+        [
+          "Line",
+          99
+        ],
+        [
+          "Text",
+          4
+        ],
+        [
+          "Reference",
+          4
+        ],
+        [
+          "Figure",
+          2
+        ],
+        [
+          "Caption",
+          2
+        ],
+        [
+          "FigureGroup",
+          2
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 7,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          114
+        ],
+        [
+          "Span",
+          31
+        ],
+        [
+          "Text",
+          7
+        ],
+        [
+          "Reference",
+          6
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "Figure",
+          2
+        ],
+        [
+          "Caption",
+          2
+        ],
+        [
+          "FigureGroup",
+          2
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 8,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          292
+        ],
+        [
+          "Line",
+          94
+        ],
+        [
+          "ListItem",
+          21
+        ],
+        [
+          "Reference",
+          21
+        ],
+        [
+          "Text",
+          2
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "ListGroup",
+          2
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 9,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          303
+        ],
+        [
+          "Line",
+          96
+        ],
+        [
+          "ListItem",
+          22
+        ],
+        [
+          "Reference",
+          22
+        ],
+        [
+          "ListGroup",
+          2
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 10,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          311
+        ],
+        [
+          "Line",
+          99
+        ],
+        [
+          "ListItem",
+          22
+        ],
+        [
+          "Reference",
+          21
+        ],
+        [
+          "ListGroup",
+          2
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 11,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          61
+        ],
+        [
+          "Line",
+          21
+        ],
+        [
+          "ListItem",
+          5
+        ],
+        [
+          "Reference",
+          5
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 12,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          117
+        ],
+        [
+          "Span",
+          68
+        ],
+        [
+          "ListItem",
+          16
+        ],
+        [
+          "Text",
+          10
+        ],
+        [
+          "Reference",
+          7
+        ],
+        [
+          "SectionHeader",
+          6
+        ],
+        [
+          "ListGroup",
+          2
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "Footnote",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 13,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          431
+        ],
+        [
+          "Line",
+          112
+        ],
+        [
+          "ListItem",
+          10
+        ],
+        [
+          "Text",
+          4
+        ],
+        [
+          "Reference",
+          4
+        ],
+        [
+          "ListGroup",
+          3
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "Code",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 14,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          401
+        ],
+        [
+          "Line",
+          110
+        ],
+        [
+          "ListItem",
+          7
+        ],
+        [
+          "Text",
+          2
+        ],
+        [
+          "ListGroup",
+          2
+        ],
+        [
+          "Reference",
+          2
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "Code",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 15,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          317
+        ],
+        [
+          "Line",
+          97
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "Reference",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 16,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          288
+        ],
+        [
+          "Line",
+          91
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "Code",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "Reference",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 17,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          103
+        ],
+        [
+          "Span",
+          48
+        ],
+        [
+          "Text",
+          11
+        ],
+        [
+          "Reference",
+          6
+        ],
+        [
+          "SectionHeader",
+          4
+        ],
+        [
+          "Equation",
+          2
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 18,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          118
+        ],
+        [
+          "Span",
+          49
+        ],
+        [
+          "Text",
+          10
+        ],
+        [
+          "SectionHeader",
+          4
+        ],
+        [
+          "Reference",
+          4
+        ],
+        [
+          "Figure",
+          2
+        ],
+        [
+          "Caption",
+          2
+        ],
+        [
+          "FigureGroup",
+          2
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 19,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          68
+        ],
+        [
+          "Span",
+          41
+        ],
+        [
+          "Caption",
+          3
+        ],
+        [
+          "Figure",
+          2
+        ],
+        [
+          "FigureGroup",
+          2
+        ],
+        [
+          "Reference",
+          2
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "Code",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 20,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          238
+        ],
+        [
+          "Line",
+          86
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "Reference",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    }
+  ],
+  "debug_data_path": "debug_data/[DeepMind]SFT Memorizes, RL Generalizes- A Comparative Study of Foundation Model Post-training"
+}

@@ -1,0 +1,1730 @@
+{
+  "table_of_contents": [
+    {
+      "title": "Training Chain-of-Thought via Latent-Variable\nInference",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          130.587890625,
+          99.8338623046875
+        ],
+        [
+          480.5223693847656,
+          99.38671875
+        ],
+        [
+          480.5223693847656,
+          136.9742431640625
+        ],
+        [
+          129.392578125,
+          136.9742431640625
+        ]
+      ]
+    },
+    {
+      "title": "Abstract",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          282.09375,
+          238.60546875
+        ],
+        [
+          328.2433166503906,
+          238.60546875
+        ],
+        [
+          328.2433166503906,
+          251.22332763671875
+        ],
+        [
+          282.09375,
+          251.22332763671875
+        ]
+      ]
+    },
+    {
+      "title": "1 Introduction",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          108.0,
+          492.29296875
+        ],
+        [
+          190.8136749267578,
+          492.29296875
+        ],
+        [
+          190.8136749267578,
+          504.58135986328125
+        ],
+        [
+          108.0,
+          504.58135986328125
+        ]
+      ]
+    },
+    {
+      "title": "2 Method",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          107.876953125,
+          407.66717529296875
+        ],
+        [
+          165.77947998046875,
+          407.66717529296875
+        ],
+        [
+          165.77947998046875,
+          419.62237548828125
+        ],
+        [
+          106.681640625,
+          419.62237548828125
+        ]
+      ]
+    },
+    {
+      "title": "2.1 Derivation",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          107.25,
+          464.44921875
+        ],
+        [
+          176.25,
+          464.44921875
+        ],
+        [
+          176.25,
+          473.25
+        ],
+        [
+          106.681640625,
+          473.25
+        ]
+      ]
+    },
+    {
+      "title": "Algorithm 1 TRICE",
+      "heading_level": null,
+      "page_id": 3,
+      "polygon": [
+        [
+          106.3828125,
+          73.4765625
+        ],
+        [
+          190.5,
+          71.9296875
+        ],
+        [
+          190.5,
+          82.5
+        ],
+        [
+          105.1875,
+          82.7578125
+        ]
+      ]
+    },
+    {
+      "title": "2.2 Why not variational inference, reweighted wake-sleep, or rejection sampling?",
+      "heading_level": null,
+      "page_id": 5,
+      "polygon": [
+        [
+          108.474609375,
+          219.0
+        ],
+        [
+          459.0,
+          217.72265625
+        ],
+        [
+          459.0,
+          228.0
+        ],
+        [
+          107.279296875,
+          229.32421875
+        ]
+      ]
+    },
+    {
+      "title": "3 Related Work",
+      "heading_level": null,
+      "page_id": 6,
+      "polygon": [
+        [
+          108.0,
+          146.25213623046875
+        ],
+        [
+          197.09014892578125,
+          145.01953125
+        ],
+        [
+          197.09014892578125,
+          158.20733642578125
+        ],
+        [
+          106.98046875,
+          158.20733642578125
+        ]
+      ]
+    },
+    {
+      "title": "3.1 Self-Taught Reasoner",
+      "heading_level": null,
+      "page_id": 6,
+      "polygon": [
+        [
+          107.578125,
+          535.60546875
+        ],
+        [
+          222.2012939453125,
+          535.60546875
+        ],
+        [
+          222.2012939453125,
+          545.8951110839844
+        ],
+        [
+          107.578125,
+          545.8951110839844
+        ]
+      ]
+    },
+    {
+      "title": "4 Experiments",
+      "heading_level": null,
+      "page_id": 7,
+      "polygon": [
+        [
+          107.279296875,
+          297.38671875
+        ],
+        [
+          192.0,
+          297.38671875
+        ],
+        [
+          192.0,
+          308.98828125
+        ],
+        [
+          107.279296875,
+          308.98828125
+        ]
+      ]
+    },
+    {
+      "title": "5 Discussion",
+      "heading_level": null,
+      "page_id": 9,
+      "polygon": [
+        [
+          107.279296875,
+          379.9691467285156
+        ],
+        [
+          179.7431640625,
+          379.37109375
+        ],
+        [
+          179.7431640625,
+          391.9243469238281
+        ],
+        [
+          107.279296875,
+          391.9243469238281
+        ]
+      ]
+    },
+    {
+      "title": "References",
+      "heading_level": null,
+      "page_id": 10,
+      "polygon": [
+        [
+          107.876953125,
+          122.9571533203125
+        ],
+        [
+          163.5438690185547,
+          121.81640625
+        ],
+        [
+          163.5438690185547,
+          134.912353515625
+        ],
+        [
+          106.681640625,
+          134.912353515625
+        ]
+      ]
+    },
+    {
+      "title": "Supplemental Material for \"Training Chain-of-Thought via\nLatent-Variable Inference\"",
+      "heading_level": null,
+      "page_id": 13,
+      "polygon": [
+        [
+          121.5,
+          70.5
+        ],
+        [
+          489.0,
+          69.22265625
+        ],
+        [
+          489.0,
+          98.25
+        ],
+        [
+          121.5,
+          98.25
+        ]
+      ]
+    },
+    {
+      "title": "A Generalizing TRICE to Nondeterministic Likelihood Models",
+      "heading_level": null,
+      "page_id": 13,
+      "polygon": [
+        [
+          107.578125,
+          118.5
+        ],
+        [
+          438.75,
+          117.5625
+        ],
+        [
+          438.75,
+          128.390625
+        ],
+        [
+          106.3828125,
+          129.9375
+        ]
+      ]
+    },
+    {
+      "title": "B Derivation of the Control Variate Scaling Heuristic",
+      "heading_level": null,
+      "page_id": 13,
+      "polygon": [
+        [
+          107.876953125,
+          449.25
+        ],
+        [
+          388.5,
+          448.59375
+        ],
+        [
+          388.5,
+          459.75
+        ],
+        [
+          106.681640625,
+          459.75
+        ]
+      ]
+    },
+    {
+      "title": "C On Gradient Estimators Based Solely on Incorrect Rationales",
+      "heading_level": null,
+      "page_id": 15,
+      "polygon": [
+        [
+          107.876953125,
+          71.9296875
+        ],
+        [
+          442.5,
+          71.9296875
+        ],
+        [
+          442.5,
+          82.7578125
+        ],
+        [
+          107.876953125,
+          82.7578125
+        ]
+      ]
+    },
+    {
+      "title": "C.1 Variance of incorrect-rationale gradient estimators",
+      "heading_level": null,
+      "page_id": 15,
+      "polygon": [
+        [
+          108.17578125,
+          174.75
+        ],
+        [
+          348.75,
+          173.25
+        ],
+        [
+          348.75,
+          183.0
+        ],
+        [
+          106.98046875,
+          184.078125
+        ]
+      ]
+    },
+    {
+      "title": "C.2 TRICE control variate as a debiased estimator based on incorrect rationales",
+      "heading_level": null,
+      "page_id": 15,
+      "polygon": [
+        [
+          107.25,
+          516.26953125
+        ],
+        [
+          456.75,
+          516.26953125
+        ],
+        [
+          456.75,
+          526.5
+        ],
+        [
+          107.25,
+          526.5
+        ]
+      ]
+    },
+    {
+      "title": "D BBH Per-Task Experimental Results",
+      "heading_level": null,
+      "page_id": 16,
+      "polygon": [
+        [
+          107.876953125,
+          375.50390625
+        ],
+        [
+          316.5,
+          373.95703125
+        ],
+        [
+          316.5,
+          385.55859375
+        ],
+        [
+          106.681640625,
+          387.10546875
+        ]
+      ]
+    },
+    {
+      "title": "E Example Rationales",
+      "heading_level": null,
+      "page_id": 16,
+      "polygon": [
+        [
+          107.578125,
+          430.5
+        ],
+        [
+          231.0,
+          430.03125
+        ],
+        [
+          231.0,
+          440.25
+        ],
+        [
+          107.578125,
+          440.859375
+        ]
+      ]
+    },
+    {
+      "title": "F Method and Template Details",
+      "heading_level": null,
+      "page_id": 16,
+      "polygon": [
+        [
+          107.876953125,
+          582.75
+        ],
+        [
+          279.0,
+          582.3984375
+        ],
+        [
+          279.0,
+          593.25
+        ],
+        [
+          107.876953125,
+          593.25
+        ]
+      ]
+    },
+    {
+      "title": "Example Rationales for Logical Deduction Three Objects BBH Task",
+      "heading_level": null,
+      "page_id": 17,
+      "polygon": [
+        [
+          123.1171875,
+          164.7421875
+        ],
+        [
+          397.2735595703125,
+          164.7421875
+        ],
+        [
+          397.2735595703125,
+          175.11700439453125
+        ],
+        [
+          121.921875,
+          175.11700439453125
+        ]
+      ]
+    },
+    {
+      "title": "An example where TRICE gets the answer right with a good rationale:",
+      "heading_level": null,
+      "page_id": 17,
+      "polygon": [
+        [
+          122.51953125,
+          186.3984375
+        ],
+        [
+          423.2855224609375,
+          184.8515625
+        ],
+        [
+          423.2855224609375,
+          196.80206298828125
+        ],
+        [
+          121.32421875,
+          196.80206298828125
+        ]
+      ]
+    },
+    {
+      "title": "An example where TRICE gets the answer right with a bad rationale:",
+      "heading_level": null,
+      "page_id": 17,
+      "polygon": [
+        [
+          122.818359375,
+          328.65850830078125
+        ],
+        [
+          418.8620910644531,
+          327.1640625
+        ],
+        [
+          418.8620910644531,
+          338.62109375
+        ],
+        [
+          121.623046875,
+          338.62109375
+        ]
+      ]
+    },
+    {
+      "title": "An example where TRICE gets the answer wrong:",
+      "heading_level": null,
+      "page_id": 17,
+      "polygon": [
+        [
+          122.51953125,
+          470.25
+        ],
+        [
+          336.7603759765625,
+          468.703125
+        ],
+        [
+          336.7603759765625,
+          480.4390869140625
+        ],
+        [
+          121.32421875,
+          480.4390869140625
+        ]
+      ]
+    },
+    {
+      "title": "Example Rationales for GSM8K",
+      "heading_level": null,
+      "page_id": 18,
+      "polygon": [
+        [
+          121.32421875,
+          75.41015625
+        ],
+        [
+          253.9217071533203,
+          75.41015625
+        ],
+        [
+          253.9217071533203,
+          85.4140625
+        ],
+        [
+          121.32421875,
+          85.4140625
+        ]
+      ]
+    },
+    {
+      "title": "An example where TRICE gets the answer right with a good rationale:",
+      "heading_level": null,
+      "page_id": 18,
+      "polygon": [
+        [
+          121.921875,
+          97.136474609375
+        ],
+        [
+          423.2855224609375,
+          95.90625
+        ],
+        [
+          423.2855224609375,
+          107.09906005859375
+        ],
+        [
+          120.7265625,
+          107.09906005859375
+        ]
+      ]
+    },
+    {
+      "title": "An example where TRICE gets the answer right with a bad rationale:",
+      "heading_level": null,
+      "page_id": 18,
+      "polygon": [
+        [
+          121.32421875,
+          282.59149169921875
+        ],
+        [
+          418.86212158203125,
+          281.53125
+        ],
+        [
+          418.86212158203125,
+          292.5540771484375
+        ],
+        [
+          120.12890625,
+          292.5540771484375
+        ]
+      ]
+    },
+    {
+      "title": "An example where TRICE gets the answer wrong:",
+      "heading_level": null,
+      "page_id": 18,
+      "polygon": [
+        [
+          122.51953125,
+          478.9544677734375
+        ],
+        [
+          336.7604064941406,
+          477.59765625
+        ],
+        [
+          336.7604064941406,
+          488.91705322265625
+        ],
+        [
+          121.32421875,
+          488.91705322265625
+        ]
+      ]
+    },
+    {
+      "title": "Example Rationales for GSM8K Generated by RWS Guide\nQuestion: Josh decides to try flipping a house. He buys a house for\n$80,000 and then puts in $50,000 in repairs. This increased the\nvalue of the house by 150%. How much profit did he make?\nGuide answer:\nHe bought the house for 80000 and did 50000 worth of repairs.\nSo total cost = 80000 + 50000 = 130000.\nNow, the increased value of the house is 150% of 80000 = 120000.\nSo his profit = 120000 - 130000 = -10000.",
+      "heading_level": null,
+      "page_id": 19,
+      "polygon": [
+        [
+          120.12890625,
+          75.451416015625
+        ],
+        [
+          495.45703125,
+          75.451416015625
+        ],
+        [
+          494.26171875,
+          198.759033203125
+        ],
+        [
+          118.93359375,
+          199.546875
+        ]
+      ]
+    },
+    {
+      "title": "Bootstrapped 3-shot CoT Prompt for Formal Fallacies BBH Task\nQuestion: \"It is not always easy to grasp who is consuming which\nproducts. The following argument pertains to this question: First\nof all, being a frequent consumer of KMS shampoo is necessary for\nbeing a regular consumer of Yardley London soap. Next, whoever is\na regular user of Joico shampoo is not a frequent consumer of KMS\nshampoo. All this entails that no regular consumer of Yardley London\nsoap is a regular user of Joico shampoo.\"\nIs the argument, given the explicitly stated premises, deductively\nvalid or invalid?\nOptions:\n- valid\n- invalid\nAnswer: Let's think step by step.\nRegular use of a product always entails being a frequent consumer of\nthat product. Although a Joico shampoo user might still buy bottles\nof Yardley London soap sometimes, he/she can never be a regular\nproduct of both soaps. So, the answer is valid.\nQuestion: \"Here comes a perfectly valid argument: To start with,\nwhoever is an expert of BSC Young Boys is not an ex-fan of Real\nBetis Balompi\u00e9. Now, whoever is a friend of FC Dynamo Kyiv is not\nan expert of BSC Young Boys. Hence, no friend of FC Dynamo Kyiv is\nan ex-fan of Real Betis Balompi\u00e9.\"\nIs the argument, given the explicitly stated premises, deductively\nvalid or invalid?\nOptions:\n- valid\n- invalid\nAnswer: Let's think step by step.\nYou can friend FC Dynamo Kyiv but not be an expert of BSC Young Boys.\nSo, the answer is invalid.",
+      "heading_level": null,
+      "page_id": 21,
+      "polygon": [
+        [
+          111.1640625,
+          99.38671875
+        ],
+        [
+          485.296875,
+          97.83984375
+        ],
+        [
+          485.296875,
+          463.67578125
+        ],
+        [
+          111.1640625,
+          465.22265625
+        ]
+      ]
+    }
+  ],
+  "page_stats": [
+    {
+      "page_id": 0,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          129
+        ],
+        [
+          "Line",
+          44
+        ],
+        [
+          "Text",
+          4
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "Footnote",
+          2
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 1,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          414
+        ],
+        [
+          "Line",
+          63
+        ],
+        [
+          "Text",
+          9
+        ],
+        [
+          "Footnote",
+          2
+        ],
+        [
+          "Reference",
+          2
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "Equation",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 2,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          121
+        ],
+        [
+          "Line",
+          62
+        ],
+        [
+          "Text",
+          10
+        ],
+        [
+          "Reference",
+          2
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "Equation",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 3,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          201
+        ],
+        [
+          "Line",
+          89
+        ],
+        [
+          "Text",
+          2
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "Code",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "Reference",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 4,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          111
+        ],
+        [
+          "Line",
+          59
+        ],
+        [
+          "Text",
+          9
+        ],
+        [
+          "Equation",
+          3
+        ],
+        [
+          "Footnote",
+          2
+        ],
+        [
+          "Reference",
+          2
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 5,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          88
+        ],
+        [
+          "Line",
+          70
+        ],
+        [
+          "Text",
+          10
+        ],
+        [
+          "Reference",
+          2
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 6,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          184
+        ],
+        [
+          "Line",
+          53
+        ],
+        [
+          "Text",
+          8
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "Reference",
+          2
+        ],
+        [
+          "Footnote",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 7,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          62
+        ],
+        [
+          "Span",
+          26
+        ],
+        [
+          "Text",
+          8
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "Reference",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 8,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "TableCell",
+          52
+        ],
+        [
+          "Line",
+          40
+        ],
+        [
+          "Span",
+          15
+        ],
+        [
+          "Text",
+          4
+        ],
+        [
+          "Table",
+          2
+        ],
+        [
+          "Caption",
+          2
+        ],
+        [
+          "TableGroup",
+          2
+        ],
+        [
+          "Reference",
+          2
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 9,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          150
+        ],
+        [
+          "Line",
+          52
+        ],
+        [
+          "Text",
+          5
+        ],
+        [
+          "Reference",
+          2
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "Footnote",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 10,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          143
+        ],
+        [
+          "Line",
+          46
+        ],
+        [
+          "ListItem",
+          18
+        ],
+        [
+          "Reference",
+          18
+        ],
+        [
+          "Text",
+          1
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 11,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          142
+        ],
+        [
+          "Line",
+          47
+        ],
+        [
+          "ListItem",
+          18
+        ],
+        [
+          "Reference",
+          18
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 12,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          130
+        ],
+        [
+          "Line",
+          43
+        ],
+        [
+          "ListItem",
+          15
+        ],
+        [
+          "Reference",
+          15
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 13,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          106
+        ],
+        [
+          "Line",
+          62
+        ],
+        [
+          "Text",
+          7
+        ],
+        [
+          "Equation",
+          5
+        ],
+        [
+          "Reference",
+          4
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "ListItem",
+          2
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 14,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          58
+        ],
+        [
+          "Line",
+          54
+        ],
+        [
+          "Text",
+          9
+        ],
+        [
+          "Equation",
+          8
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "Reference",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 15,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          67
+        ],
+        [
+          "Line",
+          65
+        ],
+        [
+          "Text",
+          13
+        ],
+        [
+          "Equation",
+          7
+        ],
+        [
+          "Reference",
+          4
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 16,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "TableCell",
+          244
+        ],
+        [
+          "Line",
+          38
+        ],
+        [
+          "Span",
+          22
+        ],
+        [
+          "Text",
+          6
+        ],
+        [
+          "Reference",
+          4
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "Table",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "TableGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 17,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          79
+        ],
+        [
+          "Line",
+          34
+        ],
+        [
+          "ListItem",
+          9
+        ],
+        [
+          "Text",
+          8
+        ],
+        [
+          "SectionHeader",
+          4
+        ],
+        [
+          "ListGroup",
+          3
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "Reference",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 18,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          113
+        ],
+        [
+          "Line",
+          51
+        ],
+        [
+          "SectionHeader",
+          4
+        ],
+        [
+          "Text",
+          3
+        ],
+        [
+          "Code",
+          3
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "Reference",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 19,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          193
+        ],
+        [
+          "Line",
+          50
+        ],
+        [
+          "Text",
+          8
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "Code",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "Reference",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 20,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          72
+        ],
+        [
+          "Line",
+          22
+        ],
+        [
+          "Text",
+          4
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 21,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          101
+        ],
+        [
+          "Line",
+          51
+        ],
+        [
+          "Text",
+          5
+        ],
+        [
+          "ListItem",
+          2
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ],
+        [
+          "Reference",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 22,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          119
+        ],
+        [
+          "Line",
+          60
+        ],
+        [
+          "Code",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "Reference",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    }
+  ],
+  "debug_data_path": "debug_data/[Google][ELBO loss] NeurIPS-2023-training-chain-of-thought-via-latent-variable-inference-Paper-Conference"
+}

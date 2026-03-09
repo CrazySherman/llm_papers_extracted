@@ -1,0 +1,1534 @@
+{
+  "table_of_contents": [
+    {
+      "title": "Automating Code Review Activities by Large-Scale Pre-training",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          56.478515625,
+          82.76910400390625
+        ],
+        [
+          554.2805786132812,
+          81.984375
+        ],
+        [
+          554.2805786132812,
+          99.9844970703125
+        ],
+        [
+          56.478515625,
+          100.546875
+        ]
+      ]
+    },
+    {
+      "title": "ABSTRACT",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          53.7890625,
+          346.4607849121094
+        ],
+        [
+          111.94344329833984,
+          344.953125
+        ],
+        [
+          111.94344329833984,
+          357.369873046875
+        ],
+        [
+          52.59375,
+          357.369873046875
+        ]
+      ]
+    },
+    {
+      "title": "CCS CONCEPTS",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          317.056640625,
+          409.921875
+        ],
+        [
+          398.9768981933594,
+          409.921875
+        ],
+        [
+          398.9768981933594,
+          422.461669921875
+        ],
+        [
+          317.056640625,
+          422.461669921875
+        ]
+      ]
+    },
+    {
+      "title": "KEYWORDS",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          317.35546875,
+          445.11328125
+        ],
+        [
+          379.82049560546875,
+          445.11328125
+        ],
+        [
+          379.82049560546875,
+          457.4166564941406
+        ],
+        [
+          316.16015625,
+          457.4166564941406
+        ]
+      ]
+    },
+    {
+      "title": "ACM Reference Format:",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          316.7578125,
+          474.1171875
+        ],
+        [
+          404.65362548828125,
+          474.1171875
+        ],
+        [
+          404.65362548828125,
+          484.3592529296875
+        ],
+        [
+          316.7578125,
+          484.3592529296875
+        ]
+      ]
+    },
+    {
+      "title": "1 INTRODUCTION",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          317.35546875,
+          563.44921875
+        ],
+        [
+          420.68597412109375,
+          563.44921875
+        ],
+        [
+          420.68597412109375,
+          575.7676544189453
+        ],
+        [
+          317.35546875,
+          575.7676544189453
+        ]
+      ]
+    },
+    {
+      "title": "2 CODE REVIEW AUTOMATION TASKS",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          316.5,
+          304.5
+        ],
+        [
+          526.5,
+          303.9609375
+        ],
+        [
+          526.5,
+          313.5
+        ],
+        [
+          316.5,
+          313.5
+        ]
+      ]
+    },
+    {
+      "title": "2.1 Code Review",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          316.5,
+          378.0
+        ],
+        [
+          407.25,
+          376.6640625
+        ],
+        [
+          407.25,
+          386.25
+        ],
+        [
+          316.5,
+          386.25
+        ]
+      ]
+    },
+    {
+      "title": "2.2 Code Change Quality Estimation",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          52.892578125,
+          597.0
+        ],
+        [
+          241.5,
+          597.0
+        ],
+        [
+          241.5,
+          607.5
+        ],
+        [
+          52.892578125,
+          607.921875
+        ]
+      ]
+    },
+    {
+      "title": "2.3 Code Review Generation",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          316.16015625,
+          509.30859375
+        ],
+        [
+          465.75,
+          509.30859375
+        ],
+        [
+          465.75,
+          518.25
+        ],
+        [
+          316.16015625,
+          518.25
+        ]
+      ]
+    },
+    {
+      "title": "2.4 Code Refinement",
+      "heading_level": null,
+      "page_id": 3,
+      "polygon": [
+        [
+          52.5,
+          132.0
+        ],
+        [
+          165.0,
+          131.484375
+        ],
+        [
+          165.0,
+          141.0
+        ],
+        [
+          51.99609375,
+          141.0
+        ]
+      ]
+    },
+    {
+      "title": "2.5 Data Format",
+      "heading_level": null,
+      "page_id": 3,
+      "polygon": [
+        [
+          52.5,
+          280.5
+        ],
+        [
+          141.0,
+          280.5
+        ],
+        [
+          141.0,
+          289.5
+        ],
+        [
+          52.294921875,
+          290.0390625
+        ]
+      ]
+    },
+    {
+      "title": "3 CODE REVIEW DATASET",
+      "heading_level": null,
+      "page_id": 3,
+      "polygon": [
+        [
+          52.5,
+          538.69921875
+        ],
+        [
+          199.5,
+          538.69921875
+        ],
+        [
+          199.5,
+          548.25
+        ],
+        [
+          52.5,
+          548.25
+        ]
+      ]
+    },
+    {
+      "title": "3.1 Project Selection",
+      "heading_level": null,
+      "page_id": 3,
+      "polygon": [
+        [
+          316.16015625,
+          85.46484375
+        ],
+        [
+          426.0,
+          85.46484375
+        ],
+        [
+          426.0,
+          95.51953125
+        ],
+        [
+          316.16015625,
+          95.51953125
+        ]
+      ]
+    },
+    {
+      "title": "3.2 Review Data Collection",
+      "heading_level": null,
+      "page_id": 3,
+      "polygon": [
+        [
+          316.5,
+          328.32421875
+        ],
+        [
+          459.0,
+          328.32421875
+        ],
+        [
+          459.0,
+          337.5
+        ],
+        [
+          316.16015625,
+          337.5
+        ]
+      ]
+    },
+    {
+      "title": "3.3 Dataset Construction",
+      "heading_level": null,
+      "page_id": 3,
+      "polygon": [
+        [
+          317.35546875,
+          604.44140625
+        ],
+        [
+          448.5,
+          604.44140625
+        ],
+        [
+          448.5,
+          613.5
+        ],
+        [
+          317.35546875,
+          613.5
+        ]
+      ]
+    },
+    {
+      "title": "3.4 Data Split",
+      "heading_level": null,
+      "page_id": 4,
+      "polygon": [
+        [
+          52.5,
+          470.25
+        ],
+        [
+          128.25,
+          468.703125
+        ],
+        [
+          128.25,
+          479.25
+        ],
+        [
+          52.5,
+          479.53125
+        ]
+      ]
+    },
+    {
+      "title": "4 CODEREVIEWER",
+      "heading_level": null,
+      "page_id": 4,
+      "polygon": [
+        [
+          53.490234375,
+          571.18359375
+        ],
+        [
+          159.0,
+          571.18359375
+        ],
+        [
+          159.0,
+          581.25
+        ],
+        [
+          52.294921875,
+          581.25
+        ]
+      ]
+    },
+    {
+      "title": "4.1 Model Architecture",
+      "heading_level": null,
+      "page_id": 4,
+      "polygon": [
+        [
+          52.5,
+          663.22265625
+        ],
+        [
+          175.5,
+          663.22265625
+        ],
+        [
+          175.5,
+          671.73046875
+        ],
+        [
+          52.5,
+          671.73046875
+        ]
+      ]
+    },
+    {
+      "title": "4.2 Input-Output Representations",
+      "heading_level": null,
+      "page_id": 4,
+      "polygon": [
+        [
+          316.16015625,
+          272.25
+        ],
+        [
+          492.75,
+          270.75
+        ],
+        [
+          492.75,
+          281.14453125
+        ],
+        [
+          316.16015625,
+          282.69140625
+        ]
+      ]
+    },
+    {
+      "title": "4.3 Pre-training Tasks",
+      "heading_level": null,
+      "page_id": 4,
+      "polygon": [
+        [
+          316.16015625,
+          549.0
+        ],
+        [
+          435.0,
+          547.59375
+        ],
+        [
+          435.0,
+          558.0
+        ],
+        [
+          316.16015625,
+          558.421875
+        ]
+      ]
+    },
+    {
+      "title": "4.4 Fine-Tuning",
+      "heading_level": null,
+      "page_id": 5,
+      "polygon": [
+        [
+          317.056640625,
+          652.0078125
+        ],
+        [
+          404.25,
+          652.0078125
+        ],
+        [
+          404.25,
+          661.5
+        ],
+        [
+          317.056640625,
+          661.5
+        ]
+      ]
+    },
+    {
+      "title": "5 STUDY DESIGN",
+      "heading_level": null,
+      "page_id": 6,
+      "polygon": [
+        [
+          53.490234375,
+          147.75
+        ],
+        [
+          149.25,
+          147.7265625
+        ],
+        [
+          149.25,
+          156.75
+        ],
+        [
+          52.294921875,
+          157.0078125
+        ]
+      ]
+    },
+    {
+      "title": "5.1 Baseline Models",
+      "heading_level": null,
+      "page_id": 6,
+      "polygon": [
+        [
+          52.5,
+          629.96484375
+        ],
+        [
+          159.0,
+          629.96484375
+        ],
+        [
+          159.0,
+          639.0
+        ],
+        [
+          52.5,
+          639.0
+        ]
+      ]
+    },
+    {
+      "title": "5.2 Evaluation Metrics",
+      "heading_level": null,
+      "page_id": 6,
+      "polygon": [
+        [
+          316.5,
+          589.74609375
+        ],
+        [
+          436.5,
+          589.74609375
+        ],
+        [
+          436.5,
+          598.5
+        ],
+        [
+          316.5,
+          598.5
+        ]
+      ]
+    },
+    {
+      "title": "5.3 Implementation Details",
+      "heading_level": null,
+      "page_id": 7,
+      "polygon": [
+        [
+          53.490234375,
+          364.2890625
+        ],
+        [
+          196.39083862304688,
+          362.7421875
+        ],
+        [
+          196.39083862304688,
+          375.4586486816406
+        ],
+        [
+          53.490234375,
+          375.4586486816406
+        ]
+      ]
+    },
+    {
+      "title": "6 RESULTS ANALYSIS",
+      "heading_level": null,
+      "page_id": 7,
+      "polygon": [
+        [
+          53.19140625,
+          532.51171875
+        ],
+        [
+          171.67080688476562,
+          532.51171875
+        ],
+        [
+          171.67080688476562,
+          544.1526641845703
+        ],
+        [
+          51.99609375,
+          544.1526641845703
+        ]
+      ]
+    },
+    {
+      "title": "6.1 RQ1: Performance on Code Change Quality\nEstimation",
+      "heading_level": null,
+      "page_id": 7,
+      "polygon": [
+        [
+          53.7890625,
+          614.2665710449219
+        ],
+        [
+          293.2091064453125,
+          612.94921875
+        ],
+        [
+          293.2091064453125,
+          638.1266784667969
+        ],
+        [
+          53.7890625,
+          638.1266784667969
+        ]
+      ]
+    },
+    {
+      "title": "6.2 RQ2: Performance on Review Generation",
+      "heading_level": null,
+      "page_id": 7,
+      "polygon": [
+        [
+          317.654296875,
+          334.7215576171875
+        ],
+        [
+          546.4242553710938,
+          333.3515625
+        ],
+        [
+          546.4242553710938,
+          345.6306457519531
+        ],
+        [
+          316.458984375,
+          345.6306457519531
+        ]
+      ]
+    },
+    {
+      "title": "6.3 RQ3: Performance on Code Refinement",
+      "heading_level": null,
+      "page_id": 8,
+      "polygon": [
+        [
+          52.892578125,
+          662.8359375
+        ],
+        [
+          273.7363586425781,
+          662.8359375
+        ],
+        [
+          273.7363586425781,
+          673.7646636962891
+        ],
+        [
+          51.697265625,
+          673.7646636962891
+        ]
+      ]
+    },
+    {
+      "title": "6.4 RQ4: Influence of Pre-training Tasks",
+      "heading_level": null,
+      "page_id": 9,
+      "polygon": [
+        [
+          52.892578125,
+          499.1045837402344
+        ],
+        [
+          259.8381652832031,
+          497.70703125
+        ],
+        [
+          259.8381652832031,
+          510.013671875
+        ],
+        [
+          52.892578125,
+          510.013671875
+        ]
+      ]
+    },
+    {
+      "title": "6.5 RQ5: Influence of Multilingual Dataset",
+      "heading_level": null,
+      "page_id": 9,
+      "polygon": [
+        [
+          315.5625,
+          204.445556640625
+        ],
+        [
+          534.3260498046875,
+          203.4140625
+        ],
+        [
+          534.3260498046875,
+          215.35467529296875
+        ],
+        [
+          315.5625,
+          215.7890625
+        ]
+      ]
+    },
+    {
+      "title": "7 RELATED WORKS",
+      "heading_level": null,
+      "page_id": 9,
+      "polygon": [
+        [
+          316.458984375,
+          438.92578125
+        ],
+        [
+          427.2423400878906,
+          438.92578125
+        ],
+        [
+          427.2423400878906,
+          450.4877014160156
+        ],
+        [
+          316.458984375,
+          450.4877014160156
+        ]
+      ]
+    },
+    {
+      "title": "7.1 Pre-training for Code-related Tasks",
+      "heading_level": null,
+      "page_id": 9,
+      "polygon": [
+        [
+          317.35546875,
+          455.26959228515625
+        ],
+        [
+          518.3005981445312,
+          454.39453125
+        ],
+        [
+          518.3005981445312,
+          466.1786804199219
+        ],
+        [
+          317.35546875,
+          466.1786804199219
+        ]
+      ]
+    },
+    {
+      "title": "7.2 Automating Code Review Activities",
+      "heading_level": null,
+      "page_id": 10,
+      "polygon": [
+        [
+          53.19140625,
+          236.091552734375
+        ],
+        [
+          254.48178100585938,
+          234.73828125
+        ],
+        [
+          254.48178100585938,
+          247.00067138671875
+        ],
+        [
+          53.19140625,
+          247.00067138671875
+        ]
+      ]
+    },
+    {
+      "title": "7.3 Code Review Datasets",
+      "heading_level": null,
+      "page_id": 10,
+      "polygon": [
+        [
+          317.056640625,
+          85.40655517578125
+        ],
+        [
+          451.0350646972656,
+          84.3046875
+        ],
+        [
+          451.0350646972656,
+          96.315673828125
+        ],
+        [
+          315.861328125,
+          96.315673828125
+        ]
+      ]
+    },
+    {
+      "title": "8 THREATS TO VALIDITY",
+      "heading_level": null,
+      "page_id": 10,
+      "polygon": [
+        [
+          317.953125,
+          255.62109375
+        ],
+        [
+          456.8060607910156,
+          254.07421875
+        ],
+        [
+          456.8060607910156,
+          266.812744140625
+        ],
+        [
+          316.7578125,
+          266.812744140625
+        ]
+      ]
+    },
+    {
+      "title": "9 CONCLUSION",
+      "heading_level": null,
+      "page_id": 10,
+      "polygon": [
+        [
+          316.458984375,
+          479.53125
+        ],
+        [
+          405.7295837402344,
+          479.53125
+        ],
+        [
+          405.7295837402344,
+          491.9456481933594
+        ],
+        [
+          316.458984375,
+          491.9456481933594
+        ]
+      ]
+    },
+    {
+      "title": "REFERENCES",
+      "heading_level": null,
+      "page_id": 10,
+      "polygon": [
+        [
+          316.458984375,
+          640.01953125
+        ],
+        [
+          387.3695983886719,
+          640.01953125
+        ],
+        [
+          387.3695983886719,
+          651.4836730957031
+        ],
+        [
+          316.458984375,
+          651.4836730957031
+        ]
+      ]
+    }
+  ],
+  "page_stats": [
+    {
+      "page_id": 0,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          255
+        ],
+        [
+          "Line",
+          110
+        ],
+        [
+          "Text",
+          21
+        ],
+        [
+          "SectionHeader",
+          6
+        ],
+        [
+          "Footnote",
+          3
+        ],
+        [
+          "PageHeader",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 1,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          128
+        ],
+        [
+          "Span",
+          69
+        ],
+        [
+          "Text",
+          11
+        ],
+        [
+          "ListItem",
+          4
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "Footnote",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ],
+        [
+          "Reference",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 2,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          91
+        ],
+        [
+          "Span",
+          38
+        ],
+        [
+          "TableCell",
+          20
+        ],
+        [
+          "Caption",
+          3
+        ],
+        [
+          "Text",
+          3
+        ],
+        [
+          "Reference",
+          3
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "Figure",
+          2
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "FigureGroup",
+          2
+        ],
+        [
+          "Table",
+          1
+        ],
+        [
+          "TableGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 3,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          123
+        ],
+        [
+          "Span",
+          72
+        ],
+        [
+          "Text",
+          8
+        ],
+        [
+          "SectionHeader",
+          6
+        ],
+        [
+          "Reference",
+          5
+        ],
+        [
+          "Footnote",
+          3
+        ],
+        [
+          "PageHeader",
+          2
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 4,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          125
+        ],
+        [
+          "Span",
+          77
+        ],
+        [
+          "Text",
+          13
+        ],
+        [
+          "SectionHeader",
+          5
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ],
+        [
+          "Reference",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 5,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          101
+        ],
+        [
+          "Span",
+          47
+        ],
+        [
+          "Text",
+          8
+        ],
+        [
+          "Equation",
+          4
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 6,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          110
+        ],
+        [
+          "TableCell",
+          95
+        ],
+        [
+          "Span",
+          39
+        ],
+        [
+          "Text",
+          16
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "Reference",
+          3
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "Caption",
+          2
+        ],
+        [
+          "Table",
+          2
+        ],
+        [
+          "TableGroup",
+          2
+        ],
+        [
+          "Footnote",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 7,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          235
+        ],
+        [
+          "Line",
+          101
+        ],
+        [
+          "TableCell",
+          25
+        ],
+        [
+          "Text",
+          9
+        ],
+        [
+          "SectionHeader",
+          4
+        ],
+        [
+          "Reference",
+          3
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "Footnote",
+          2
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "Table",
+          1
+        ],
+        [
+          "TableGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 8,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          243
+        ],
+        [
+          "Line",
+          65
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "Code",
+          2
+        ],
+        [
+          "Caption",
+          2
+        ],
+        [
+          "Text",
+          2
+        ],
+        [
+          "Reference",
+          2
+        ],
+        [
+          "SectionHeader",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 9,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          253
+        ],
+        [
+          "Line",
+          95
+        ],
+        [
+          "TableCell",
+          87
+        ],
+        [
+          "Text",
+          7
+        ],
+        [
+          "Caption",
+          4
+        ],
+        [
+          "Table",
+          4
+        ],
+        [
+          "SectionHeader",
+          4
+        ],
+        [
+          "Reference",
+          4
+        ],
+        [
+          "TableGroup",
+          3
+        ],
+        [
+          "PageHeader",
+          2
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 10,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          279
+        ],
+        [
+          "Line",
+          108
+        ],
+        [
+          "Text",
+          10
+        ],
+        [
+          "SectionHeader",
+          5
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "ListItem",
+          2
+        ],
+        [
+          "Reference",
+          2
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 11,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          554
+        ],
+        [
+          "Line",
+          157
+        ],
+        [
+          "ListItem",
+          40
+        ],
+        [
+          "Reference",
+          39
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "ListGroup",
+          2
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 12,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          97
+        ],
+        [
+          "Line",
+          28
+        ],
+        [
+          "ListItem",
+          9
+        ],
+        [
+          "Reference",
+          8
+        ],
+        [
+          "PageHeader",
+          2
+        ],
+        [
+          "ListGroup",
+          2
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    }
+  ],
+  "debug_data_path": "debug_data/[Microsoft]Automating Code Review Activities by Large-Scale Pre-training"
+}

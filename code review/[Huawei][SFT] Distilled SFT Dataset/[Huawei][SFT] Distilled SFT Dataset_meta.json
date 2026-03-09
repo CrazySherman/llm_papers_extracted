@@ -1,0 +1,969 @@
+{
+  "table_of_contents": [
+    {
+      "title": "Distilling Desired Comments for Enhanced Code\nReview with Large Language Models",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          63.3515625,
+          52.98046875
+        ],
+        [
+          547.4115600585938,
+          52.98046875
+        ],
+        [
+          547.4115600585938,
+          104.90399169921875
+        ],
+        [
+          63.3515625,
+          104.90399169921875
+        ]
+      ]
+    },
+    {
+      "title": "I. INTRODUCTION",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          396.544921875,
+          429.64453125
+        ],
+        [
+          476.38568115234375,
+          428.09765625
+        ],
+        [
+          476.38568115234375,
+          440.9140930175781
+        ],
+        [
+          396.544921875,
+          440.9140930175781
+        ]
+      ]
+    },
+    {
+      "title": "II. RELATED WORK",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          130.88671875,
+          51.35443115234375
+        ],
+        [
+          216.5081024169922,
+          50.66015625
+        ],
+        [
+          216.5081024169922,
+          61.3170166015625
+        ],
+        [
+          130.88671875,
+          61.3170166015625
+        ]
+      ]
+    },
+    {
+      "title": "A. Automated code review",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          46.916015625,
+          114.75299072265625
+        ],
+        [
+          157.16778564453125,
+          113.30859375
+        ],
+        [
+          157.16778564453125,
+          124.715576171875
+        ],
+        [
+          46.916015625,
+          124.715576171875
+        ]
+      ]
+    },
+    {
+      "title": "B. Large language models for software engineering",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          47.8125,
+          632.421875
+        ],
+        [
+          261.56585693359375,
+          632.28515625
+        ],
+        [
+          261.56585693359375,
+          642.3844757080078
+        ],
+        [
+          47.8125,
+          642.3844757080078
+        ]
+      ]
+    },
+    {
+      "title": "III. METHODOLOGY",
+      "heading_level": null,
+      "page_id": 3,
+      "polygon": [
+        [
+          129.69140625,
+          381.69140625
+        ],
+        [
+          218.53948974609375,
+          380.14453125
+        ],
+        [
+          218.53948974609375,
+          392.5871887207031
+        ],
+        [
+          128.49609375,
+          392.5871887207031
+        ]
+      ]
+    },
+    {
+      "title": "A. Desiview: Constructing a distilled dataset",
+      "heading_level": null,
+      "page_id": 3,
+      "polygon": [
+        [
+          47.8125,
+          514.5420227050781
+        ],
+        [
+          234.28125,
+          513.17578125
+        ],
+        [
+          234.06910705566406,
+          524.5046081542969
+        ],
+        [
+          46.6171875,
+          524.5046081542969
+        ]
+      ]
+    },
+    {
+      "title": "B. Desiview4FT: Fine-tuning Large Language Models",
+      "heading_level": null,
+      "page_id": 4,
+      "polygon": [
+        [
+          48.0,
+          549.0
+        ],
+        [
+          272.25,
+          547.59375
+        ],
+        [
+          272.25,
+          558.0
+        ],
+        [
+          48.0,
+          558.421875
+        ]
+      ]
+    },
+    {
+      "title": "C. Desiview4FA: Aligning Large Language Models",
+      "heading_level": null,
+      "page_id": 4,
+      "polygon": [
+        [
+          310.5,
+          586.265625
+        ],
+        [
+          522.75,
+          584.71875
+        ],
+        [
+          522.75,
+          594.75
+        ],
+        [
+          310.5,
+          595.546875
+        ]
+      ]
+    },
+    {
+      "title": "IV. EVALUATION",
+      "heading_level": null,
+      "page_id": 5,
+      "polygon": [
+        [
+          398.63671875,
+          239.765625
+        ],
+        [
+          474.0,
+          239.765625
+        ],
+        [
+          474.0,
+          249.75
+        ],
+        [
+          398.63671875,
+          249.75
+        ]
+      ]
+    },
+    {
+      "title": "A. Experimental settings",
+      "heading_level": null,
+      "page_id": 5,
+      "polygon": [
+        [
+          309.75,
+          501.0
+        ],
+        [
+          414.0,
+          499.640625
+        ],
+        [
+          414.0,
+          510.0
+        ],
+        [
+          309.75,
+          510.46875
+        ]
+      ]
+    },
+    {
+      "title": "B. Results analysis",
+      "heading_level": null,
+      "page_id": 7,
+      "polygon": [
+        [
+          47.8125,
+          211.369140625
+        ],
+        [
+          127.44937896728516,
+          209.98828125
+        ],
+        [
+          127.44937896728516,
+          221.33172607421875
+        ],
+        [
+          47.8125,
+          221.33172607421875
+        ]
+      ]
+    },
+    {
+      "title": "V. DISCUSSION",
+      "heading_level": null,
+      "page_id": 7,
+      "polygon": [
+        [
+          401.625,
+          309.375
+        ],
+        [
+          471.10382080078125,
+          309.375
+        ],
+        [
+          471.10382080078125,
+          320.54620361328125
+        ],
+        [
+          400.4296875,
+          320.54620361328125
+        ]
+      ]
+    },
+    {
+      "title": "A. Distilled dataset for training code review models",
+      "heading_level": null,
+      "page_id": 7,
+      "polygon": [
+        [
+          310.482421875,
+          430.03125
+        ],
+        [
+          526.0742797851562,
+          428.484375
+        ],
+        [
+          526.0742797851562,
+          440.0356140136719
+        ],
+        [
+          310.482421875,
+          440.0356140136719
+        ]
+      ]
+    },
+    {
+      "title": "B. Distilled dataset for training review quality prediction\nmodels",
+      "heading_level": null,
+      "page_id": 8,
+      "polygon": [
+        [
+          47.513671875,
+          667.2919921875
+        ],
+        [
+          300.0215148925781,
+          666.31640625
+        ],
+        [
+          300.0215148925781,
+          689.2095947265625
+        ],
+        [
+          46.318359375,
+          689.2095947265625
+        ]
+      ]
+    },
+    {
+      "title": "VI. THREATS TO VALIDITY",
+      "heading_level": null,
+      "page_id": 9,
+      "polygon": [
+        [
+          116.244140625,
+          524.00390625
+        ],
+        [
+          232.49362182617188,
+          524.00390625
+        ],
+        [
+          232.49362182617188,
+          535.7288513183594
+        ],
+        [
+          115.048828125,
+          535.7288513183594
+        ]
+      ]
+    },
+    {
+      "title": "VII. CONCLUSIONS",
+      "heading_level": null,
+      "page_id": 10,
+      "polygon": [
+        [
+          130.587890625,
+          213.46875
+        ],
+        [
+          217.1620635986328,
+          211.921875
+        ],
+        [
+          217.1620635986328,
+          223.45916748046875
+        ],
+        [
+          130.587890625,
+          223.45916748046875
+        ]
+      ]
+    },
+    {
+      "title": "REFERENCES",
+      "heading_level": null,
+      "page_id": 10,
+      "polygon": [
+        [
+          145.828125,
+          485.33203125
+        ],
+        [
+          202.39846801757812,
+          485.33203125
+        ],
+        [
+          202.39846801757812,
+          496.3360290527344
+        ],
+        [
+          144.6328125,
+          496.3360290527344
+        ]
+      ]
+    }
+  ],
+  "page_stats": [
+    {
+      "page_id": 0,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          295
+        ],
+        [
+          "Line",
+          115
+        ],
+        [
+          "Text",
+          17
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "PageHeader",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 1,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          388
+        ],
+        [
+          "Line",
+          134
+        ],
+        [
+          "TableCell",
+          32
+        ],
+        [
+          "Text",
+          5
+        ],
+        [
+          "ListItem",
+          3
+        ],
+        [
+          "Table",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "TableGroup",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ],
+        [
+          "Reference",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 2,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          279
+        ],
+        [
+          "Line",
+          109
+        ],
+        [
+          "Text",
+          9
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "Reference",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 3,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          448
+        ],
+        [
+          "Line",
+          113
+        ],
+        [
+          "Text",
+          10
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "Equation",
+          2
+        ],
+        [
+          "Reference",
+          2
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 4,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          91
+        ],
+        [
+          "Span",
+          62
+        ],
+        [
+          "TableCell",
+          50
+        ],
+        [
+          "Text",
+          5
+        ],
+        [
+          "Caption",
+          4
+        ],
+        [
+          "Reference",
+          4
+        ],
+        [
+          "Table",
+          2
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "TableGroup",
+          2
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Code",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 5,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          114
+        ],
+        [
+          "Span",
+          101
+        ],
+        [
+          "Text",
+          7
+        ],
+        [
+          "Reference",
+          3
+        ],
+        [
+          "Code",
+          2
+        ],
+        [
+          "Caption",
+          2
+        ],
+        [
+          "Equation",
+          2
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "ListItem",
+          2
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 6,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          323
+        ],
+        [
+          "Line",
+          120
+        ],
+        [
+          "Text",
+          9
+        ],
+        [
+          "Caption",
+          2
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Code",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ],
+        [
+          "Reference",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 7,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          378
+        ],
+        [
+          "Line",
+          134
+        ],
+        [
+          "TableCell",
+          69
+        ],
+        [
+          "Text",
+          7
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "Reference",
+          3
+        ],
+        [
+          "ListItem",
+          2
+        ],
+        [
+          "Caption",
+          2
+        ],
+        [
+          "Table",
+          2
+        ],
+        [
+          "TableGroup",
+          2
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 8,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          233
+        ],
+        [
+          "Line",
+          97
+        ],
+        [
+          "Text",
+          3
+        ],
+        [
+          "Code",
+          2
+        ],
+        [
+          "Caption",
+          2
+        ],
+        [
+          "Reference",
+          2
+        ],
+        [
+          "SectionHeader",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 9,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          312
+        ],
+        [
+          "Line",
+          107
+        ],
+        [
+          "TableCell",
+          27
+        ],
+        [
+          "Text",
+          10
+        ],
+        [
+          "Reference",
+          3
+        ],
+        [
+          "Caption",
+          2
+        ],
+        [
+          "Table",
+          2
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "TableGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 10,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          440
+        ],
+        [
+          "Line",
+          134
+        ],
+        [
+          "ListItem",
+          27
+        ],
+        [
+          "Reference",
+          27
+        ],
+        [
+          "Text",
+          3
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "ListGroup",
+          2
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 11,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          345
+        ],
+        [
+          "Line",
+          96
+        ],
+        [
+          "ListItem",
+          29
+        ],
+        [
+          "Reference",
+          28
+        ],
+        [
+          "ListGroup",
+          2
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    }
+  ],
+  "debug_data_path": "debug_data/[Huawei][SFT] Distilled SFT Dataset"
+}

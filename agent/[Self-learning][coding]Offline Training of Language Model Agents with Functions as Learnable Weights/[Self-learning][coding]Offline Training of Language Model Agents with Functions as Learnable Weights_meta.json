@@ -1,0 +1,2331 @@
+{
+  "table_of_contents": [
+    {
+      "title": "Offline Training of Language Model Agents with Functions as Learnable Weights",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          54.0,
+          89.25
+        ],
+        [
+          541.5,
+          89.25
+        ],
+        [
+          541.5,
+          102.75
+        ],
+        [
+          54.0,
+          102.75
+        ]
+      ]
+    },
+    {
+      "title": "Abstract",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          148.21875,
+          176.25
+        ],
+        [
+          195.75,
+          174.796875
+        ],
+        [
+          195.75,
+          186.0
+        ],
+        [
+          148.21875,
+          186.0
+        ]
+      ]
+    },
+    {
+      "title": "1. Introduction",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          54.0,
+          584.71875
+        ],
+        [
+          132.75,
+          584.71875
+        ],
+        [
+          132.75,
+          595.5
+        ],
+        [
+          54.0,
+          595.5
+        ]
+      ]
+    },
+    {
+      "title": "2. Methodology",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          306.0,
+          523.5711669921875
+        ],
+        [
+          386.475830078125,
+          522.45703125
+        ],
+        [
+          386.475830078125,
+          535.5263671875
+        ],
+        [
+          306.0,
+          535.5263671875
+        ]
+      ]
+    },
+    {
+      "title": "2.1. The AgentOptimizer",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          54.0,
+          309.0
+        ],
+        [
+          161.25,
+          309.0
+        ],
+        [
+          161.25,
+          318.75
+        ],
+        [
+          54.0,
+          318.75
+        ]
+      ]
+    },
+    {
+      "title": "2.2. Agent Training",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          306.0,
+          566.25
+        ],
+        [
+          390.0,
+          565.76953125
+        ],
+        [
+          390.0,
+          576.0
+        ],
+        [
+          306.0,
+          576.0
+        ]
+      ]
+    },
+    {
+      "title": "Algorithm 2 Agent Training",
+      "heading_level": null,
+      "page_id": 3,
+      "polygon": [
+        [
+          54.685546875,
+          495.0
+        ],
+        [
+          170.1197509765625,
+          493.453125
+        ],
+        [
+          170.1197509765625,
+          505.9720764160156
+        ],
+        [
+          54.685546875,
+          505.9720764160156
+        ]
+      ]
+    },
+    {
+      "title": "3. Experiments",
+      "heading_level": null,
+      "page_id": 3,
+      "polygon": [
+        [
+          305.40234375,
+          67.84710693359375
+        ],
+        [
+          384.47930908203125,
+          67.84710693359375
+        ],
+        [
+          384.47930908203125,
+          79.80230712890625
+        ],
+        [
+          305.40234375,
+          79.80230712890625
+        ]
+      ]
+    },
+    {
+      "title": "3.1. Experimental Setup",
+      "heading_level": null,
+      "page_id": 3,
+      "polygon": [
+        [
+          305.701171875,
+          185.614501953125
+        ],
+        [
+          409.8356018066406,
+          184.8515625
+        ],
+        [
+          409.8356018066406,
+          195.57708740234375
+        ],
+        [
+          305.701171875,
+          195.6796875
+        ]
+      ]
+    },
+    {
+      "title": "3.2. Main Results",
+      "heading_level": null,
+      "page_id": 4,
+      "polygon": [
+        [
+          54.685546875,
+          603.66796875
+        ],
+        [
+          129.05364990234375,
+          603.66796875
+        ],
+        [
+          129.05364990234375,
+          615.0381164550781
+        ],
+        [
+          54.685546875,
+          615.0381164550781
+        ]
+      ]
+    },
+    {
+      "title": "3.3. Ablation and Analysis",
+      "heading_level": null,
+      "page_id": 4,
+      "polygon": [
+        [
+          307.1953125,
+          657.80859375
+        ],
+        [
+          418.9912414550781,
+          657.80859375
+        ],
+        [
+          418.9912414550781,
+          668.1171112060547
+        ],
+        [
+          306.0,
+          668.1171112060547
+        ]
+      ]
+    },
+    {
+      "title": "3.3.1. ABLATION",
+      "heading_level": null,
+      "page_id": 4,
+      "polygon": [
+        [
+          306.896484375,
+          676.37109375
+        ],
+        [
+          380.3130798339844,
+          676.37109375
+        ],
+        [
+          380.3130798339844,
+          686.8600769042969
+        ],
+        [
+          306.896484375,
+          686.8600769042969
+        ]
+      ]
+    },
+    {
+      "title": "3.3.2. Learning curve",
+      "heading_level": null,
+      "page_id": 5,
+      "polygon": [
+        [
+          54.0,
+          349.5
+        ],
+        [
+          161.25,
+          348.8203125
+        ],
+        [
+          161.25,
+          358.5
+        ],
+        [
+          54.0,
+          358.5
+        ]
+      ]
+    },
+    {
+      "title": "3.3.3. Domain Transferability",
+      "heading_level": null,
+      "page_id": 5,
+      "polygon": [
+        [
+          305.40234375,
+          271.5
+        ],
+        [
+          456.75,
+          270.31640625
+        ],
+        [
+          456.75,
+          280.5
+        ],
+        [
+          305.40234375,
+          280.5
+        ]
+      ]
+    },
+    {
+      "title": "3.3.4. EXTEND TO LARGE SCALE TRAINING DATA -\nBATCH TRAINING",
+      "heading_level": null,
+      "page_id": 6,
+      "polygon": [
+        [
+          54.0,
+          213.0
+        ],
+        [
+          275.25,
+          213.0
+        ],
+        [
+          275.25,
+          233.25
+        ],
+        [
+          54.0,
+          233.25
+        ]
+      ]
+    },
+    {
+      "title": "3.4. Agent Training v.s. Tool-Creation",
+      "heading_level": null,
+      "page_id": 6,
+      "polygon": [
+        [
+          54.0,
+          633.75
+        ],
+        [
+          216.75,
+          633.4453125
+        ],
+        [
+          216.75,
+          643.5
+        ],
+        [
+          54.0,
+          644.2734375
+        ]
+      ]
+    },
+    {
+      "title": "3.5. Analysis of the Learned Functions",
+      "heading_level": null,
+      "page_id": 6,
+      "polygon": [
+        [
+          305.25,
+          491.25
+        ],
+        [
+          471.0,
+          490.74609375
+        ],
+        [
+          471.0,
+          500.25
+        ],
+        [
+          305.25,
+          500.80078125
+        ]
+      ]
+    },
+    {
+      "title": "4. Related Work",
+      "heading_level": null,
+      "page_id": 7,
+      "polygon": [
+        [
+          55.283203125,
+          315.17578125
+        ],
+        [
+          138.55255126953125,
+          315.17578125
+        ],
+        [
+          138.55255126953125,
+          327.85638427734375
+        ],
+        [
+          54.087890625,
+          327.85638427734375
+        ]
+      ]
+    },
+    {
+      "title": "5. Conclusion",
+      "heading_level": null,
+      "page_id": 7,
+      "polygon": [
+        [
+          306.0,
+          537.92578125
+        ],
+        [
+          376.52911376953125,
+          537.92578125
+        ],
+        [
+          376.52911376953125,
+          550.1753540039062
+        ],
+        [
+          306.0,
+          550.1753540039062
+        ]
+      ]
+    },
+    {
+      "title": "Impact Statements",
+      "heading_level": null,
+      "page_id": 8,
+      "polygon": [
+        [
+          54.984375,
+          67.84710693359375
+        ],
+        [
+          151.39242553710938,
+          67.2890625
+        ],
+        [
+          151.39242553710938,
+          79.80230712890625
+        ],
+        [
+          54.984375,
+          79.80230712890625
+        ]
+      ]
+    },
+    {
+      "title": "References",
+      "heading_level": null,
+      "page_id": 8,
+      "polygon": [
+        [
+          55.44000244140625,
+          319.0231628417969
+        ],
+        [
+          110.9838638305664,
+          317.8828125
+        ],
+        [
+          110.9838638305664,
+          330.9783630371094
+        ],
+        [
+          54.38671875,
+          330.9783630371094
+        ]
+      ]
+    },
+    {
+      "title": "Offline Training of Language Model Agents with Functions as Learnable Weights",
+      "heading_level": null,
+      "page_id": 10,
+      "polygon": [
+        [
+          142.95599365234375,
+          46.40625
+        ],
+        [
+          453.9285888671875,
+          46.40625
+        ],
+        [
+          453.9285888671875,
+          56.19354248046875
+        ],
+        [
+          142.541015625,
+          56.19354248046875
+        ]
+      ]
+    },
+    {
+      "title": "Appendix",
+      "heading_level": null,
+      "page_id": 10,
+      "polygon": [
+        [
+          54.685546875,
+          67.67578125
+        ],
+        [
+          104.97039794921875,
+          67.67578125
+        ],
+        [
+          104.97039794921875,
+          79.80230712890625
+        ],
+        [
+          53.490234375,
+          79.80230712890625
+        ]
+      ]
+    },
+    {
+      "title": "A. Supplementary Theoretical Analysis",
+      "heading_level": null,
+      "page_id": 11,
+      "polygon": [
+        [
+          54.984375,
+          67.67578125
+        ],
+        [
+          255.8091583251953,
+          67.67578125
+        ],
+        [
+          255.8091583251953,
+          79.80230712890625
+        ],
+        [
+          53.7890625,
+          79.80230712890625
+        ]
+      ]
+    },
+    {
+      "title": "B. Supplementary Experimental Results",
+      "heading_level": null,
+      "page_id": 12,
+      "polygon": [
+        [
+          54.38671875,
+          502.01416015625
+        ],
+        [
+          260.6749267578125,
+          501.57421875
+        ],
+        [
+          260.6749267578125,
+          513.9693603515625
+        ],
+        [
+          54.38671875,
+          513.9693603515625
+        ]
+      ]
+    },
+    {
+      "title": "B.1. Evaluations on Other Language Models",
+      "heading_level": null,
+      "page_id": 12,
+      "polygon": [
+        [
+          53.19140625,
+          522.0703125
+        ],
+        [
+          243.82276916503906,
+          520.5234375
+        ],
+        [
+          243.82276916503906,
+          532.8790893554688
+        ],
+        [
+          53.19140625,
+          532.8790893554688
+        ]
+      ]
+    },
+    {
+      "title": "B.2. More Experimental Results after Removing Roll-back & Early-stop",
+      "heading_level": null,
+      "page_id": 13,
+      "polygon": [
+        [
+          54.0,
+          69.0
+        ],
+        [
+          363.0,
+          69.0
+        ],
+        [
+          363.0,
+          78.890625
+        ],
+        [
+          54.0,
+          78.890625
+        ]
+      ]
+    },
+    {
+      "title": "C. Supplementary Analysis of Agent Training versus Model Training",
+      "heading_level": null,
+      "page_id": 13,
+      "polygon": [
+        [
+          54.0,
+          369.703125
+        ],
+        [
+          408.0,
+          368.15625
+        ],
+        [
+          408.0,
+          379.5
+        ],
+        [
+          53.7890625,
+          380.53125
+        ]
+      ]
+    },
+    {
+      "title": "D. Implementations Details",
+      "heading_level": null,
+      "page_id": 13,
+      "polygon": [
+        [
+          54.0,
+          596.25
+        ],
+        [
+          195.0,
+          595.546875
+        ],
+        [
+          195.0,
+          606.0
+        ],
+        [
+          54.0,
+          606.375
+        ]
+      ]
+    },
+    {
+      "title": "D.1. Prompt Design for AgentOptimizer",
+      "heading_level": null,
+      "page_id": 13,
+      "polygon": [
+        [
+          54.0,
+          615.75
+        ],
+        [
+          225.75,
+          615.75
+        ],
+        [
+          225.75,
+          626.25
+        ],
+        [
+          54.0,
+          627.2578125
+        ]
+      ]
+    },
+    {
+      "title": "D.2. Prompt Design for ReAct",
+      "heading_level": null,
+      "page_id": 15,
+      "polygon": [
+        [
+          54.685546875,
+          118.4205322265625
+        ],
+        [
+          182.6325225830078,
+          117.5625
+        ],
+        [
+          182.6325225830078,
+          128.38311767578125
+        ],
+        [
+          53.490234375,
+          128.390625
+        ]
+      ]
+    },
+    {
+      "title": "{tool descriptions}",
+      "heading_level": null,
+      "page_id": 15,
+      "polygon": [
+        [
+          54.984375,
+          154.73681640625
+        ],
+        [
+          132.64028930664062,
+          153.52734375
+        ],
+        [
+          132.64028930664062,
+          165.05908203125
+        ],
+        [
+          54.984375,
+          165.12890625
+        ]
+      ]
+    },
+    {
+      "title": "TEMPLATE:",
+      "heading_level": null,
+      "page_id": 15,
+      "polygon": [
+        [
+          54.38671875,
+          286.171875
+        ],
+        [
+          108.81945037841797,
+          284.625
+        ],
+        [
+          108.81945037841797,
+          296.5660400390625
+        ],
+        [
+          53.19140625,
+          296.5660400390625
+        ]
+      ]
+    },
+    {
+      "title": "D.3. Function calls of LLM backed AgentOptimizer",
+      "heading_level": null,
+      "page_id": 15,
+      "polygon": [
+        [
+          53.490234375,
+          490.9735412597656
+        ],
+        [
+          274.8662414550781,
+          490.74609375
+        ],
+        [
+          274.8662414550781,
+          500.9361267089844
+        ],
+        [
+          53.490234375,
+          500.9361267089844
+        ]
+      ]
+    },
+    {
+      "title": "Revise function: revise one existing function.",
+      "heading_level": null,
+      "page_id": 16,
+      "polygon": [
+        [
+          55.44000244140625,
+          162.990478515625
+        ],
+        [
+          247.74766540527344,
+          161.6484375
+        ],
+        [
+          247.74766540527344,
+          173.0440673828125
+        ],
+        [
+          54.685546875,
+          173.0440673828125
+        ]
+      ]
+    },
+    {
+      "title": "Remove function: remove one existing function.",
+      "heading_level": null,
+      "page_id": 16,
+      "polygon": [
+        [
+          54.984375,
+          459.0115051269531
+        ],
+        [
+          260.3710021972656,
+          457.48828125
+        ],
+        [
+          260.3710021972656,
+          469.0650634765625
+        ],
+        [
+          53.7890625,
+          469.0650634765625
+        ]
+      ]
+    },
+    {
+      "title": "E. Generated Functions",
+      "heading_level": null,
+      "page_id": 16,
+      "polygon": [
+        [
+          54.38671875,
+          624.55078125
+        ],
+        [
+          176.65377807617188,
+          623.00390625
+        ],
+        [
+          176.65377807617188,
+          636.7483520507812
+        ],
+        [
+          54.38671875,
+          636.7483520507812
+        ]
+      ]
+    },
+    {
+      "title": "E.1. Trained Functions in MATH",
+      "heading_level": null,
+      "page_id": 16,
+      "polygon": [
+        [
+          54.984375,
+          670.8295059204102
+        ],
+        [
+          196.02223205566406,
+          669.41015625
+        ],
+        [
+          196.02223205566406,
+          680.792106628418
+        ],
+        [
+          53.7890625,
+          680.792106628418
+        ]
+      ]
+    },
+    {
+      "title": "GPT-4+ Agent",
+      "heading_level": null,
+      "page_id": 16,
+      "polygon": [
+        [
+          54.087890625,
+          689.4815063476562
+        ],
+        [
+          116.92916107177734,
+          689.4815063476562
+        ],
+        [
+          116.92916107177734,
+          699.4441070556641
+        ],
+        [
+          54.087890625,
+          699.4441070556641
+        ]
+      ]
+    },
+    {
+      "title": "ReAct Agent",
+      "heading_level": null,
+      "page_id": 17,
+      "polygon": [
+        [
+          54.685546875,
+          405.29949951171875
+        ],
+        [
+          110.267578125,
+          404.5078125
+        ],
+        [
+          109.9354248046875,
+          415.2620849609375
+        ],
+        [
+          53.490234375,
+          415.3359375
+        ]
+      ]
+    },
+    {
+      "title": "E.2. Trained Functions in GAIA",
+      "heading_level": null,
+      "page_id": 18,
+      "polygon": [
+        [
+          54.984375,
+          142.146484375
+        ],
+        [
+          191.9873809814453,
+          140.765625
+        ],
+        [
+          191.9873809814453,
+          152.10906982421875
+        ],
+        [
+          54.984375,
+          152.10906982421875
+        ]
+      ]
+    },
+    {
+      "title": "GPT-4+ Agent",
+      "heading_level": null,
+      "page_id": 18,
+      "polygon": [
+        [
+          55.44000244140625,
+          160.79949951171875
+        ],
+        [
+          116.92916107177734,
+          159.328125
+        ],
+        [
+          116.92916107177734,
+          170.7620849609375
+        ],
+        [
+          55.44000244140625,
+          170.7620849609375
+        ]
+      ]
+    },
+    {
+      "title": "React Agent",
+      "heading_level": null,
+      "page_id": 18,
+      "polygon": [
+        [
+          54.38671875,
+          595.93359375
+        ],
+        [
+          107.72371673583984,
+          595.93359375
+        ],
+        [
+          107.72371673583984,
+          606.2171173095703
+        ],
+        [
+          54.38671875,
+          606.2171173095703
+        ]
+      ]
+    },
+    {
+      "title": "E.3. Trained Functions in TabMWP",
+      "heading_level": null,
+      "page_id": 19,
+      "polygon": [
+        [
+          55.283203125,
+          301.0885009765625
+        ],
+        [
+          207.685546875,
+          300.09375
+        ],
+        [
+          207.67848205566406,
+          311.05108642578125
+        ],
+        [
+          54.087890625,
+          311.05108642578125
+        ]
+      ]
+    },
+    {
+      "title": "GPT-4+ Agent",
+      "heading_level": null,
+      "page_id": 19,
+      "polygon": [
+        [
+          55.283203125,
+          319.7405090332031
+        ],
+        [
+          116.92915344238281,
+          318.65625
+        ],
+        [
+          116.92915344238281,
+          329.7030944824219
+        ],
+        [
+          54.087890625,
+          329.7030944824219
+        ]
+      ]
+    },
+    {
+      "title": "React Agent",
+      "heading_level": null,
+      "page_id": 19,
+      "polygon": [
+        [
+          55.283203125,
+          642.301513671875
+        ],
+        [
+          107.72372436523438,
+          642.301513671875
+        ],
+        [
+          107.72372436523438,
+          652.2641143798828
+        ],
+        [
+          55.283203125,
+          652.2641143798828
+        ]
+      ]
+    },
+    {
+      "title": "F. Case Study",
+      "heading_level": null,
+      "page_id": 20,
+      "polygon": [
+        [
+          55.283203125,
+          67.84710693359375
+        ],
+        [
+          124.86384582519531,
+          67.2890625
+        ],
+        [
+          124.86384582519531,
+          79.80230712890625
+        ],
+        [
+          55.283203125,
+          79.80230712890625
+        ]
+      ]
+    },
+    {
+      "title": "F.1. Case Study for MATH",
+      "heading_level": null,
+      "page_id": 20,
+      "polygon": [
+        [
+          55.44000244140625,
+          125.83856201171875
+        ],
+        [
+          168.5390625,
+          124.5234375
+        ],
+        [
+          168.2664337158203,
+          135.8011474609375
+        ],
+        [
+          54.984375,
+          135.8011474609375
+        ]
+      ]
+    },
+    {
+      "title": "F.2. Case Study for GAIA",
+      "heading_level": null,
+      "page_id": 20,
+      "polygon": [
+        [
+          54.984375,
+          411.04449462890625
+        ],
+        [
+          164.2315673828125,
+          409.921875
+        ],
+        [
+          164.2315673828125,
+          421.007080078125
+        ],
+        [
+          54.984375,
+          421.007080078125
+        ]
+      ]
+    },
+    {
+      "title": "F.3. Case Study for TabMWP",
+      "heading_level": null,
+      "page_id": 21,
+      "polygon": [
+        [
+          54.984375,
+          69.22265625
+        ],
+        [
+          179.9226837158203,
+          67.67578125
+        ],
+        [
+          179.9226837158203,
+          79.33905029296875
+        ],
+        [
+          53.7890625,
+          79.33905029296875
+        ]
+      ]
+    },
+    {
+      "title": "G. Hyperparameters Settings",
+      "heading_level": null,
+      "page_id": 21,
+      "polygon": [
+        [
+          54.685546875,
+          401.4140625
+        ],
+        [
+          205.07127380371094,
+          399.8671875
+        ],
+        [
+          205.07127380371094,
+          414.1273498535156
+        ],
+        [
+          54.685546875,
+          414.1273498535156
+        ]
+      ]
+    },
+    {
+      "title": "H. Limitations",
+      "heading_level": null,
+      "page_id": 21,
+      "polygon": [
+        [
+          54.984375,
+          545.66015625
+        ],
+        [
+          129.83721923828125,
+          545.66015625
+        ],
+        [
+          129.83721923828125,
+          557.7063598632812
+        ],
+        [
+          54.984375,
+          557.7063598632812
+        ]
+      ]
+    }
+  ],
+  "page_stats": [
+    {
+      "page_id": 0,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          102
+        ],
+        [
+          "Span",
+          47
+        ],
+        [
+          "Text",
+          7
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "Footnote",
+          2
+        ],
+        [
+          "Reference",
+          2
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 1,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          320
+        ],
+        [
+          "Line",
+          105
+        ],
+        [
+          "Text",
+          8
+        ],
+        [
+          "ListItem",
+          3
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "Equation",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 2,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          115
+        ],
+        [
+          "Span",
+          84
+        ],
+        [
+          "Text",
+          9
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "Code",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "Reference",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 3,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          492
+        ],
+        [
+          "Line",
+          103
+        ],
+        [
+          "Text",
+          6
+        ],
+        [
+          "ListItem",
+          5
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "ListGroup",
+          2
+        ],
+        [
+          "Reference",
+          2
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "Code",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 4,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          249
+        ],
+        [
+          "TableCell",
+          139
+        ],
+        [
+          "Line",
+          71
+        ],
+        [
+          "Text",
+          7
+        ],
+        [
+          "Reference",
+          4
+        ],
+        [
+          "Table",
+          3
+        ],
+        [
+          "Caption",
+          3
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "TableGroup",
+          3
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 5,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          115
+        ],
+        [
+          "Span",
+          49
+        ],
+        [
+          "Text",
+          5
+        ],
+        [
+          "Reference",
+          3
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "Figure",
+          2
+        ],
+        [
+          "Caption",
+          2
+        ],
+        [
+          "FigureGroup",
+          2
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "Footnote",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 6,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          103
+        ],
+        [
+          "Span",
+          40
+        ],
+        [
+          "TableCell",
+          25
+        ],
+        [
+          "Text",
+          8
+        ],
+        [
+          "Reference",
+          4
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "Caption",
+          2
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "Table",
+          1
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "TableGroup",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 7,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          353
+        ],
+        [
+          "Line",
+          96
+        ],
+        [
+          "TableCell",
+          24
+        ],
+        [
+          "Text",
+          7
+        ],
+        [
+          "Table",
+          2
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "Reference",
+          2
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "TableGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 8,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          255
+        ],
+        [
+          "Line",
+          93
+        ],
+        [
+          "ListItem",
+          22
+        ],
+        [
+          "Reference",
+          22
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "ListGroup",
+          2
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "Text",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 9,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          250
+        ],
+        [
+          "Line",
+          94
+        ],
+        [
+          "ListItem",
+          27
+        ],
+        [
+          "Reference",
+          27
+        ],
+        [
+          "ListGroup",
+          2
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 10,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          103
+        ],
+        [
+          "TableCell",
+          55
+        ],
+        [
+          "Line",
+          22
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "TableOfContents",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 11,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          579
+        ],
+        [
+          "Line",
+          78
+        ],
+        [
+          "Text",
+          12
+        ],
+        [
+          "Equation",
+          7
+        ],
+        [
+          "Reference",
+          7
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 12,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          510
+        ],
+        [
+          "Line",
+          56
+        ],
+        [
+          "TableCell",
+          12
+        ],
+        [
+          "Text",
+          11
+        ],
+        [
+          "Reference",
+          7
+        ],
+        [
+          "Equation",
+          6
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "Table",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "TableGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 13,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          73
+        ],
+        [
+          "Span",
+          16
+        ],
+        [
+          "TableCell",
+          15
+        ],
+        [
+          "Text",
+          6
+        ],
+        [
+          "Reference",
+          6
+        ],
+        [
+          "SectionHeader",
+          4
+        ],
+        [
+          "Caption",
+          2
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Table",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "TableGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 14,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          247
+        ],
+        [
+          "Line",
+          50
+        ],
+        [
+          "Text",
+          13
+        ],
+        [
+          "ListItem",
+          3
+        ],
+        [
+          "Code",
+          2
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 15,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          403
+        ],
+        [
+          "Line",
+          53
+        ],
+        [
+          "Text",
+          16
+        ],
+        [
+          "SectionHeader",
+          4
+        ],
+        [
+          "Reference",
+          2
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "Code",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 16,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          529
+        ],
+        [
+          "Line",
+          60
+        ],
+        [
+          "SectionHeader",
+          5
+        ],
+        [
+          "Code",
+          3
+        ],
+        [
+          "Text",
+          2
+        ],
+        [
+          "Reference",
+          2
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 17,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          399
+        ],
+        [
+          "Line",
+          64
+        ],
+        [
+          "Code",
+          6
+        ],
+        [
+          "Text",
+          5
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 18,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          319
+        ],
+        [
+          "Line",
+          65
+        ],
+        [
+          "Code",
+          6
+        ],
+        [
+          "Text",
+          5
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "Reference",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 19,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          331
+        ],
+        [
+          "Line",
+          58
+        ],
+        [
+          "Code",
+          6
+        ],
+        [
+          "Text",
+          5
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "Reference",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 20,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          337
+        ],
+        [
+          "Line",
+          118
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "Reference",
+          3
+        ],
+        [
+          "Figure",
+          2
+        ],
+        [
+          "Caption",
+          2
+        ],
+        [
+          "FigureGroup",
+          2
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "Text",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 21,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          153
+        ],
+        [
+          "Line",
+          58
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "Reference",
+          3
+        ],
+        [
+          "Text",
+          2
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    }
+  ],
+  "debug_data_path": "debug_data/[Self-learning][coding]Offline Training of Language Model Agents with Functions as Learnable Weights"
+}

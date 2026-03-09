@@ -1,0 +1,988 @@
+{
+  "table_of_contents": [
+    {
+      "title": "WizardCoder: Empowering Code Large Language\nModels with Evol-Instruct",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          121.623046875,
+          99.8338623046875
+        ],
+        [
+          488.4150085449219,
+          99.8338623046875
+        ],
+        [
+          488.4150085449219,
+          136.9742431640625
+        ],
+        [
+          121.623046875,
+          136.9742431640625
+        ]
+      ]
+    },
+    {
+      "title": "Abstract",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          282.09375,
+          273.41015625
+        ],
+        [
+          328.24334716796875,
+          273.41015625
+        ],
+        [
+          328.24334716796875,
+          285.719482421875
+        ],
+        [
+          282.09375,
+          285.719482421875
+        ]
+      ]
+    },
+    {
+      "title": "1 Introduction",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          107.578125,
+          453.234375
+        ],
+        [
+          190.81365966796875,
+          453.234375
+        ],
+        [
+          190.81365966796875,
+          466.1273498535156
+        ],
+        [
+          107.578125,
+          466.1273498535156
+        ]
+      ]
+    },
+    {
+      "title": "2 Related Work",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          106.681640625,
+          382.46484375
+        ],
+        [
+          198.0,
+          380.91796875
+        ],
+        [
+          198.0,
+          391.5
+        ],
+        [
+          106.681640625,
+          391.5
+        ]
+      ]
+    },
+    {
+      "title": "3 Approach",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          106.98046875,
+          339.92578125
+        ],
+        [
+          176.56307983398438,
+          339.92578125
+        ],
+        [
+          176.56307983398438,
+          352.09136962890625
+        ],
+        [
+          106.98046875,
+          352.09136962890625
+        ]
+      ]
+    },
+    {
+      "title": "3.1 Evol-Instruct Prompts for Code",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          107.578125,
+          417.65625
+        ],
+        [
+          265.747802734375,
+          417.65625
+        ],
+        [
+          265.747802734375,
+          428.0340881347656
+        ],
+        [
+          106.3828125,
+          428.0340881347656
+        ]
+      ]
+    },
+    {
+      "title": "3.2 Training WizardCoder",
+      "heading_level": null,
+      "page_id": 3,
+      "polygon": [
+        [
+          106.98046875,
+          244.40625
+        ],
+        [
+          223.69573974609375,
+          244.40625
+        ],
+        [
+          223.69573974609375,
+          255.39227294921875
+        ],
+        [
+          106.98046875,
+          255.39227294921875
+        ]
+      ]
+    },
+    {
+      "title": "4 Experiment",
+      "heading_level": null,
+      "page_id": 3,
+      "polygon": [
+        [
+          107.279296875,
+          492.66815185546875
+        ],
+        [
+          186.3663330078125,
+          491.90625
+        ],
+        [
+          186.3663330078125,
+          504.62335205078125
+        ],
+        [
+          107.279296875,
+          504.62335205078125
+        ]
+      ]
+    },
+    {
+      "title": "4.1 Baselines",
+      "heading_level": null,
+      "page_id": 3,
+      "polygon": [
+        [
+          107.876953125,
+          562.67578125
+        ],
+        [
+          169.7183074951172,
+          561.12890625
+        ],
+        [
+          169.7183074951172,
+          573.3271179199219
+        ],
+        [
+          106.681640625,
+          573.3271179199219
+        ]
+      ]
+    },
+    {
+      "title": "4.2 Implementation Details",
+      "heading_level": null,
+      "page_id": 4,
+      "polygon": [
+        [
+          106.5,
+          359.25
+        ],
+        [
+          231.0,
+          358.1015625
+        ],
+        [
+          231.0,
+          368.25
+        ],
+        [
+          106.5,
+          368.9296875
+        ]
+      ]
+    },
+    {
+      "title": "4.3 Evaluation on HumanEval, HumanEval+, and MBPP",
+      "heading_level": null,
+      "page_id": 4,
+      "polygon": [
+        [
+          107.25,
+          441.0
+        ],
+        [
+          358.5,
+          440.0859375
+        ],
+        [
+          358.5,
+          450.75
+        ],
+        [
+          106.3828125,
+          450.9140625
+        ]
+      ]
+    },
+    {
+      "title": "4.4 Evaluation on DS-1000",
+      "heading_level": null,
+      "page_id": 6,
+      "polygon": [
+        [
+          107.279296875,
+          485.33203125
+        ],
+        [
+          228.29840087890625,
+          485.33203125
+        ],
+        [
+          228.29840087890625,
+          496.2240905761719
+        ],
+        [
+          106.083984375,
+          496.2240905761719
+        ]
+      ]
+    },
+    {
+      "title": "4.5 Ablation Study",
+      "heading_level": null,
+      "page_id": 6,
+      "polygon": [
+        [
+          107.578125,
+          634.9921875
+        ],
+        [
+          194.91371154785156,
+          634.9921875
+        ],
+        [
+          194.91371154785156,
+          645.8051300048828
+        ],
+        [
+          107.578125,
+          645.8051300048828
+        ]
+      ]
+    },
+    {
+      "title": "4.6 Examples",
+      "heading_level": null,
+      "page_id": 7,
+      "polygon": [
+        [
+          106.681640625,
+          74.25
+        ],
+        [
+          171.9300079345703,
+          72.703125
+        ],
+        [
+          171.9300079345703,
+          84.279052734375
+        ],
+        [
+          106.681640625,
+          84.279052734375
+        ]
+      ]
+    },
+    {
+      "title": "5 Conclusion and Future Work",
+      "heading_level": null,
+      "page_id": 7,
+      "polygon": [
+        [
+          107.876953125,
+          132.064208984375
+        ],
+        [
+          275.27716064453125,
+          131.09765625
+        ],
+        [
+          275.27716064453125,
+          144.0194091796875
+        ],
+        [
+          106.681640625,
+          144.0194091796875
+        ]
+      ]
+    },
+    {
+      "title": "Table 3: Examples of interaction with our WizardCoder.\nInstruction\nResponse\nHere's a Python function that tells you what the date is today:\nimport datetime\ndef get_date():\nnow = datetime.datetime.now()\nreturn now.strftime(\"%A, %B %d, %Y\")\nprint(get_date())\nWrite a Python\nThis function uses the datetime module to get the current date and time. It\nfunction to tell me\nthen uses the strftime() method to format the date as a string in the format\nwhat the date is to-\n\"Day, Month Date, Year\". Finally, it returns the formatted string.\nday.\nYou can call this function from your Python code to get the current date\nand time.\nSure, here's an example code for integrating a Python function numerically\nusing the trapezoidal rule:\ndef integrate(f, a, b, n):\n    h = (b - a) / n\n    s = (f(a) + f(b)) / 2\n    for i in range(1, n):\n        s += f(a + i * h)\nThis code takes in a function f, the lower bound a, the upper bound b,\nand the number of subintervals n. It then calculates the width of each\nsubinterval h, and uses the trapezoidal rule to approximate the integral of\nI do not know\nf between a and b. The result is returned as a float.\nhow to integrate\nTo use this function, you would call it with the function you want to inte-\na Python function\ngrate, the lower bound, the upper bound, and the number of subintervals\nnumerically.\nyou want to use. For example:\nPlease write a\ncode for me.\nreturn x**2\nresult = integrate(f, 0, 1, 1000)\nprint(result)\nThis would integrate the function f(x) = x^{**}2 between 0 and 1 using 1000\nsubintervals, and print the result.\nHere's the Java code to list the prime numbers between 20 and 30:\npublic class PrimeNumbers {\n   public static void main(String[] args) {\n     for (int i = 20; i <= 30; i++) {\n        boolean isPrime = true;\n        for (int j = 2; j < i; j++) {\n             if (i % j == 0) {\n                  isPrime = false;\n                                    \n}\nif (isPrime) {\n    System.out.print(i + \" \");\n}\n}\nList the prime\nOutput:\nnumbers between\n23 29\n20 and 30 with\nExplanation:\nJava.\nand 30.",
+      "heading_level": null,
+      "page_id": 8,
+      "polygon": [
+        [
+          115.34765625,
+          78.50390625
+        ],
+        [
+          495.75,
+          78.50390625
+        ],
+        [
+          495.75,
+          642.75
+        ],
+        [
+          114.15234375,
+          643.5
+        ]
+      ]
+    },
+    {
+      "title": "References",
+      "heading_level": null,
+      "page_id": 9,
+      "polygon": [
+        [
+          107.578125,
+          72.31640625
+        ],
+        [
+          163.54385375976562,
+          70.76953125
+        ],
+        [
+          163.54385375976562,
+          84.7423095703125
+        ],
+        [
+          107.578125,
+          84.7423095703125
+        ]
+      ]
+    }
+  ],
+  "page_stats": [
+    {
+      "page_id": 0,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          152
+        ],
+        [
+          "Line",
+          44
+        ],
+        [
+          "Text",
+          5
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "Footnote",
+          2
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 1,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          65
+        ],
+        [
+          "Span",
+          34
+        ],
+        [
+          "Text",
+          7
+        ],
+        [
+          "ListItem",
+          3
+        ],
+        [
+          "Footnote",
+          2
+        ],
+        [
+          "Reference",
+          2
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 2,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          158
+        ],
+        [
+          "Line",
+          46
+        ],
+        [
+          "Text",
+          6
+        ],
+        [
+          "ListItem",
+          3
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "Code",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 3,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          132
+        ],
+        [
+          "Line",
+          45
+        ],
+        [
+          "Text",
+          13
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "Footnote",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "Reference",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 4,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Line",
+          59
+        ],
+        [
+          "Span",
+          14
+        ],
+        [
+          "Reference",
+          5
+        ],
+        [
+          "Footnote",
+          4
+        ],
+        [
+          "Text",
+          3
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "Code",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 5,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          199
+        ],
+        [
+          "TableCell",
+          83
+        ],
+        [
+          "Line",
+          51
+        ],
+        [
+          "Text",
+          5
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "Table",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "TableGroup",
+          1
+        ],
+        [
+          "Reference",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 6,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          113
+        ],
+        [
+          "TableCell",
+          100
+        ],
+        [
+          "Line",
+          38
+        ],
+        [
+          "Caption",
+          2
+        ],
+        [
+          "ListItem",
+          2
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "Text",
+          2
+        ],
+        [
+          "Reference",
+          2
+        ],
+        [
+          "Table",
+          1
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "TableGroup",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 7,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          70
+        ],
+        [
+          "Line",
+          17
+        ],
+        [
+          "Text",
+          4
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 8,
+      "text_extraction_method": "surya",
+      "block_counts": [
+        [
+          "Span",
+          63
+        ],
+        [
+          "Line",
+          59
+        ],
+        [
+          "ListItem",
+          5
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ],
+        [
+          "Reference",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 9,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          152
+        ],
+        [
+          "Line",
+          59
+        ],
+        [
+          "ListItem",
+          8
+        ],
+        [
+          "Reference",
+          8
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 10,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          158
+        ],
+        [
+          "Line",
+          53
+        ],
+        [
+          "ListItem",
+          13
+        ],
+        [
+          "Reference",
+          12
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 11,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          171
+        ],
+        [
+          "Line",
+          58
+        ],
+        [
+          "ListItem",
+          12
+        ],
+        [
+          "Reference",
+          12
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 12,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          95
+        ],
+        [
+          "Line",
+          29
+        ],
+        [
+          "ListItem",
+          8
+        ],
+        [
+          "Reference",
+          8
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    }
+  ],
+  "debug_data_path": "debug_data/[HKU_MSFT][EvolInstruct]WizardCoder"
+}

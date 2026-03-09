@@ -1,0 +1,1104 @@
+{
+  "table_of_contents": [
+    {
+      "title": "Code Generation with AlphaCodium: From Prompt Engineering to Flow\nEngineering",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          73.810546875,
+          105.1875
+        ],
+        [
+          521.2716064453125,
+          105.1875
+        ],
+        [
+          521.2716064453125,
+          138.201171875
+        ],
+        [
+          73.810546875,
+          138.201171875
+        ]
+      ]
+    },
+    {
+      "title": "Tal Ridnik, Dedy Kredo, Itamar Friedman\nCodiumAI",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          195.134765625,
+          162.421875
+        ],
+        [
+          398.23980712890625,
+          162.421875
+        ],
+        [
+          398.23980712890625,
+          189.5594482421875
+        ],
+        [
+          195.134765625,
+          189.5594482421875
+        ]
+      ]
+    },
+    {
+      "title": "Abstract",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          144.6328125,
+          232.41796875
+        ],
+        [
+          190.48028564453125,
+          232.41796875
+        ],
+        [
+          190.48028564453125,
+          244.4443359375
+        ],
+        [
+          144.6328125,
+          244.4443359375
+        ]
+      ]
+    },
+    {
+      "title": "1. Introduction",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          50.111968994140625,
+          560.35546875
+        ],
+        [
+          126.94804382324219,
+          560.35546875
+        ],
+        [
+          126.94804382324219,
+          572.9940795898438
+        ],
+        [
+          50.111968994140625,
+          572.9940795898438
+        ]
+      ]
+    },
+    {
+      "title": "2. CodeContests Dataset",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          49.306640625,
+          131.03118896484375
+        ],
+        [
+          173.95590209960938,
+          129.9375
+        ],
+        [
+          173.95590209960938,
+          142.98638916015625
+        ],
+        [
+          48.111328125,
+          142.98638916015625
+        ]
+      ]
+    },
+    {
+      "title": "What makes CodeContests a good dataset for evaluating\nLLMs on code generation tasks:",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          48.41015625,
+          404.12109375
+        ],
+        [
+          286.36505126953125,
+          402.57421875
+        ],
+        [
+          286.36505126953125,
+          426.39215087890625
+        ],
+        [
+          48.41015625,
+          426.39215087890625
+        ]
+      ]
+    },
+    {
+      "title": "3. The Proposed Flow",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          307.1953125,
+          124.49310302734375
+        ],
+        [
+          419.4476013183594,
+          122.9765625
+        ],
+        [
+          419.4476013183594,
+          136.44830322265625
+        ],
+        [
+          307.1953125,
+          136.44830322265625
+        ]
+      ]
+    },
+    {
+      "title": "3.1. Overview",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          307.494140625,
+          145.01953125
+        ],
+        [
+          372.8619689941406,
+          143.47265625
+        ],
+        [
+          372.8619689941406,
+          156.441650390625
+        ],
+        [
+          307.494140625,
+          156.441650390625
+        ]
+      ]
+    },
+    {
+      "title": "3.2. Flow stages",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          307.1953125,
+          586.7287139892578
+        ],
+        [
+          381.804443359375,
+          586.7287139892578
+        ],
+        [
+          381.804443359375,
+          597.6876068115234
+        ],
+        [
+          307.1953125,
+          597.6876068115234
+        ]
+      ]
+    },
+    {
+      "title": "Problem Description",
+      "heading_level": null,
+      "page_id": 3,
+      "polygon": [
+        [
+          172.72265625,
+          78.01611328125
+        ],
+        [
+          266.1695251464844,
+          76.5703125
+        ],
+        [
+          266.1695251464844,
+          87.18914794921875
+        ],
+        [
+          172.72265625,
+          87.3984375
+        ]
+      ]
+    },
+    {
+      "title": "Input:\n2 2\nPublic Tests",
+      "heading_level": null,
+      "page_id": 3,
+      "polygon": [
+        [
+          352.6171875,
+          78.62762451171875
+        ],
+        [
+          415.9407958984375,
+          78.62762451171875
+        ],
+        [
+          415.9407958984375,
+          118.72265625
+        ],
+        [
+          352.6171875,
+          120.26953125
+        ]
+      ]
+    },
+    {
+      "title": "101\n000\n000\nOutput:\n18\n...",
+      "heading_level": null,
+      "page_id": 3,
+      "polygon": [
+        [
+          354.41015625,
+          103.25390625
+        ],
+        [
+          386.68359375,
+          103.25390625
+        ],
+        [
+          385.48828125,
+          166.34228515625
+        ],
+        [
+          353.21484375,
+          166.34228515625
+        ]
+      ]
+    },
+    {
+      "title": "Private Tests",
+      "heading_level": null,
+      "page_id": 3,
+      "polygon": [
+        [
+          434.197265625,
+          76.18359375
+        ],
+        [
+          496.9749755859375,
+          74.63671875
+        ],
+        [
+          496.9749755859375,
+          87.18914794921875
+        ],
+        [
+          433.001953125,
+          87.18914794921875
+        ]
+      ]
+    },
+    {
+      "title": "Self-reflection on the problem",
+      "heading_level": null,
+      "page_id": 3,
+      "polygon": [
+        [
+          233.982421875,
+          241.3125
+        ],
+        [
+          364.0841369628906,
+          241.3125
+        ],
+        [
+          364.0841369628906,
+          251.35821533203125
+        ],
+        [
+          233.982421875,
+          251.35821533203125
+        ]
+      ]
+    },
+    {
+      "title": "3.3. Additional insights",
+      "heading_level": null,
+      "page_id": 4,
+      "polygon": [
+        [
+          49.306640625,
+          106.7587890625
+        ],
+        [
+          157.9037628173828,
+          105.57421875
+        ],
+        [
+          157.9037628173828,
+          117.71771240234375
+        ],
+        [
+          49.306640625,
+          117.71771240234375
+        ]
+      ]
+    },
+    {
+      "title": "4. Code-Oriented Design Concepts",
+      "heading_level": null,
+      "page_id": 4,
+      "polygon": [
+        [
+          49.0078125,
+          533.4999694824219
+        ],
+        [
+          226.10452270507812,
+          532.8984375
+        ],
+        [
+          226.10452270507812,
+          545.4551696777344
+        ],
+        [
+          49.0078125,
+          545.4551696777344
+        ]
+      ]
+    },
+    {
+      "title": "5. Results",
+      "heading_level": null,
+      "page_id": 5,
+      "polygon": [
+        [
+          306.59765625,
+          628.41796875
+        ],
+        [
+          358.00982666015625,
+          628.41796875
+        ],
+        [
+          358.00982666015625,
+          640.5372314453125
+        ],
+        [
+          306.59765625,
+          640.5372314453125
+        ]
+      ]
+    },
+    {
+      "title": "5.1. Direct prompt vs. AlphaCodium flow",
+      "heading_level": null,
+      "page_id": 5,
+      "polygon": [
+        [
+          307.494140625,
+          648.53271484375
+        ],
+        [
+          502.5715026855469,
+          647.3671875
+        ],
+        [
+          502.5715026855469,
+          659.4916076660156
+        ],
+        [
+          307.494140625,
+          659.4916076660156
+        ]
+      ]
+    },
+    {
+      "title": "5.2. Comparison to previous works",
+      "heading_level": null,
+      "page_id": 6,
+      "polygon": [
+        [
+          48.708984375,
+          445.4797668457031
+        ],
+        [
+          212.807861328125,
+          444.7265625
+        ],
+        [
+          212.807861328125,
+          456.43865966796875
+        ],
+        [
+          48.708984375,
+          456.43865966796875
+        ]
+      ]
+    },
+    {
+      "title": "5.3. Computational effort and comparison to Al-\nphaCode and AlphaCode2",
+      "heading_level": null,
+      "page_id": 6,
+      "polygon": [
+        [
+          307.1953125,
+          514.5207824707031
+        ],
+        [
+          545.1139526367188,
+          513.5625
+        ],
+        [
+          545.1139526367188,
+          537.4346618652344
+        ],
+        [
+          306.0,
+          537.4346618652344
+        ]
+      ]
+    },
+    {
+      "title": "6. Conclusions",
+      "heading_level": null,
+      "page_id": 7,
+      "polygon": [
+        [
+          49.306640625,
+          227.00390625
+        ],
+        [
+          123.8516845703125,
+          225.45703125
+        ],
+        [
+          123.8516845703125,
+          239.261474609375
+        ],
+        [
+          49.306640625,
+          239.261474609375
+        ]
+      ]
+    },
+    {
+      "title": "References",
+      "heading_level": null,
+      "page_id": 7,
+      "polygon": [
+        [
+          50.11199188232422,
+          483.3984375
+        ],
+        [
+          105.65585327148438,
+          483.3984375
+        ],
+        [
+          105.65585327148438,
+          496.39630126953125
+        ],
+        [
+          49.0078125,
+          496.39630126953125
+        ]
+      ]
+    },
+    {
+      "title": "Appendices",
+      "heading_level": null,
+      "page_id": 8,
+      "polygon": [
+        [
+          49.306640625,
+          70.3770751953125
+        ],
+        [
+          151.77149963378906,
+          70.3770751953125
+        ],
+        [
+          151.77149963378906,
+          91.03961181640625
+        ],
+        [
+          49.306640625,
+          91.03961181640625
+        ]
+      ]
+    },
+    {
+      "title": "A. Typical HumanEval code problem",
+      "heading_level": null,
+      "page_id": 8,
+      "polygon": [
+        [
+          49.60546875,
+          105.57421875
+        ],
+        [
+          239.19544982910156,
+          105.57421875
+        ],
+        [
+          239.19544982910156,
+          118.1173095703125
+        ],
+        [
+          48.41015625,
+          118.1173095703125
+        ]
+      ]
+    },
+    {
+      "title": "B. Why YAML output is better suited for code generation tasks than JSON output",
+      "heading_level": null,
+      "page_id": 8,
+      "polygon": [
+        [
+          49.904296875,
+          289.7531433105469
+        ],
+        [
+          468.861328125,
+          289.265625
+        ],
+        [
+          468.74725341796875,
+          301.7083435058594
+        ],
+        [
+          48.708984375,
+          301.7083435058594
+        ]
+      ]
+    },
+    {
+      "title": "C. What didn't work for us",
+      "heading_level": null,
+      "page_id": 9,
+      "polygon": [
+        [
+          49.904296875,
+          72.31640625
+        ],
+        [
+          189.1748809814453,
+          72.31640625
+        ],
+        [
+          189.1748809814453,
+          84.7423095703125
+        ],
+        [
+          49.904296875,
+          84.7423095703125
+        ]
+      ]
+    },
+    {
+      "title": "D. Estimating distance between tests' outputs",
+      "heading_level": null,
+      "page_id": 9,
+      "polygon": [
+        [
+          48.708984375,
+          259.088134765625
+        ],
+        [
+          281.22991943359375,
+          257.94140625
+        ],
+        [
+          281.22991943359375,
+          271.0433349609375
+        ],
+        [
+          47.513671875,
+          271.08984375
+        ]
+      ]
+    }
+  ],
+  "page_stats": [
+    {
+      "page_id": 0,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          175
+        ],
+        [
+          "Line",
+          83
+        ],
+        [
+          "Text",
+          9
+        ],
+        [
+          "SectionHeader",
+          4
+        ],
+        [
+          "PageHeader",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "Reference",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 1,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          139
+        ],
+        [
+          "Line",
+          66
+        ],
+        [
+          "Text",
+          7
+        ],
+        [
+          "Figure",
+          2
+        ],
+        [
+          "Reference",
+          2
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 2,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          231
+        ],
+        [
+          "Line",
+          96
+        ],
+        [
+          "Text",
+          10
+        ],
+        [
+          "SectionHeader",
+          5
+        ],
+        [
+          "ListItem",
+          4
+        ],
+        [
+          "ListGroup",
+          2
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "Reference",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 3,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          185
+        ],
+        [
+          "Line",
+          78
+        ],
+        [
+          "Text",
+          12
+        ],
+        [
+          "ListItem",
+          8
+        ],
+        [
+          "SectionHeader",
+          5
+        ],
+        [
+          "ListGroup",
+          2
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "Reference",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 4,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          215
+        ],
+        [
+          "Line",
+          97
+        ],
+        [
+          "Text",
+          13
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "Reference",
+          2
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 5,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          191
+        ],
+        [
+          "Line",
+          65
+        ],
+        [
+          "Text",
+          7
+        ],
+        [
+          "ListItem",
+          5
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "ListGroup",
+          2
+        ],
+        [
+          "Code",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "Reference",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 6,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          257
+        ],
+        [
+          "Line",
+          120
+        ],
+        [
+          "TableCell",
+          80
+        ],
+        [
+          "Text",
+          8
+        ],
+        [
+          "Reference",
+          3
+        ],
+        [
+          "Table",
+          2
+        ],
+        [
+          "Caption",
+          2
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "TableGroup",
+          2
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 7,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          266
+        ],
+        [
+          "Line",
+          92
+        ],
+        [
+          "ListItem",
+          13
+        ],
+        [
+          "Reference",
+          13
+        ],
+        [
+          "Text",
+          4
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "ListGroup",
+          2
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 8,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          80
+        ],
+        [
+          "Line",
+          27
+        ],
+        [
+          "Reference",
+          5
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "Text",
+          2
+        ],
+        [
+          "Code",
+          1
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "Caption",
+          1
+        ],
+        [
+          "Footnote",
+          1
+        ],
+        [
+          "PageFooter",
+          1
+        ],
+        [
+          "FigureGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 9,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          76
+        ],
+        [
+          "Line",
+          23
+        ],
+        [
+          "ListItem",
+          7
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "Text",
+          2
+        ],
+        [
+          "ListGroup",
+          2
+        ],
+        [
+          "Reference",
+          2
+        ],
+        [
+          "PageFooter",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    }
+  ],
+  "debug_data_path": "debug_data/[CodiumAI]AlphaCodium"
+}
